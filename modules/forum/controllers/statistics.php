@@ -24,7 +24,7 @@ class m_forum_c_statistics extends Controller_Module
 	{
 		return [
 			'topics' => [
-				'title' => 'Nouveaux sujets',
+				'title' => 'New topics',
 				'data'  => function(){
 					$this->db	->from('dungeon_forum_topics t')
 								->join('dungeon_forum_messages m', 'm.message_id = t.message_id', 'INNER');
@@ -33,7 +33,7 @@ class m_forum_c_statistics extends Controller_Module
 				}
 			],
 			'replies' => [
-				'title' => 'Nouvelles réponses',
+				'title' => 'New replies',
 				'data'  => function(){
 					$this->db	->from('dungeon_forum_messages m')
 								->join('dungeon_forum_topics t', 'm.topic_id = t.topic_id', 'INNER')

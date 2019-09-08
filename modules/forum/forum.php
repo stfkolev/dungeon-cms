@@ -123,7 +123,7 @@ class m_forum extends Module
 								'icon'  => 'fa-lock'
 							],
 							'category_move' => [
-								'title' => 'Déplacer un sujet',
+								'title' => 'Move a topic',
 								'icon'  => 'fa-reply fa-flip-horizontal'
 							]
 						]

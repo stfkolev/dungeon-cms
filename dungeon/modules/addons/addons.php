@@ -20,7 +20,7 @@ along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 
 class m_addons extends Module
 {
-	public $title         = 'Composants';
+	public $title         = 'Components';
 	public $description   = '';
 	public $icon          = 'fa-puzzle-piece';
 	public $link          = 'http://www.dungeon.com';

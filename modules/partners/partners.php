@@ -46,11 +46,11 @@ class m_partners extends Module
 						'label'       => 'Logo',
 						'value'       => $this->config->partners_logo_display,
 						'values'      => [
-							'logo_dark'  => 'Foncé',
-							'logo_light' => 'Clair'
+							'logo_dark'  => 'Dark',
+							'logo_light' => 'Light'
 						],
 						'type'        => 'radio',
-						'description' => 'Utilisez les logos clairs s\'ils sont affichés sur un fond foncé',
+						'description' => 'Use the light logo if it is displayed on a dark background',
 						'size'        => 'col-md-4'
 					]
 				])

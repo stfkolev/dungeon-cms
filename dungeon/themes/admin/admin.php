@@ -109,7 +109,7 @@ class t_admin extends Theme
 						'icon'  => 'fa-users',
 						'url'   => [
 							[
-								'title'  => 'Membres / Groupes',
+								'title'  => 'Members / Groups',
 								'icon'   => 'fa-users',
 								'url'    => 'admin/user',
 								'access' => $this->user('admin')
@@ -121,7 +121,7 @@ class t_admin extends Theme
 								'access' => $this->user('admin')
 							],
 							/*array(
-								'title' => 'Profil',
+								'title' => 'Profile',
 								'icon'  => 'fa-user',
 								'url'   => 'admin/user'
 							),*/
@@ -174,7 +174,7 @@ class t_admin extends Theme
 						'access' => $this->user('admin')
 					],
 					[
-						'title'  => 'Statistiques',
+						'title'  => 'Statistics',
 						'icon'   => 'fa-bar-chart',
 						'url'    => 'admin/statistics',
 						'access' => $this->user('admin')

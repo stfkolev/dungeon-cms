@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-md-5 text-center">
-		<h4>Tous nos podiums</h4>
+		<h4>All our awards</h4>
 		<ul class="list-inline no-margin">
 			<li>
 				<span data-toggle="tooltip" title="1ère place"><?php echo icon('fa-trophy trophy-gold fa-2x'); ?></span>
@@ -20,7 +20,7 @@
 		<table class="table table-hover no-margin">
 			<thead>
 				<tr>
-					<th>Équipes</th>
+					<th>Teams</th>
 					<th class="text-center"><?php echo icon('fa-trophy trophy-gold'); ?></th>
 					<th class="text-center"><?php echo icon('fa-trophy trophy-silver'); ?></th>
 					<th class="text-center"><?php echo icon('fa-trophy trophy-bronze'); ?></th>

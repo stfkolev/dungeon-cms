@@ -62,7 +62,7 @@ class m_monitoring_c_admin extends Controller_Module
 			$this	->col(
 						$this->panel()->body($this->view('monitoring'), FALSE),
 						$this	->panel()
-								->heading('<div class="pull-right"><a class="btn btn-xs btn-default" href="#" data-toggle="modal" data-target="#modal-phpinfo">'.icon('fa-info').'</a></div>Informations serveur', 'fa-info-circle')
+								->heading('<div class="pull-right"><a class="btn btn-xs btn-default" href="#" data-toggle="modal" data-target="#modal-phpinfo">'.icon('fa-info').'</a></div>Server information', 'fa-info-circle')
 								->body($this->view('infos', [
 									'check'   => $this->model()->check_server(),
 									'phpinfo' => $phpinfo
@@ -91,7 +91,7 @@ class m_monitoring_c_admin extends Controller_Module
 						$this->row(
 							$this->col(
 								$this	->panel()
-										->heading('Votre installation Dungeon', 'fa-heartbeat')
+										->heading('Your Dungeon installation', 'fa-heartbeat')
 										->body('<div id="tree"></div>', FALSE)
 							)
 						)

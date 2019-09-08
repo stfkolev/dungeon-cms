@@ -46,7 +46,7 @@ class m_monitoring_m_monitoring extends Model
 						'check' => function(&$errors){
 							if (!extension_loaded('curl'))
 							{
-								$errors[] = ['L\'extension cURL doit être activée', 'danger'];
+								$errors[] = ['The cURL extension must be enabled', 'danger'];
 								return FALSE;
 							}
 							
@@ -58,7 +58,7 @@ class m_monitoring_m_monitoring extends Model
 						'check' => function(&$errors){
 							if (!extension_loaded('gd'))
 							{
-								$errors[] = ['L\'extension GD doit être activée', 'danger'];
+								$errors[] = ['The GD extension must be enabled', 'danger'];
 								return FALSE;
 							}
 							
@@ -70,7 +70,7 @@ class m_monitoring_m_monitoring extends Model
 						'check' => function(&$errors){
 							if (!extension_loaded('json'))
 							{
-								$errors[] = ['L\'extension JSON doit être activée', 'danger'];
+								$errors[] = ['The JSON extension must be enabled', 'danger'];
 								return FALSE;
 							}
 							
@@ -82,7 +82,7 @@ class m_monitoring_m_monitoring extends Model
 						'check' => function(&$errors){
 							if (!extension_loaded('mbstring'))
 							{
-								$errors[] = ['L\'extension mbstring doit être activée', 'danger'];
+								$errors[] = ['The mbstring extension must be enabled', 'danger'];
 								return FALSE;
 							}
 							
@@ -94,7 +94,7 @@ class m_monitoring_m_monitoring extends Model
 						'check' => function(&$errors){
 							if (!extension_loaded('zip'))
 							{
-								$errors[] = ['L\'extension Zip doit être activée', 'danger'];
+								$errors[] = ['The zip extension must be enabled', 'danger'];
 								return FALSE;
 							}
 							
@@ -112,7 +112,7 @@ class m_monitoring_m_monitoring extends Model
 						'check' => function(&$errors){
 							if (!1)
 							{
-								$errors[] = ['L\'option de réécriture d\'URL doit être activée', 'danger'];
+								$errors[] = ['URL rewrite option must be enabled', 'danger'];
 								return FALSE;
 							}
 							
@@ -130,7 +130,7 @@ class m_monitoring_m_monitoring extends Model
 						'check' => function(&$errors) use ($server){
 							if (!$server['databases_innodb'])
 							{
-								$errors[] = ['Le moteur de stockage InnoDB doit être activé', 'danger'];
+								$errors[] = ['InnoDB storage engine must be enabled', 'danger'];
 								return FALSE;
 							}
 							
@@ -140,16 +140,16 @@ class m_monitoring_m_monitoring extends Model
 				]
 			],
 			[
-				'title' => 'Envoi d\'email',
+				'title' => 'Mail Service',
 				'icon'  => 'fa-envelope-o',
 				'check' => [
 					'email' => [
-						'title' => 'Test du serveur...',
+						'title' => 'Server test...',
 						'check' => function(&$errors, &$title){
-							if (!$this->email->to('test@dungeon.com')->subject('email_check')->message('default', ['content' => ''])->send())
+							if (!$this->email->to('inkyzfx@gmail.com')->subject('email_check')->message('default', ['content' => ''])->send())
 							{
-								$errors[] = ['Le serveur d\'envoi d\'email doit être configuré', 'danger'];
-								$title = 'Échec';
+								$errors[] = ['The sending email server must be configured', 'danger'];
+								$title = 'Failure';
 								return FALSE;
 							}
 							

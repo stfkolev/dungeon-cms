@@ -124,7 +124,7 @@ class m_events_c_index extends Controller_Module
 					],
 					[
 						'content' => function($data){
-							return '<div>'.$this->user->link($data['user_id'], $data['username']).'</div><small>'.icon('fa-circle '.($data['online'] ? 'text-green' : 'text-gray')).' '.($data['admin'] ? 'Admin' : 'Membre').' '.($data['online'] ? 'en ligne' : 'hors ligne').'</small>';
+							return '<div>'.$this->user->link($data['user_id'], $data['username']).'</div><small>'.icon('fa-circle '.($data['online'] ? 'text-green' : 'text-gray')).' '.($data['admin'] ? 'Admin' : 'Member').' '.($data['online'] ? 'online' : 'offline').'</small>';
 						},
 					],
 					[
@@ -142,7 +142,7 @@ class m_events_c_index extends Controller_Module
 					]
 				])
 				->data($this->model('participants')->get_participants($event_id))
-				->no_data('Aucun participant pour cet événement');
+				->no_data('No participants for this event');
 
 		$match = $type == 1 ? $this->model('matches')->get_match_info($event_id) : NULL;
 
@@ -192,12 +192,12 @@ class m_events_c_index extends Controller_Module
 				refresh();
 			}
 
-			$modal = $this	->modal('Inviter des membres', 'fa-user-plus')
+			$modal = $this	->modal('Invite members', 'fa-user-plus')
 							->body($this->view('participants', [
 								'users'   => $users,
 								'form_id' => $this->form->token()
 							]))
-							->submit('Inviter')
+							->submit('Invite')
 							->cancel()
 							->set_id('c2dac90bb0731401a293d27ee036757a');
 		}
@@ -241,7 +241,7 @@ class m_events_c_index extends Controller_Module
 						'status' => $status
 					]);
 
-		notify('Disponibilité ajoutée');
+		notify('Availability added');
 
 		redirect('events/'.$event_id.'/'.$title.'#participants');
 	}
@@ -250,7 +250,7 @@ class m_events_c_index extends Controller_Module
 	{
 		$this	->title('Suppression participant')
 				->form
-				->confirm_deletion('Confirmation de suppression', 'Êtes-vous sûr(e) de vouloir supprimer cet invité ?');
+				->confirm_deletion('Delete confirmation', 'Are you sure you want to delete this guest?');
 
 		if ($this->form->is_valid())
 		{

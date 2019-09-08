@@ -24,7 +24,7 @@ class m_user_c_statistics extends Controller_Module
 	{
 		return [
 			'registrations' => [
-				'title' => 'Inscriptions',
+				'title' => 'Registrations',
 				'data'  => function(){
 					$this->db	->from('dungeon_users')
 								->where('deleted', FALSE);
@@ -33,7 +33,7 @@ class m_user_c_statistics extends Controller_Module
 				}
 			],
 			'sessions' => [
-				'title'    => 'Connections de membres',
+				'title'    => 'Sessions',
 				'group_by' => 'COUNT(DISTINCT user_id)',
 				'data'     => function(){
 					$this->db->from('dungeon_sessions_history');
@@ -41,7 +41,7 @@ class m_user_c_statistics extends Controller_Module
 				}
 			],
 			'crawlers' => [
-				'title' => 'Connections de bots',
+				'title' => 'Crawlers',
 				'data'  => function(){
 					$this->db->from('dungeon_crawlers');
 					return 'date';

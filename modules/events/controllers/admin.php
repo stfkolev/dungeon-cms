@@ -26,7 +26,7 @@ class m_events_c_admin extends Controller_Module
 				->css('admin')
 				->js('moment.min')
 				->js('fullcalendar.min')
-				->js('lang-all')
+				// ->js('lang-all')
 				->js('events');
 
 		$types = $this	->table
@@ -53,14 +53,14 @@ class m_events_c_admin extends Controller_Module
 						])
 						->pagination(FALSE)
 						->data($this->model('types')->get_types())
-						->no_data('Aucun type')
+						->no_data('No type')
 						->display();
 
 		$events = $this	->table
 						->add_columns([
 							[
 								'content' => function($data){
-									return $data['published'] ? '<i class="fa fa-circle" data-toggle="tooltip" title="Publié" style="color: #7bbb17;"></i>' : '<i class="fa fa-circle-o" data-toggle="tooltip" title="En attente de publication" style="color: #535353;"></i>';
+									return $data['published'] ? '<i class="fa fa-circle" data-toggle="tooltip" title="published" style="color: #7bbb17;"></i>' : '<i class="fa fa-circle-o" data-toggle="tooltip" title="Awaiting publication" style="color: #535353;"></i>';
 								},
 								'sort'    => function($data){
 									return $data['published'];
@@ -95,7 +95,7 @@ class m_events_c_admin extends Controller_Module
 								'content' => function($data){
 									if ($data['type'] == 1 && ($match = $this->model('matches')->get_match_info($data['event_id'])))//Matches
 									{
-										return  ($match['scores'] ? $this->model('matches')->label_global_scores($data['event_id']).'<span style="margin: 0 10px;"> vs </span>' : '<span style="margin-right: 10px;">Match à jouer vs </span>').
+										return  ($match['scores'] ? $this->model('matches')->label_global_scores($data['event_id']).'<span style="margin: 0 10px;"> vs </span>' : '<span style="margin-right: 10px;">Match play vs </span>').
 												($match['opponent']['country'] ? '<img src="'.url('dungeon/themes/default/images/flags/'.$match['opponent']['country'].'.png').'" data-toggle="tooltip" title="'.get_countries()[$match['opponent']['country']].'" style="margin-right: 10px;" alt="" />' : '').
 												$match['opponent']['title'].' <i>('.$match['game']['title'].')</i>';
 									}
@@ -142,7 +142,7 @@ class m_events_c_admin extends Controller_Module
 								'size'    => TRUE
 							],
 							[
-								'title'   => '<i class="fa fa-comments-o" data-toggle="tooltip" title="Commentaires"></i>',
+								'title'   => '<i class="fa fa-comments-o" data-toggle="tooltip" title="Comments"></i>',
 								'content' => function($data){
 									return Dungeon()->comments->admin_comments('events', $data['event_id']);
 								},
@@ -161,7 +161,7 @@ class m_events_c_admin extends Controller_Module
 							]
 						])
 						->data($events)
-						->no_data('Il n\'y a pas encore d\'événement')
+						->no_data('There are no events yet')
 						->display();
 
 		return $this->row(
@@ -170,16 +170,16 @@ class m_events_c_admin extends Controller_Module
 								->heading('', 'fa-calendar')
 								->body('<div id="calendar"></div>', FALSE),
 						$this	->panel()
-								->heading('Types d\'événement', 'fa-bookmark-o')
+								->heading('Event type', 'fa-bookmark-o')
 								->body($types)
-								->footer($this->is_authorized('add_events_type') ? $this->button_create('admin/events/types/add', 'Créer un type d\'événement') : NULL)
+								->footer($this->is_authorized('add_events_type') ? $this->button_create('admin/events/types/add', 'Create an event type') : NULL)
 					)
 					->size('col-md-4 col-lg-3'),
 			$this	->col(
 						$this	->panel()
-								->heading('Liste des événements', 'fa-calendar')
+								->heading('Events list', 'fa-calendar')
 								->body('<div class="panel-footer">'.$this->_filters().'</div><div class="panel-body">'.$events.'</div>', FALSE)
-								->footer($this->is_authorized('add_event') ? $this->button_create('admin/events/add', 'Créer un événement') : NULL)
+								->footer($this->is_authorized('add_event') ? $this->button_create('admin/events/add', 'Create an event') : NULL)
 					)
 					->size('col-md-8 col-lg-9')
 		);
@@ -207,10 +207,10 @@ class m_events_c_admin extends Controller_Module
 
 	public function add()
 	{
-		$this	->subtitle('Ajouter un événement')
+		$this	->subtitle('Add an event')
 				->form
 				->add_rules('events')
-				->add_submit('Ajouter')
+				->add_submit('Add')
 				->add_back('admin/events');
 
 		if ($this->form->is_valid($post))
@@ -238,13 +238,13 @@ class m_events_c_admin extends Controller_Module
 		}
 
 		return $this->panel()
-					->heading('Ajouter un événement', 'fa-calendar')
+					->heading('Add an event', 'fa-calendar')
 					->body($this->form->display());
 	}
 
 	public function _edit($event_id, $title, $type_id, $date, $date_end, $description, $private_description, $location, $image_id, $published, $type)
 	{
-		$form_default = $this	->title('Éditer l\'événement')
+		$form_default = $this	->title('Edit event')
 								->subtitle($title)
 								->form
 								->add_rules('events', [
@@ -282,14 +282,14 @@ class m_events_c_admin extends Controller_Module
 			$form_match = $this	->form
 								->add_rules([
 									'team' => [
-										'label'       => 'Équipe',
+										'label'       => 'Team',
 										'value'       => isset($match['team_id']) ? $match['team_id'] : NULL,
 										'values'      => $this->module('teams')->model()->get_teams_list(),
 										'type'        => 'select',
 										'rules'       => 'required'
 									],
 									'opponent' => [
-										'label'       => 'Adversaire',
+										'label'       => 'Opponent',
 										'value'       => isset($match['opponent_id']) ? $match['opponent_id'] : NULL,
 										'values'      => $this->model('matches')->get_opponents_list(),
 										'type'        => 'select',
@@ -304,13 +304,13 @@ class m_events_c_admin extends Controller_Module
 									'webtv' => [
 										'label'       => 'WebTv',
 										'value'       => isset($match['webtv']) ? $match['webtv'] : NULL,
-										'description' => 'Renseignez l\'url de votre chaine Twitch pour indiquer une retransmission en Live.',
+										'description' => 'Fill in the url of your Twitch channel to indicate a live broadcast.',
 										'type'        => 'url'
 									],
 									'website' => [
-										'label'       => 'Site web',
+										'label'       => 'Website',
 										'value'       => isset($match['website']) ? $match['website'] : NULL,
-										'description' => 'Renseignez un site qui parle de l\'événement',
+										'description' => 'Fill in a site that talks about the event',
 										'type'        => 'url'
 									]
 								])
@@ -320,7 +320,7 @@ class m_events_c_admin extends Controller_Module
 			$form_opponent = $this	->form
 									->add_rules([
 										'title' => [
-											'label'       => 'Nom',
+											'label'       => 'Name',
 											'rules'       => 'required'
 										],
 										'image' => [
@@ -336,12 +336,12 @@ class m_events_c_admin extends Controller_Module
 											}
 										],
 										'country' => [
-											'label'       => 'Pays',
+											'label'       => 'Country',
 											'values'      => get_countries(),
 											'type'        => 'select'
 										],
 										'website' => [
-											'label'       => 'Site web',
+											'label'       => 'Website',
 											'type'        => 'url'
 										]
 									])
@@ -351,25 +351,25 @@ class m_events_c_admin extends Controller_Module
 			$form_round = $this	->form
 								->add_rules([
 									'map' => [
-										'label'  => 'Carte',
+										'label'  => 'Map',
 										'type'   => 'select',
 										'values' => $maps,
 										'size'   => 'col-md-5'
 									],
 									'score1' => [
-										'label'  => 'Notre score',
+										'label'  => 'Our score',
 										'type'   => 'number',
 										'rules'  => 'required',
 										'size'   => 'col-md-3'
 									],
 									'score2' => [
-										'label'  => 'Score adverse',
+										'label'  => 'Opponent score',
 										'type'   => 'number',
 										'rules'  => 'required',
 										'size'   => 'col-md-3'
 									]
 								])
-								->add_submit('Valider')
+								->add_submit('Validate')
 								->save();
 
 			if ($form_match->is_valid($post))
@@ -383,7 +383,7 @@ class m_events_c_admin extends Controller_Module
 					'website'     => $post['website'],
 				]);
 
-				notify('Rencontre éditée');
+				notify('Edited meeting');
 
 				redirect('admin/events/'.$event_id.'/'.url_title($title));
 			}
@@ -396,7 +396,7 @@ class m_events_c_admin extends Controller_Module
 					'website'  => $post['website']
 				]);
 
-				notify('Adversaire ajouté');
+				notify('Opponent added');
 
 				redirect('admin/events/'.$event_id.'/'.url_title($title));
 			}
@@ -409,7 +409,7 @@ class m_events_c_admin extends Controller_Module
 					'score2'   => $post['score2']
 				]);
 
-				notify('Manche ajoutée');
+				notify('Channel added');
 
 				redirect('admin/events/'.$event_id.'/'.url_title($title));
 			}
@@ -428,7 +428,7 @@ class m_events_c_admin extends Controller_Module
 									$post['image'],
 									in_array('on', $post['published']));
 
-			notify('Événement édité');
+			notify('Event edited');
 
 			$new_type = $this->db->select('type')->from('dungeon_events_types')->where('type_id', $post['type'])->row();
 
@@ -447,12 +447,12 @@ class m_events_c_admin extends Controller_Module
 		if ($published && !$this->model('participants')->get_participants($event_id))
 		{
 			$alert = $this	->panel()
-							->body('<div class="pull-right"><a href="'.url('events/'.$event_id.'/'.url_title($title).'#participants').'" class="btn btn-info">Inviter des membres</a></div><i class="fa fa-info-circle"></i> <b>Pense-bête !</b><br />N\'oubliez pas d\'envoyer vos demandes de participation à vos membres !</b>')
+							->body('<div class="pull-right"><a href="'.url('events/'.$event_id.'/'.url_title($title).'#participants').'" class="btn btn-info">Invite members</a></div><i class="fa fa-info-circle"></i> <b>Reminder !</b><br />Do not forget to send your participation requests to your members !</b>')
 							->color('info');
 		}
 
 		$panel = $this		->panel()
-							->heading('Éditer l\'événement', 'fa-align-left')
+							->heading('Edit event', 'fa-align-left')
 							->body($form_default->display());
 
 		if ($type == 1)//Matches
@@ -480,13 +480,13 @@ class m_events_c_admin extends Controller_Module
 												->where('r.event_id', $event_id)
 												->order_by('r.round_id')
 												->get())
-					->no_data('Aucune manche renseignée');
+					->no_data('No race completed');
 
-			$modal_opponent = $this	->modal('Ajouter un adversaire', 'fa-plus')
+			$modal_opponent = $this	->modal('Add an opponent', 'fa-plus')
 									->body($form_opponent->display())
 									->open_if($form_opponent->get_errors());
 
-			$modal_round    = $this	->modal('Ajouter une manche', 'fa-plus')
+			$modal_round    = $this	->modal('Add a round', 'fa-plus')
 									->body($form_round->display())
 									->open_if($form_round->get_errors());
 
@@ -495,12 +495,12 @@ class m_events_c_admin extends Controller_Module
 						->size('col-md-8'),
 				$this	->col(
 							$this	->panel()
-									->heading('Détails de la rencontre<div class="pull-right">'.$this->button()->title('Ajouter un adversaire')->icon('fa-plus')->modal($modal_opponent).'</div>', 'fa-info-circle')
+									->heading('Details of the meeting<div class="pull-right">'.$this->button()->title('Add an opponent')->icon('fa-plus')->modal($modal_opponent).'</div>', 'fa-info-circle')
 									->body($form_match->display()),
 							$this	->panel()
-									->heading('Manches jouées'.(count($rounds) > 1 ? '<div class="pull-right">Résultat global '.$this->model('matches')->label_global_scores($event_id).'</div>' : ''), 'fa-gamepad')
+									->heading('Manches jouées'.(count($rounds) > 1 ? '<div class="pull-right">Overall result '.$this->model('matches')->label_global_scores($event_id).'</div>' : ''), 'fa-gamepad')
 									->body($this->table->display())
-									->footer($this->button_create('#', 'Ajouter une manche')->modal($modal_round))
+									->footer($this->button_create('#', 'Add a round')->modal($modal_round))
 						)
 						->size('col-md-4')
 			);
@@ -513,10 +513,10 @@ class m_events_c_admin extends Controller_Module
 
 	public function delete($event_id, $title)
 	{
-		$this	->title('Suppression événement')
+		$this	->title('Event Deletion')
 				->subtitle($title)
 				->form
-				->confirm_deletion('Confirmation de suppression', 'Êtes-vous sûr(e) de vouloir supprimer le l\'événement <b>'.$title.'</b> ?');
+				->confirm_deletion('Delete confirmation', 'Are you sure you want to delete the event <b>'.$title.'</b> ?');
 
 		if ($this->form->is_valid())
 		{
@@ -530,11 +530,11 @@ class m_events_c_admin extends Controller_Module
 
 	public function _types_add()
 	{
-		$this	->subtitle('Ajouter un type d\'événement')
+		$this	->subtitle('Add an event type')
 				->form
 				->add_rules('types')
 				->add_back('admin/events')
-				->add_submit('Ajouter');
+				->add_submit('Add');
 
 		if ($this->form->is_valid($post))
 		{
@@ -543,13 +543,13 @@ class m_events_c_admin extends Controller_Module
 										$post['color'],
 										$post['icon']);
 
-			notify('Type d\'événement ajouté');
+			notify('Type of event added');
 
 			redirect_back('admin/events');
 		}
 
 		return $this->panel()
-					->heading('Ajouter un type d\'événement', 'fa-bookmark-o')
+					->heading('Add an event type', 'fa-bookmark-o')
 					->body($this->form->display());
 	}
 
@@ -574,22 +574,22 @@ class m_events_c_admin extends Controller_Module
 										$post['color'],
 										$post['icon']);
 
-			notify('Type d\'événement édité');
+			notify('Event type edited');
 
 			redirect_back('admin/events');
 		}
 
 		return $this->panel()
-					->heading('Éditer le type d\'événement', 'fa-bookmark-o')
+					->heading('Edit event type', 'fa-bookmark-o')
 					->body($this->form->display());
 	}
 
 	public function _types_delete($type_id, $title)
 	{
-		$this	->title('Suppression type d\'événement')
+		$this	->title('Event type deletion')
 				->subtitle($title)
 				->form
-				->confirm_deletion('Confirmation de suppression', 'Êtes-vous sûr(e) de vouloir supprimer le type d\'événement <b>'.$title.'</b> ?<br />Tous les événements de ce type seront aussi supprimés.');
+				->confirm_deletion('Deletion confirmation', 'Are you sure you want to delete the type of event <b>'.$title.'</b> ?<br />All events of this type will also be deleted.');
 
 		if ($this->form->is_valid())
 		{
@@ -603,9 +603,9 @@ class m_events_c_admin extends Controller_Module
 
 	public function _round_delete($round_id)
 	{
-		$this	->title('Suppression manche')
+		$this	->title('Delete round')
 				->form
-				->confirm_deletion('Confirmation de suppression', 'Êtes-vous sûr(e) de vouloir supprimer cette manche ?');
+				->confirm_deletion('Delete confirmation', 'Are you sure you want to delete this round? ?');
 
 		if ($this->form->is_valid())
 		{

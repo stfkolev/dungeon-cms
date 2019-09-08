@@ -4,7 +4,7 @@
 		<td><?php echo php_uname(); ?></td>
 	</tr>
 	<tr>
-		<td width="20%">Serveur PHP</td>
+		<td width="20%">Server Information</td>
 		<td><?php echo $data['php_server']; ?></td>
 	</tr>
 	<tr>

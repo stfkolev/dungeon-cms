@@ -22,7 +22,7 @@ $db[] = [
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'dungeon',
+	'database' => 'dungeoncms',
 	'driver'   => 'mysqli'
 ];
 

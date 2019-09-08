@@ -898,7 +898,7 @@ INSERT INTO `dungeon_settings` (`name`, `site`, `lang`, `value`, `type`) VALUES
 ('dungeon_maintenance_twitter', '', '', '', 'string'),
 ('dungeon_monitoring_last_check', '', '', '0', 'int'),
 ('dungeon_name', 'default', '', 'Dungeon CMS', 'string'),
-('dungeon_registration_charte', '', '', '', 'string'),
+('dungeon_registration_terms', '', '', '', 'string'),
 ('dungeon_registration_status', '', '', '0', 'string'),
 ('dungeon_robots_txt', '', '', 'User-agent: *\r\nDisallow:', 'string'),
 ('dungeon_social_behance', '', '', '', 'string'),
@@ -1042,12 +1042,7 @@ CREATE TABLE `dungeon_settings_languages` (
 --
 
 INSERT INTO `dungeon_settings_languages` (`code`, `name`, `flag`, `order`) VALUES
-('de', 'Deutsch', 'de.png', 3),
 ('en', 'English', 'gb.png', 1),
-('es', 'Español', 'es.png', 4),
-('fr', 'Français', 'fr.png', 2),
-('it', 'Italiano', 'it.png', 5),
-('pt', 'Português', 'pt.png', 6);
 
 -- --------------------------------------------------------
 

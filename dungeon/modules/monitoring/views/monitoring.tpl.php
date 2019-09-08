@@ -1,6 +1,6 @@
 <div class="panel-monitoring bg-gray">
 	<div class="status-legend">
-		<h3>Santé du site</h3>
+		<h3>Site health</h3>
 		<span id="monitoring-text">&nbsp;</span>
 	</div>
 	<div class="text-center">
@@ -11,7 +11,7 @@
 	<div class="row">
 		<div class="col-md-4 monitoring-legend">
 			<h3 id="monitoring-info"><?php echo icon('fa-spinner fa-spin'); ?></h3>
-			<span class="span-legend"><?php echo icon('fa-exclamation-circle text-blue'); ?> Conseils</span>
+			<span class="span-legend"><?php echo icon('fa-exclamation-circle text-blue'); ?> Advice</span>
 		</div>
 		<div class="col-md-4 monitoring-legend">
 			<h3 id="monitoring-warning"><?php echo icon('fa-spinner fa-spin'); ?></h3>
@@ -19,7 +19,7 @@
 		</div>
 		<div class="col-md-4 monitoring-legend">
 			<h3 id="monitoring-danger"><?php echo icon('fa-spinner fa-spin'); ?></h3>
-			<span class="span-legend"><?php echo icon('fa-bug text-red'); ?> Erreurs</span>
+			<span class="span-legend"><?php echo icon('fa-bug text-red'); ?> Errors</span>
 		</div>
 	</div>
 </div>

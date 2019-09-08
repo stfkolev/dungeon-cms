@@ -20,7 +20,7 @@ along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 
 class w_events extends Widget
 {
-	public $title       = 'Événements';
+	public $title       = 'Events';
 	public $description = '';
 	public $link        = 'http://www.dungeon.com';
 	public $author      = 'Evil <inkyzfx@gmail.com>';
@@ -29,12 +29,12 @@ class w_events extends Widget
 	public $dungeon_version  = 'Alpha 0.1.4';
 	public $path        = __FILE__;
 	public $types       = [
-		'index'       => 'Calendrier des événements',
-		'types'       => 'Liste des types d\'événements',
-		'events'      => 'Liste des événements',
-		'event'       => 'Un événement en détail',
-		'matches'     => 'Derniers résultats',
-		'upcoming'    => 'Prochains matchs'
+		'index'       => 'Event calendar',
+		'types'       => 'List of event types',
+		'events'      => 'Events list',
+		'event'       => 'An event in detail',
+		'matches'     => 'Latest results',
+		'upcoming'    => 'Upcoming matches'
 	];
 }
 

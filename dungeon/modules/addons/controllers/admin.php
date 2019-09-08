@@ -35,15 +35,15 @@ class m_addons_c_admin extends Controller_Module
 		return $this->row(
 			$this	->col(
 						$this	->panel()
-								->heading('<div class="pull-right"><small>(max. '.(file_upload_max_size() / 1024 / 1024).' Mo)</small></div>Ajouter un composant', 'fa-plus')
-								->body('<input type="file" id="install-input" class="install" accept=".zip" /><label for="install-input" id="install-input-label"><p>'.icon('fa-upload fa-3x').'</p><span class="legend">Choisissez votre archive</span><br /><small class="text-muted">(format .zip)</small></label>')
+								->heading('<div class="pull-right"><small>(max. '.(file_upload_max_size() / 1024 / 1024).' MB)</small></div>Add component', 'fa-plus')
+								->body('<input type="file" id="install-input" class="install" accept=".zip" /><label for="install-input" id="install-input-label"><p>'.icon('fa-upload fa-3x').'</p><span class="legend">Choose an archive</span><br /><small class="text-muted">(format .zip)</small></label>')
 								->footer($this	->button()
 												->title('Installer')
 												->icon('fa-plus')
 												->color('info btn-block install disabled')
 												->outline()),
 						$this	->panel()
-								->heading('Composants du site', 'fa-puzzle-piece')
+								->heading('Site components', 'fa-puzzle-piece')
 								->body($this->view('addons', [
 									'addons' => [
 										'modules' => [
@@ -51,7 +51,7 @@ class m_addons_c_admin extends Controller_Module
 											'icon'  => 'fa-edit'
 										],
 										'themes' => [
-											'title' => 'Thèmes',
+											'title' => 'Themes',
 											'icon'  => 'fa-tint'
 										],
 										'widgets' => [
@@ -59,11 +59,11 @@ class m_addons_c_admin extends Controller_Module
 											'icon'  => 'fa-cubes'
 										],
 										'languages' => [
-											'title' => 'Langues',
+											'title' => 'Languages',
 											'icon'  => 'fa-book'
 										],
 										'authenticators' => [
-											'title' => 'Authentificateurs',
+											'title' => 'Authenticators',
 											'icon'  => 'fa-user-circle'
 										]/*,
 										'smileys' => array(

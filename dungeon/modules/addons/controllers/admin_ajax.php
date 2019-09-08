@@ -37,13 +37,13 @@ class m_addons_c_admin_ajax extends Controller_Module
 			if (!$object->is_setup())
 			{
 				return [
-					'danger' => 'Vous devez configurer l\'authentificateur'
+					'danger' => 'You must configure the authenticator'
 				];
 			}
 
 			$table      = 'dungeon_settings_authenticators';
 			$is_enabled = !$object->is_enabled();
-			$title      = 'L\'authentificateur '.$object->title;
+			$title      = 'The authenticator '.$object->title;
 		}
 		else
 		{
@@ -65,7 +65,7 @@ class m_addons_c_admin_ajax extends Controller_Module
 					]);
 
 		return [
-			'success' => $title.' est '.($is_enabled ? 'activé' : 'désactivé')
+			'success' => $title.' is '.($is_enabled ? 'activated' : 'deactivated')
 		];
 	}
 	
@@ -138,13 +138,13 @@ class m_addons_c_admin_ajax extends Controller_Module
 									if (($cmp = version_compare($version, version_format($addon->version))) === 0)
 									{
 										return [
-											'warning' => 'Le '.$type.' '.$addon->get_title().' est déjà installé en version '.$version
+											'warning' => 'The '.$type.' '.$addon->get_title().' is already installed '.$version
 										];
 									}
 									else if ($cmp === -1)
 									{
 										return [
-											'danger' => 'Le '.$type.' '.$addon->get_title().' est déjà installé avec une version supérieure'
+											'danger' => 'The '.$type.' '.$addon->get_title().' is already installed with a higher version'
 										];
 									}
 								}
@@ -158,28 +158,28 @@ class m_addons_c_admin_ajax extends Controller_Module
 										$addon->reset();
 										
 										return [
-											'success' => 'Le '.$type.' '.$addon->get_title().' a été '.(empty($update) ? 'installé' : 'mis-à-jour')
+											'success' => 'The '.$type.' '.$addon->get_title().' has been '.(empty($update) ? 'installed' : 'updated')
 										];
 									}
 
 									return [
-										'danger' => 'Le '.$type.' '.($addon ? $addon->get_title() : $name).' n\'a pas pu être '.(empty($update) ? 'installé' : 'mis-à-jour')
+										'danger' => 'The '.$type.' '.($addon ? $addon->get_title() : $name).' could not be '.(empty($update) ? 'installed' : 'updated')
 									];
 								}
 								
 								return [
-									'danger' => 'Le '.$type.' '.($addon ? $addon->get_title() : $name).' nécessite la version '.$dungeon_version.' de Dungeon, veuillez mettre jour votre site'
+									'danger' => 'The '.$type.' '.($addon ? $addon->get_title() : $name).' requires version '.$dungeon_version.' of Dungeon, please update your site'
 								];
 							}
 							
 							return [
-								'danger' => 'Le composant ne peut pas être installé, veuillez vérifier la présence des numéros de version'
+								'danger' => 'The component can not be installed, please check the versions'
 							];
 						}
 					}
 					
 					return [
-						'danger' => 'Le composant ne peut pas être installé, veuillez vérifier son contenu'
+						'danger' => 'The component can not be installed, please check its contents'
 					];
 				};
 
@@ -217,7 +217,7 @@ class m_addons_c_admin_ajax extends Controller_Module
 			}
 			
 			return [
-				'danger' => ['Erreur de transfert vers le serveur']
+				'danger' => ['Error transferring to the server']
 			];
 		}
 		
@@ -229,28 +229,28 @@ class m_addons_c_admin_ajax extends Controller_Module
 	private function _modules_list()
 	{
 		return $this->panel()
-					->heading('Liste des modules', 'fa-edit')
+					->heading('List of modules', 'fa-edit')
 					->body($this->view('modules'), FALSE);
 	}
 	
 	private function _themes_list()
 	{
 		return $this->panel()
-					->heading('Liste des thèmes', 'fa-tint')
+					->heading('List of themes', 'fa-tint')
 					->body($this->view('themes'));
 	}
 	
 	private function _widgets_list()
 	{
 		return $this->panel()
-					->heading('Liste des widgets', 'fa-cubes')
+					->heading('List of widgets', 'fa-cubes')
 					->body($this->view('widgets'), FALSE);
 	}
 	
 	private function _languages_list()
 	{
 		return $this->panel()
-					->heading('Liste des langues', 'fa-book')
+					->heading('List of languages', 'fa-book')
 					->body($this->view('languages', [
 						'languages' => $this->addons->get_languages()
 					]), FALSE);
@@ -259,7 +259,7 @@ class m_addons_c_admin_ajax extends Controller_Module
 	private function _authenticators_list()
 	{
 		return $this->panel()
-					->heading('Liste des authentificateurs', 'fa-user-circle')
+					->heading('List of authenticators', 'fa-user-circle')
 					->body($this->view('authenticators', [
 						'authenticators' => $this->addons->get_authenticators(TRUE)
 					]), FALSE);
@@ -268,7 +268,7 @@ class m_addons_c_admin_ajax extends Controller_Module
 	/*private function _smileys_list()
 	{
 		return array(
-			'title' => 'Liste des smileys',
+			'title' => 'List of smileys',
 			'icon'  => 'fa-smile-o'
 		);
 	}
@@ -276,7 +276,7 @@ class m_addons_c_admin_ajax extends Controller_Module
 	private function _bbcodes_list()
 	{
 		return array(
-			'title' => 'Liste des BBcodes',
+			'title' => 'List of BBCodes',
 			'icon'  => 'fa-code'
 		);
 	}*/
@@ -287,7 +287,7 @@ class m_addons_c_admin_ajax extends Controller_Module
 				->config('dungeon_default_theme', $theme->name);
 		
 		return [
-			'success' => 'Le thème '.$theme->get_title().' a été activé'
+			'success' => 'The theme '.$theme->get_title().' has been activated'
 		];
 	}
 
@@ -296,7 +296,7 @@ class m_addons_c_admin_ajax extends Controller_Module
 		$theme->reset()->extension('json');
 		
 		return [
-			'success' => 'Le thème '.$theme->get_title().' a été réinstallé par défaut'
+			'success' => 'The theme '.$theme->get_title().' has been reinstalled by default'
 		];
 	}
 

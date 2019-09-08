@@ -138,7 +138,7 @@ class m_settings_c_admin extends Controller_Module
 	public function registration()
 	{
 		$this	->title($this->lang('configuration'))
-				->subtitle('Gestions des inscriptions')
+				->subtitle('Registrations')
 				->icon('fa-sign-in fa-rotate-90');
 
 		$users = $this->db	->select('user_id', 'username')
@@ -159,14 +159,14 @@ class m_settings_c_admin extends Controller_Module
 		$this	->form
 				->add_rules([
 					[
-						'label'   => 'Inscription',
+						'label'   => 'Registration',
 						'type'    => 'legend'
 					],
 					'registration_status' => [
-						'label'   => 'Statut',
+						'label'   => 'Status',
 						'type'    => 'radio',
 						'value'   => $this->config->dungeon_registration_status,
-						'values'  => ['Ouvertes', 'Fermées']
+						'values'  => ['Open', 'Closed']
 					],
 					/*'registration_validation' => array(
 						'label'   => 'Validation',
@@ -174,34 +174,34 @@ class m_settings_c_admin extends Controller_Module
 						'value'   => $this->config->dungeon_registration_validation,
 						'values'  => array('Automatique', 'Confirmation par e-mail')
 					),*/
-					'registration_charte' => [
-						'label'   => 'Règlement',
-						'value'   => $this->config->dungeon_registration_charte,
+					'registration_terms' => [
+						'label'   => 'Terms of usage',
+						'value'   => $this->config->dungeon_registration_terms,
 						'type'    => 'editor'
 					],
 					[
-						'label'   => 'Message de bienvenue',
+						'label'   => 'Welcome message',
 						'type'    => 'legend'
 					],
 					'welcome' => [
 						'type'    => 'checkbox',
 						'checked' => ['on' => $this->config->dungeon_welcome],
-						'values'  => ['on' => 'Envoyer un message privé aux nouveaux membres']
+						'values'  => ['on' => 'Send a private message to new members']
 					],
 					'welcome_user_id' => [
-						'label'   => 'Auteur du message',
+						'label'   => 'Author of the message',
 						'values'  => $list_users,
 						'value'   => $this->config->dungeon_welcome_user_id,
 						'type'    => 'select',
 						'size'    => 'col-md-5'
 					],
 					'welcome_title' => [
-						'label'   => 'Titre du message',
+						'label'   => 'Message title',
 						'value'   => $this->config->dungeon_welcome_title,
 						'type'    => 'text'
 					],
 					'welcome_content' => [
-						'label'   => 'Message de bienvenue',
+						'label'   => 'Message content',
 						'value'   => $this->config->dungeon_welcome_content,
 						'type'    => 'editor'
 					]
@@ -221,7 +221,7 @@ class m_settings_c_admin extends Controller_Module
 				$this->config('dungeon_'.$var, $value);
 			}
 
-			notify('Gestion des inscriptions sauvegardée avec succès');
+			notify('Registrations management successfully saved');
 
 			refresh();
 		}
@@ -231,7 +231,7 @@ class m_settings_c_admin extends Controller_Module
 					->size('col-md-3'),
 			$this	->col(
 						$this	->panel()
-								->heading('Gestions des inscriptions', 'fa-sign-in fa-rotate-90')
+								->heading('Registration management', 'fa-sign-in fa-rotate-90')
 								->body($this->form->display()))
 					->size('col-md-9')
 		);
@@ -240,13 +240,13 @@ class m_settings_c_admin extends Controller_Module
 	public function team()
 	{
 		$this	->title($this->lang('configuration'))
-				->subtitle('Notre structure')
+				->subtitle('Our structure')
 				->icon('fa-users');
 
 		$this	->form
 				->add_rules([
 					'team_name' => [
-						'label'       => 'Nom de l\'équipe',
+						'label'       => 'Team Name',
 						'value'       => $this->config->dungeon_team_name,
 						'type'        => 'text'
 					],
@@ -255,30 +255,30 @@ class m_settings_c_admin extends Controller_Module
 						'value'       => $this->config->dungeon_team_logo,
 						'type'        => 'file',
 						'upload'      => 'logos',
-						'info'        => ' d\'image (max. '.(file_upload_max_size() / 1024 / 1024).' Mo)',
+						'info'        => ' Image (max. '.(file_upload_max_size() / 1024 / 1024).' MB)',
 						'check'       => function($filename, $ext){
 							if (!in_array($ext, ['gif', 'jpeg', 'jpg', 'png']))
 							{
-								return 'Veuiller choisir un fichier d\'image';
+								return 'Please choose an image file';
 							}
 						},
-						'description' => 'Le logo pourra être affiché dans le widget type <b>header</b> <i>(en remplacement du titre et slogan)</i>.'
+						'description' => 'The logo can be displayed in the type widget <b>header</b> <i>(replacing the title and slogan)</i>.'
 					],
 					'team_type' => [
-						'label'       => 'Type de structure',
+						'label'       => 'Type of structure',
 						'value'       => $this->config->dungeon_team_type,
 						'type'        => 'text',
 						'size'        => 'col-md-4',
-						'description' => '<b>Exemple:</b> Association, entreprise, marque, etc...'
+						'description' => '<b>Example:</b> Association, company, brand, etc...'
 					],
 					'team_creation' => [
-						'label'       => 'Date de création',
+						'label'       => 'Creation Date',
 						'value'       => $this->config->dungeon_team_creation,
 						'type'        => 'date',
 						'size'        => 'col-md-4'
 					],
 					'team_biographie' => [
-						'label'       => 'Biographie',
+						'label'       => 'Biography',
 						'value'       => $this->config->dungeon_team_biographie,
 						'type'        => 'textarea'
 					]
@@ -293,7 +293,7 @@ class m_settings_c_admin extends Controller_Module
 				$this->config('dungeon_'.$var, $value);
 			}
 
-			notify('Informations sauvegardées avec succès');
+			notify('Information saved successfully');
 
 			refresh();
 		}
@@ -303,7 +303,7 @@ class m_settings_c_admin extends Controller_Module
 					->size('col-md-3'),
 			$this	->col(
 						$this	->panel()
-								->heading('Notre structure', 'fa-users')
+								->heading('Our structure', 'fa-users')
 								->body($this->form->display())
 					)
 					->size('col-md-9')
@@ -313,7 +313,7 @@ class m_settings_c_admin extends Controller_Module
 	public function socials()
 	{
 		$this	->title($this->lang('configuration'))
-				->subtitle('Réseaux sociaux')
+				->subtitle('Social networks')
 				->icon('fa-globe');
 
 		$this	->form
@@ -337,7 +337,7 @@ class m_settings_c_admin extends Controller_Module
 						'type'  => 'url'
 					],
 					'social_steam' => [
-						'label' => 'Page Steam',
+						'label' => 'Steam',
 						'icon'  => 'fa-steam',
 						'value' => $this->config->dungeon_social_steam,
 						'type'  => 'url'
@@ -401,7 +401,7 @@ class m_settings_c_admin extends Controller_Module
 				$this->config('dungeon_'.$var, $value);
 			}
 
-			notify('Réseaux sociaux sauvegardés avec succès');
+			notify('Social networks saved successfully');
 
 			refresh();
 		}
@@ -411,7 +411,7 @@ class m_settings_c_admin extends Controller_Module
 					->size('col-md-3'),
 			$this	->col(
 						$this	->panel()
-								->heading('Réseaux sociaux', 'fa-globe')
+								->heading('Social networks', 'fa-globe')
 								->body($this->form->display())
 					)
 					->size('col-md-9')
@@ -421,18 +421,18 @@ class m_settings_c_admin extends Controller_Module
 	public function captcha()
 	{
 		$this	->title($this->lang('configuration'))
-				->subtitle('Sécurité anti-bots')
+				->subtitle('Anti-bot security')
 				->icon('fa-shield');
 
 		$this	->form
 				->add_rules([
 					'captcha_public_key' => [
-						'label' => 'Clé publique Google',
+						'label' => 'Google public key',
 						'value' => $this->config->dungeon_captcha_public_key,
 						'type'  => 'text'
 					],
 					'captcha_private_key' => [
-						'label' => 'Clé privée Google',
+						'label' => 'Google private key',
 						'value' => $this->config->dungeon_captcha_private_key,
 						'type'  => 'text'
 					]
@@ -447,7 +447,7 @@ class m_settings_c_admin extends Controller_Module
 				$this->config('dungeon_'.$var, $value);
 			}
 
-			notify('Configuration de Google reCAPTCHA sauvegardée avec succès');
+			notify('Configuration of Google reCAPTCHA successfully saved');
 
 			refresh();
 		}
@@ -457,7 +457,7 @@ class m_settings_c_admin extends Controller_Module
 					->size('col-md-3'),
 			$this	->col(
 						$this	->panel()
-								->heading('Configuration de Google reCAPTCHA', 'fa-shield')
+								->heading('Google reCAPTCHA configuration', 'fa-shield')
 								->body('<div class="alert alert-info"><a href="https://www.google.com/recaptcha/intro/index.html" target="_blank">https://www.google.com/recaptcha/intro/index.html</a></div>'.$this->form->display())
 					)
 					->size('col-md-9')
@@ -467,30 +467,30 @@ class m_settings_c_admin extends Controller_Module
 	public function email()
 	{
 		$this	->title($this->lang('configuration'))
-				->subtitle('Serveur e-mail')
+				->subtitle('SMTP Server')
 				->icon('fa-envelope-o');
 
 		$this	->form
 				->add_rules([
 					'email_smtp' => [
-						'label'  => 'Serveur SMTP',
+						'label'  => 'SMTP Server',
 						'value'  => $this->config->dungeon_email_smtp,
 						'type'   => 'text'
 					],
 					'email_username' => [
-						'label'  => 'Utilisateur',
+						'label'  => 'Email username',
 						'value'  => $this->config->dungeon_email_username,
 						'type'   => 'text',
 						'size'   => 'col-md-5'
 					],
 					'email_password' => [
-						'label'  => 'Mot de passe',
+						'label'  => 'Email password',
 						'value'  => $this->config->dungeon_email_password,
 						'type'   => 'password',
 						'size'   => 'col-md-5'
 					],
 					'email_secure' => [
-						'label'  => 'Sécurité',
+						'label'  => 'Email secure',
 						'type'   => 'radio',
 						'value'  => $this->config->dungeon_email_secure,
 						'values' => ['SSL', 'TLS']
@@ -512,7 +512,7 @@ class m_settings_c_admin extends Controller_Module
 				$this->config('dungeon_'.$var, $value);
 			}
 
-			notify('Configuration du serveur SMTP sauvegardée avec succès');
+			notify('Configuration of the SMTP server successfully saved');
 
 			refresh();
 		}
@@ -522,7 +522,7 @@ class m_settings_c_admin extends Controller_Module
 					->size('col-md-3'),
 			$this->col(
 						$this	->panel()
-								->heading('Serveur e-mail', 'fa-envelope-o')
+								->heading('SMTP Server', 'fa-envelope-o')
 								->body($this->form->display())
 					)
 					->size('col-md-9')

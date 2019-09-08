@@ -31,7 +31,7 @@ class m_members_c_index extends Controller_Module
 						'size'    => TRUE
 					],
 					[
-						'title'   => 'Membre',
+						'title'   => 'Members',
 						'content' => function($data){
 							return '<div>'.Dungeon()->user->link($data['user_id'], $data['username']).'</div><small>'.icon('fa-circle '.($data['online'] ? 'text-green' : 'text-gray')).' '.$this->lang($data['admin'] ? 'admin' : 'member').' '.$this->lang($data['online'] ? 'online' : 'offline').'</small>';
 						},

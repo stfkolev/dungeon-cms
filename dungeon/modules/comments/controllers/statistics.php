@@ -24,7 +24,7 @@ class m_comments_c_statistics extends Controller_Module
 	{
 		return [
 			'comments' => [
-				'title' => 'Commentaires',
+				'title' => 'Comments',
 				'data'  => function(){
 					$this->db->from('dungeon_comments');
 					return 'date';

@@ -29,7 +29,7 @@ class m_statistics_c_admin extends Controller_Module
 			$this->row(
 				$this	->col(
 							$this	->panel()
-									->heading('Statistiques', 'fa-bar-chart')
+									->heading('Statistics', 'fa-bar-chart')
 									->body($this	->form
 													->set_id('sq6fswkfb81n0lu4cb7eyb3tuixcovla')
 													->add_rules('statistics')

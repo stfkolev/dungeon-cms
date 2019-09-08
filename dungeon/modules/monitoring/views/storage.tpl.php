@@ -3,7 +3,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="<?php echo $this->lang('close'); ?>"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title">Sauvegarde</h4>
+				<h4 class="modal-title">Safeguard</h4>
 			</div>
 			<div class="modal-body">
 				<div class="steps-body text-center">
@@ -24,26 +24,26 @@
 							<div class="step">
 								<?php echo icon('fa-floppy-o'); ?>
 							</div>
-							<span class="span-legend">Lancement</span>
+							<span class="span-legend">Launching</span>
 						</div>
 						<div class="col-md-4 col-md-offset-2">
 							<div class="step">
 								<?php echo icon('fa-database'); ?>
 							</div>
-							<span class="span-legend">Données</span>
+							<span class="span-legend">Database</span>
 						</div>
 						<div class="col-md-2 col-md-offset-2">
 							<div class="step">
 								<?php echo icon('fa-files-o'); ?>
 							</div>
-							<span class="span-legend">Fichiers</span>
+							<span class="span-legend">Files</span>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal"><?php echo $this->lang('cancel'); ?></button>
-				<a class="btn btn-primary" data-loading-text="Sauvegarde en cours...">Lancer la sauvegarde</a>
+				<a class="btn btn-primary" data-loading-text="Sauvegarde en cours...">Start backup</a>
 			</div>
 		</div>
 	</div>
@@ -60,7 +60,7 @@
 <div class="row">
 	<div class="col-md-6 col-xs-6 text-center">
 		<h4 id="storage-free" class="monitoring-storage-title"><?php echo icon('fa-spinner fa-spin'); ?></h4>
-		<span class="span-legend">Libre</span>
+		<span class="span-legend">Free</span>
 	</div>
 	<div class="col-md-6 col-xs-6 text-center">
 		<h4 id="storage-total" class="monitoring-storage-title"><?php echo icon('fa-spinner fa-spin'); ?></h4>

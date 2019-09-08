@@ -1,6 +1,5 @@
 //! moment.js locale configuration
-//! locale : french (fr)
-//! author : John Fischer : https://github.com/jfroffice
+//! locale : english (en)
 
 (function (global, factory) {
    typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../moment')) :
@@ -9,12 +8,12 @@
 }(this, function (moment) { 'use strict';
 
 
-    var fr = moment.defineLocale('fr', {
-        months : 'janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre'.split('_'),
-        monthsShort : 'janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.'.split('_'),
-        weekdays : 'dimanche_lundi_mardi_mercredi_jeudi_vendredi_samedi'.split('_'),
-        weekdaysShort : 'dim._lun._mar._mer._jeu._ven._sam.'.split('_'),
-        weekdaysMin : 'Di_Lu_Ma_Me_Je_Ve_Sa'.split('_'),
+    var en = moment.defineLocale('en', {
+        months : 'january_february_march_april_may_june_july_august_september_october_november_december'.split('_'),
+        monthsShort : 'jan._feb._mar_apr._may_jun_jul._aug_sept._oct._nov._dec.'.split('_'),
+        weekdays : 'sunday_monday_tuesday_wednesday_thursday_friday_saturday'.split('_'),
+        weekdaysShort : 'sun._mon._tue._wed._thu._fri._sat.'.split('_'),
+        weekdaysMin : 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_'),
         longDateFormat : {
             LT : 'HH:mm',
             LTS : 'HH:mm:ss',
@@ -24,27 +23,27 @@
             LLLL : 'dddd D MMMM YYYY HH:mm'
         },
         calendar : {
-            sameDay: '[Aujourd\'hui à] LT',
-            nextDay: '[Demain à] LT',
-            nextWeek: 'dddd [à] LT',
-            lastDay: '[Hier à] LT',
-            lastWeek: 'dddd [dernier à] LT',
+            sameDay: '[Today at] LT',
+            nextDay: '[Tomorrow at] LT',
+            nextWeek: 'dddd [at] LT',
+            lastDay: '[Yesterday at] LT',
+            lastWeek: 'dddd [last to] LT',
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'dans %s',
-            past : 'il y a %s',
-            s : 'quelques secondes',
-            m : 'une minute',
+            future : 'in %s',
+            past : '%s ago',
+            s : 'a few seconds',
+            m : 'one minute',
             mm : '%d minutes',
-            h : 'une heure',
-            hh : '%d heures',
-            d : 'un jour',
-            dd : '%d jours',
-            M : 'un mois',
-            MM : '%d mois',
-            y : 'un an',
-            yy : '%d ans'
+            h : 'one hour',
+            hh : '%d hours',
+            d : 'one day',
+            dd : '%d days',
+            M : 'one month',
+            MM : '%d months',
+            y : 'one year',
+            yy : '%d years'
         },
         ordinalParse: /\d{1,2}(er|)/,
         ordinal : function (number) {
@@ -56,6 +55,6 @@
         }
     });
 
-    return fr;
+    return en;
 
 }));

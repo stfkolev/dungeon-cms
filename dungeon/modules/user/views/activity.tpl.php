@@ -11,5 +11,5 @@
 	<?php endforeach; ?>
 </div>
 <?php else: ?>
-Aucun message récent...
+No recent posts ...
 <?php endif; ?>

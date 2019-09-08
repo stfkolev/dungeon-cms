@@ -20,7 +20,7 @@ along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 
 class m_statistics extends Module
 {
-	public $title         = 'Statistiques';
+	public $title         = 'Statistics';
 	public $description   = '';
 	public $icon          = 'fa-bar-chart';
 	public $link          = 'http://www.dungeon.com';

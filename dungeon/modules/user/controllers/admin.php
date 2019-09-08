@@ -22,7 +22,7 @@ class m_user_c_admin extends Controller_Module
 {
 	public function index($members)
 	{
-		$this	->title('Membres / Groupes')
+		$this	->title('Members / Groups')
 				->icon('fa-users');
 		
 		$table_groups = $this
@@ -264,7 +264,7 @@ class m_user_c_admin extends Controller_Module
 				$member_id
 			);
 			
-			notify('Membre édité');
+			notify('Member edited');
 
 			redirect_back('admin/user');
 		}
@@ -275,7 +275,7 @@ class m_user_c_admin extends Controller_Module
 				$post['groups']
 			);
 
-			notify('Groupes du membre édités');
+			notify('Member groups edited');
 
 			redirect_back('admin/user');
 		}
@@ -455,7 +455,7 @@ class m_user_c_admin extends Controller_Module
 				->add_columns([
 					[
 						'content' => function($data){
-							return $data['remember_me'] ? '<i class="fa fa-toggle-on text-green" data-toggle="tooltip" title="Connexion persistante"></i>' : '<i class="fa fa-toggle-off text-grey" data-toggle="tooltip" title="Connexion non persistante"></i>';
+							return $data['remember_me'] ? '<i class="fa fa-toggle-on text-green" data-toggle="tooltip" title="Persistent connection"></i>' : '<i class="fa fa-toggle-off text-grey" data-toggle="tooltip" title="Non-persistent connection"></i>';
 						},
 						'size'    => TRUE,
 						'align'   => 'center'

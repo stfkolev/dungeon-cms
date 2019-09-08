@@ -112,7 +112,7 @@ class m_user_c_index extends Controller_Module
 
 	public function sessions($sessions)
 	{
-		$this	->title('Gérer mes sessions')
+		$this	->title('Manage my sessions')
 				->icon('fa-globe')
 				->breadcrumb();
 		
@@ -436,11 +436,11 @@ class m_user_c_index extends Controller_Module
 			]
 		];
 
-		if (!empty($this->config->dungeon_registration_charte))
+		if (!empty($this->config->dungeon_registration_terms))
 		{
-			$rules['registration_charte'] = [
+			$rules['registration_terms'] = [
 				'type'   => 'checkbox',
-				'values' => ['on' => 'En vous inscrivant, vous reconnaissez avoir pris connaissance de <a href="#modalCharte" role="dialog" data-toggle="modal" data-target="#modalCharte"">notre règlement</a> et de l\'accepter.'],
+				'values' => ['on' => 'By registering, you acknowledge having read the <a href="#modalTerms" role="dialog" data-toggle="modal" data-target="#modalTerms"">terms of usage of our website</a> and accept it.'],
 				'rules'  => 'required'
 			];
 		}
@@ -480,7 +480,7 @@ class m_user_c_index extends Controller_Module
 			if ($user_id == -1)
 			{
 				//TODO
-				//$form_login->alert('Compte utilisateur inactif !', 'Ce compte n\'a pas encore été activé par mail. Si vous n\'avez pas reçu de mail d\'activation vous pouvez utiliser la fonction <a href="'.url('user/activate').'" onclick="$(\'#form_activate\').submit(); return false;">Activation de compte</a>.', 'error');
+				//$form_login->alert('Inactive user account !', 'This account has not yet been activated by email. If you have not received an activation email you can use the function <a href="'.url('user/activate').'" onclick="$(\'#form_activate\').submit(); return false;">Account activation</a>.', 'error');
 			}
 			else if ($user_id > 0 && $this->password->is_valid($password.$salt, $hash, (bool)$salt))
 			{
@@ -547,7 +547,7 @@ class m_user_c_index extends Controller_Module
 			$this	->col(
 						$this	->panel()
 								->heading($this->lang('create_account_title'), 'fa-sign-in fa-rotate-90')
-								->body($this->config->dungeon_registration_status == 0 ? $this->lang('create_account_message').$form_registration->display().($this->config->dungeon_registration_charte ? $this->view('charte') : '') : '<div class="alert alert-warning no-margin">Les inscriptions sur notre site sont fermées...</div>')
+								->body($this->config->dungeon_registration_status == 0 ? $this->lang('create_account_message').$form_registration->display().($this->config->dungeon_registration_terms ? $this->view('terms') : '') : '<div class="alert alert-warning no-margin">Les inscriptions sur notre site sont fermées...</div>')
 					)
 					->size('col-md-6')
 		);
@@ -558,7 +558,7 @@ class m_user_c_index extends Controller_Module
 
 			$col->prepend(
 				$this	->panel()
-						->heading('Connexion rapide', 'fa-user-circle')
+						->heading('Quick Login', 'fa-user-circle')
 						->body('<div class="text-center">'.implode($authenticators).'</div>')
 			);
 		}
@@ -696,7 +696,7 @@ class m_user_c_index extends Controller_Module
 			$this->col(
 				$this	->panel()
 						->heading()
-						->body(!$messages ? '<h4 class="text-center">Aucun message</h4>' : $this->view('messages/inbox', [
+						->body(!$messages ? '<h4 class="text-center">No messages</h4>' : $this->view('messages/inbox', [
 							'messages'     => $messages,
 							'allow_delete' => $allow_delete
 						]), FALSE)
@@ -708,21 +708,21 @@ class m_user_c_index extends Controller_Module
 
 	public function _messages_inbox($messages)
 	{
-		return $this	->title('Boîte de réception')
+		return $this	->title('Inbox')
 						->icon('fa-inbox')
 						->_messages($messages, TRUE);
 	}
 
 	public function _messages_sent($messages)
 	{
-		return $this	->title('Messages envoyés')
+		return $this	->title('Outbox')
 						->icon('fa-send-o')
 						->_messages($messages);
 	}
 
 	public function _messages_archives($messages)
 	{
-		return $this	->title('Archives')
+		return $this	->title('Archive')
 						->icon('fa-archive')
 						->_messages($messages);
 	}
@@ -732,7 +732,7 @@ class m_user_c_index extends Controller_Module
 		$this	->form
 				->add_rules([
 					'message' => [
-						'label' => 'Mon message',
+						'label' => 'My messages',
 						'type'  => 'editor',
 						'rules' => 'required'
 					],
@@ -768,25 +768,25 @@ class m_user_c_index extends Controller_Module
 
 	public function _messages_compose($username)
 	{
-		$this	->title('Nouveau message')
+		$this	->title('Compose PM')
 				->icon('fa-edit')
 				->breadcrumb()
 				->form
 				->add_rules([
 					'title' => [
-						'label' => 'Sujet du message',
+						'label' => 'Subject',
 						'type'  => 'text',
 						'rules' => 'required'
 					],
 					'recipients' => [
-						'label'       => 'Destinataires',
+						'label'       => 'Recipient',
 						'value'       => $username,
 						'type'        => 'text',
 						'rules'       => 'required',
-						'description' => 'Séparez plusieurs destinataires par un <b>;</b> <small>(point virgule)</small>'
+						'description' => 'Separate multiple recipients by one <b>;</b> <small>(semicolon)</small>'
 					],
 					'message' => [
-						'label' => 'Mon message',
+						'label' => 'Message',
 						'type'  => 'editor',
 						'rules' => 'required'
 					]
@@ -821,7 +821,7 @@ class m_user_c_index extends Controller_Module
 		$this	->title($this->lang('delete_message'))
 				->subtitle($title)
 				->form
-				->confirm_deletion($this->lang('delete_confirmation'), 'Êtes-vous sûr(e) de vouloir supprimer le message <b>'.$title.'</b> ?');
+				->confirm_deletion($this->lang('delete_confirmation'), 'Are you sure you want to delete the message <b>'.$title.'</b> ?');
 
 		if ($this->form->is_valid())
 		{
@@ -855,7 +855,7 @@ class m_user_c_index extends Controller_Module
 		$this->css('profile');
 
 		return $this->panel()
-					->heading('Mon profil', 'fa-user')
+					->heading('My profile', 'fa-user')
 					->body($this->view('profile', $user_profile = $this->model()->get_user_profile($this->user('user_id'))))
 					->size('col-md-4 col-lg-3');
 	}
@@ -920,7 +920,7 @@ class m_user_c_index extends Controller_Module
 		}
 
 		return $this->panel()
-					->heading('Activité récente')
+					->heading('Recent activity')
 					->body($this->view('activity', [
 						'user_activity' => $user_activity
 					]));
@@ -929,9 +929,9 @@ class m_user_c_index extends Controller_Module
 	private function _panel_messages()
 	{
 		return $this->panel()
-					->heading('Messagerie privée', 'fa-envelope-o')
+					->heading('Private messages', 'fa-envelope-o')
 					->body($this->view('messages/menu'), FALSE)
-					->footer('<a href="'.url('user').'">'.icon('fa-arrow-circle-o-left').' Retour sur mon espace</a>', 'left')
+					->footer('<a href="'.url('user').'">'.icon('fa-arrow-circle-o-left').' Return to my space</a>', 'left')
 					->size('col-md-4 col-lg-3');
 	}
 }

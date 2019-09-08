@@ -29,7 +29,7 @@ class i_0_1_4_2 extends Install
 				->config('dungeon_email_secure', '', 'string')
 				->config('dungeon_email_smtp', '', 'string')
 				->config('dungeon_email_username', '', 'string')
-				->config('dungeon_registration_charte', '', 'string')
+				->config('dungeon_registration_terms', '', 'string')
 				->config('dungeon_registration_status', '0', 'string')
 				->config('dungeon_social_behance', '', 'string')
 				->config('dungeon_social_deviantart', '', 'string')

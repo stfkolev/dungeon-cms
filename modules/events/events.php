@@ -20,7 +20,7 @@ along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 
 class m_events extends Module
 {
-	public $title       = 'Événements';
+	public $title       = 'Events';
 	public $description = '';
 	public $icon        = 'fa-calendar';
 	public $link        = 'http://www.dungeon.com';
@@ -59,7 +59,7 @@ class m_events extends Module
 		$this	->form
 				->add_rules([
 					'events_per_page' => [
-						'label'       => 'Nombre d\'événement par page',
+						'label'       => 'Number of events per page',
 						'value'       => $this->config->events_per_page ?: '10',
 						'type'        => 'number',
 						'rules'       => 'required',
@@ -68,7 +68,7 @@ class m_events extends Module
 					'events_alert_mp' => [
 						'type'        => 'checkbox',
 						'checked'     => ['on' => $this->config->events_alert_mp],
-						'values'      => ['on' => 'Être averti par message privé des invitations']
+						'values'      => ['on' => 'Be notified by private message of invitations']
 					]
 				])
 				->add_submit($this->lang('edit'))
@@ -92,21 +92,21 @@ class m_events extends Module
 			'default' => [
 				'access'  => [
 					[
-						'title'  => 'Événements',
+						'title'  => 'Events',
 						'icon'   => 'fa-calendar',
 						'access' => [
 							'add_event' => [
-								'title' => 'Ajouter',
+								'title' => 'Add',
 								'icon'  => 'fa-plus',
 								'admin' => TRUE
 							],
 							'modify_event' => [
-								'title' => 'Modifier',
+								'title' => 'Modify',
 								'icon'  => 'fa-edit',
 								'admin' => TRUE
 							],
 							'delete_event' => [
-								'title' => 'Supprimer',
+								'title' => 'Delete',
 								'icon'  => 'fa-trash-o',
 								'admin' => TRUE
 							]
@@ -117,17 +117,17 @@ class m_events extends Module
 						'icon'   => 'fa-bookmark-o',
 						'access' => [
 							'add_events_type' => [
-								'title' => 'Ajouter un type',
+								'title' => 'Add type',
 								'icon'  => 'fa-plus',
 								'admin' => TRUE
 							],
 							'modify_events_type' => [
-								'title' => 'Modifier un type',
+								'title' => 'Modify type',
 								'icon'  => 'fa-edit',
 								'admin' => TRUE
 							],
 							'delete_events_type' => [
-								'title' => 'Supprimer un type',
+								'title' => 'Delete type',
 								'icon'  => 'fa-trash-o',
 								'admin' => TRUE
 							]

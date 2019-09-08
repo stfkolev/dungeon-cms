@@ -56,7 +56,7 @@ $(function(){
 
 			$.each(data.notifications, function(i, notification){
 				notifications += '	<tr>\
-										<td class="col-lg-2"><span class="label label-'+notification[1]+'">'+(notification[1] == 'danger' ? '<?php echo icon('fa-bug'); ?> Erreur' : (notification[1] == 'warning' ? '<?php echo icon('fa-flash'); ?> Anomalie' : '<?php echo icon('fa-exclamation-circle'); ?> Conseil'))+'</span></td>\
+										<td class="col-lg-2"><span class="label label-'+notification[1]+'">'+(notification[1] == 'danger' ? '<?php echo icon('fa-bug'); ?> Error' : (notification[1] == 'warning' ? '<?php echo icon('fa-flash'); ?> Anomaly' : '<?php echo icon('fa-exclamation-circle'); ?> Advice'))+'</span></td>\
 										<td class="vcenter">'+notification[0]+'</td>\
 									</tr>';
 				count[notification[1]]++;
@@ -68,7 +68,7 @@ $(function(){
 				$('#monitoring-'+key).html(value);
 			});
 
-			$('#monitoring-text').html(count.danger ? 'Le bateau coule !' : (count.warning ? 'Iceberg, droit devant !' : 'Rien à signaler capitaine !'));
+			$('#monitoring-text').html(count.danger ? 'The boat sinks !' : (count.warning ? 'Iceberg, straight ahead !' : 'Nothing to report captain !'));
 			$('.panel-monitoring').removeClass('bg-gray').addClass(count.danger ? 'bg-red' : (count.warning ? 'bg-orange' : 'bg-green'));
 			$('.monitoring-icon-status').addClass(count.danger ? 'beat-fast' : (count.warning ? 'beat-medium' : 'beat-slow'));
 
@@ -140,7 +140,7 @@ $(function(){
 			success: function(){
 				setTimeout(function(){
 					$('#modal-backup').modal('hide');
-					notify('Sauvegarde réalisée dans le dossier <b>backups</b> de votre FTP');
+					notify('Backup performed in the folder <b>backups</b> in the FTP');
 				}, 1000);
 			}
 		});

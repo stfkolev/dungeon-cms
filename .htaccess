@@ -6,7 +6,7 @@ AddDefaultCharset UTF-8
 
 	##If your Dungeon directory is not at http root
 	##you need to replace "/" by the correct directory, for example "RewriteBase /dungeon/"
-	RewriteBase /dungeon
+	RewriteBase /dungeoncms
 
 	##Allow direct access to specific directories
 	#RewriteCond %{REQUEST_URI} ^/(dir1|dir2)/

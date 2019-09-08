@@ -1026,7 +1026,7 @@ INSERT INTO `dungeon_settings` VALUES('dungeon_email_port', '', '', '25', 'int')
 INSERT INTO `dungeon_settings` VALUES('dungeon_email_secure', '', '', '', 'string');
 INSERT INTO `dungeon_settings` VALUES('dungeon_email_smtp', '', '', '', 'string');
 INSERT INTO `dungeon_settings` VALUES('dungeon_email_username', '', '', '', 'string');
-INSERT INTO `dungeon_settings` VALUES('dungeon_registration_charte', '', '', '', 'string');
+INSERT INTO `dungeon_settings` VALUES('dungeon_registration_terms', '', '', '', 'string');
 INSERT INTO `dungeon_settings` VALUES('dungeon_registration_status', '', '', '0', 'string');
 INSERT INTO `dungeon_settings` VALUES('dungeon_social_behance', '', '', '', 'string');
 INSERT INTO `dungeon_settings` VALUES('dungeon_social_deviantart', '', '', '', 'string');

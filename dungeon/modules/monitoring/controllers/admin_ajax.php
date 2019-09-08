@@ -30,12 +30,12 @@ class m_monitoring_c_admin_ajax extends Controller_Module
 
 			if (version_compare(PHP_VERSION, 7, '<'))
 			{
-				$this->_notify('Il est recommandé d\'utiliser PHP 7', 'info');
+				$this->_notify('It is recommended to use PHP 7', 'info');
 			}
 
 			if ($this->db->get_info('driver') != 'mysqli')
 			{
-				$this->_notify('Il est recommandé d\'utiliser MySQLi', 'info');
+				$this->_notify('It is recommended to use MySQLi', 'info');
 			}
 
 			dir_create('cache/monitoring');
@@ -165,8 +165,8 @@ class m_monitoring_c_admin_ajax extends Controller_Module
 							
 							if (file_exists($dir.$name) && !is_writable($dir.$name))
 							{
-								$tags[] = 'Protégé en écriture';
-								$this->_notify('Le dossier <code>'.$dir.$name.'</code> est protégé en écriture', 'warning');
+								$tags[] = 'Protected from writing';
+								$this->_notify('The folder <code>'.$dir.$name.'</code> is write protected', 'warning');
 							}
 							
 							$output[] = [
@@ -194,26 +194,26 @@ class m_monitoring_c_admin_ajax extends Controller_Module
 								{
 									if (!preg_match('#^(?:modules|themes|widgets)/#', $dir))
 									{
-										$tags[] = 'Inconnu';
-										$this->_notify('Le fichier <code>'.$dir.$name.'</code> ne devrait pas se trouver là', 'error');
+										$tags[] = 'Unknown';
+										$this->_notify('The folder <code>'.$dir.$name.'</code> should not be there', 'error');
 									}
 								}
 								else if ($md5 === '')
 								{
-									$tags[] = 'Manquant';
-									$this->_notify('Le fichier <code>'.$dir.$name.'</code> est manquant', 'error');
+									$tags[] = 'Missing';
+									$this->_notify('The folder <code>'.$dir.$name.'</code> is missing', 'error');
 								}
 								else if ($dungeon_md5 != $md5)
 								{
-									$tags[] = 'Corrompu';
-									$this->_notify('Le fichier <code>'.$dir.$name.'</code> est corrompu', 'warning');
+									$tags[] = 'Corrupted';
+									$this->_notify('The folder <code>'.$dir.$name.'</code> is corrupted', 'warning');
 								}
 							}
 							
 							if ($md5 !== '' && !is_writable($dir.$name))
 							{
-								$tags[] = 'Protégé en écriture';
-								$this->_notify('Le fichier <code>'.$dir.$name.'</code> est protégé en écriture', 'warning');
+								$tags[] = 'Protected from writing';
+								$this->_notify('The folder <code>'.$dir.$name.'</code> is write protected', 'warning');
 							}
 							
 							$output[] = [
@@ -230,11 +230,11 @@ class m_monitoring_c_admin_ajax extends Controller_Module
 			{
 				if (!($cainfo = ini_get('curl.cainfo')) || !file_exists($cainfo))
 				{
-					$this->_notify('Problème de téléchargement, veuillez configurer <a href="http://php.net/manual/fr/curl.configuration.php#ini.curl.cainfo" target="_blank">curl.cainfo</a>', 'error');
+					$this->_notify('Download problem, please configure <a href="http://php.net/manual/fr/curl.configuration.php#ini.curl.cainfo" target="_blank">curl.cainfo</a>', 'error');
 				}
 				else
 				{
-					$this->_notify('Problème de téléchargement, erreur inconnue', 'error');
+					$this->_notify('Download problem, unknown error', 'error');
 				}
 			}
 
