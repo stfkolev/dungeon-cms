@@ -20,64 +20,64 @@ along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 
 $rules = [
 	'title' => [
-		'label'       => 'Intitulé de l\'offre',
+		'label'       => 'Title',
 		'value'       => $this->form->value('title'),
 		'type'        => 'text',
 		'rules'       => 'required'
 	],
 	'team_id' => [
-		'label'       => 'Associer à l\'équipe',
+		'label'       => 'Associate with the team',
 		'value'       => $this->form->value('team_id'),
 		'values'      => $this->form->value('teams'),
 		'type'        => 'select',
 		'size'        => 'col-md-4',
-		'description' => 'Laisser vide pour ne pas associer d\'équipe.<br />Si une candidature est acceptée, le joueur sera automatiquement ajoutée dans l\'équipe sélectionnée avec le rôle associé'
+		'description' => 'Leave empty to not associate team.<br />If an application is accepted, the player will be automatically added to the selected team with the associated role'
 	],
 	'role' => [
-		'label'       => 'Rôle proposé',
+		'label'       => 'Position',
 		'value'       => $this->form->value('role'),
 		'type'        => 'text',
 		'icon'        => 'fa-sitemap',
-		'description' => 'Exemple: Joueurs, Manager, etc...',
+		'description' => 'Example: Development, Server Manager, etc...',
 		'size'        => 'col-md-4',
 		'rules'       => 'required'
 	],
 	'icon' => [
-		'label'       => 'Icône',
+		'label'       => 'Icon',
 		'value'       => $this->form->value('icon'),
 		'default'     => 'fa-bullhorn',
 		'type'        => 'iconpicker'
 	],
 	'size' => [
-		'label'       => 'Nombre de place',
+		'label'       => 'Available spots',
 		'value'       => $this->form->value('size') ?: '1',
 		'type'        => 'number',
 		'size'        => 'col-md-2',
 		'rules'       => 'required'
 	],
 	'date_end' => [
-		'label'       => 'Date de clôture',
+		'label'       => 'Deadline',
 		'value'       => $this->form->value('date_end'),
 		'type'        => 'date',
 		'check'       => function($value){
 			if ($value && strtotime($value) < strtotime(date('Y-m-d')))
 			{
-				return 'Vraiment ?! 2.1 Gigowatt !';
+				return 'Really ?! 2.1 Gigwatt !';
 			}
 		},
 		'size'        => 'col-md-4',
-		'description' => 'Laisser vide pour créer une offre permanente'
+		'description' => 'Leave empty to create a permanent offer'
 	],
 	'image' => [
 		'label'       => 'Image',
 		'value'       => $this->form->value('image_id'),
 		'type'        => 'file',
 		'upload'      => 'news',
-		'info'        => ' d\'image (max. '.(file_upload_max_size() / 1024 / 1024).' Mo)',
+		'info'        => ' image (max. '.(file_upload_max_size() / 1024 / 1024).' MB)',
 		'check'       => function($filename, $ext){
 			if (!in_array($ext, ['gif', 'jpeg', 'jpg', 'png']))
 			{
-				return 'Veuiller choisir un fichier d\'image';
+				return 'Please choose an image file';
 			}
 		}
 	],
@@ -88,19 +88,19 @@ $rules = [
 		'rules'       => 'required'
 	],
 	'description' => [
-		'label'       => 'Description du poste',
+		'label'       => 'Description',
 		'value'       => $this->form->value('description'),
 		'type'        => 'editor'
 	],
 	'requierments' => [
-		'label'       => 'Profil recherché',
+		'label'       => 'Requirements',
 		'value'       => $this->form->value('requierments'),
 		'type'        => 'editor'
 	],
 	'closed' => [
 		'type'        => 'checkbox',
 		'checked'     => ['on' => $this->form->value('closed')],
-		'values'      => ['on' => 'Fermer le dépôt des candidatures']
+		'values'      => ['on' => 'Close the submission of applications']
 	]
 ];
 

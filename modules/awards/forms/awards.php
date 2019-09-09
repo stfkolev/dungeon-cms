@@ -20,13 +20,13 @@ along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 
 $rules = [
 	'name' => [
-		'label' => 'Titre de l\'événement',
+		'label' => 'Event Title',
 		'value' => $this->form->value('name'),
 		'type'  => 'text',
 		'rules' => 'required'
 	],
 	'location' => [
-		'label' => 'Lieu',
+		'label' => 'Location',
 		'icon'  => 'fa-map-marker',
 		'value' => $this->form->value('location'),
 		'type'  => 'text'
@@ -45,7 +45,7 @@ $rules = [
 		'rules' => 'required'
 	],
 	'team' => [
-		'label'  => 'Équipe',
+		'label'  => 'Team',
 		'value'  => $this->form->value('team_id'),
 		'values' => $this->form->value('teams'),
 		'type'   => 'select',
@@ -53,7 +53,7 @@ $rules = [
 		'rules'  => 'required'
 	],
 	'game' => [
-		'label'  => 'Jeu',
+		'label'  => 'Game',
 		'value'  => $this->form->value('game_id'),
 		'values' => $this->form->value('games'),
 		'type'   => 'select',
@@ -61,7 +61,7 @@ $rules = [
 		'rules'  => 'required'
 	],
 	'platform' => [
-		'label'  => 'Plateforme',
+		'label'  => 'Platform',
 		'icon'   => 'fa-tv',
 		'value'  => $this->form->value('platform'),
 		'values' => [
@@ -78,7 +78,7 @@ $rules = [
 		'rules'  => 'required'
 	],
 	'ranking' => [
-		'label' => 'Classement',
+		'label' => 'Ranking',
 		'icon'  => 'fa-trophy',
 		'value' => $this->form->value('ranking'),
 		'type'  => 'number',
@@ -86,7 +86,7 @@ $rules = [
 		'rules' => 'required'
 	],
 	'participants' => [
-		'label' => 'Nombre d\'équipes',
+		'label' => 'Participants',
 		'icon'  => 'fa-users',
 		'value' => $this->form->value('participants'),
 		'type'  => 'number',
@@ -94,7 +94,7 @@ $rules = [
 		'rules' => 'required'
 	],
 	'description' => [
-		'label' => 'Commentaire',
+		'label' => 'Description',
 		'value' => $this->form->value('description'),
 		'type'  => 'editor'
 	],

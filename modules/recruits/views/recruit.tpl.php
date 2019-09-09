@@ -5,7 +5,7 @@
 	</div>
 	<?php endif; ?>
 	<div class="col-md-<?php echo $data['image_id'] ? '8' : '12'; ?>">
-		<p><b><?php echo icon('fa-clock-o'); ?> Offre publiée le <?php echo timetostr('%e %b %Y', $data['date']); ?></b></p>
+		<p><b><?php echo icon('fa-clock-o'); ?> Offer published on <?php echo timetostr('%e %b %Y', $data['date']); ?></b></p>
 		<?php echo $data['introduction']; ?>
 	</div>
 </div>
@@ -16,7 +16,7 @@
 			<?php echo $data['description']; ?>
 		<?php endif; ?>
 		<?php if ($data['requierments']): ?>
-			<h3>Profil recherché</h3>
+			<h3>Requirements</h3>
 			<?php echo $data['requierments']; ?>
 		<?php endif; ?>
 	</div>

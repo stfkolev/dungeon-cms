@@ -4,19 +4,19 @@
 	<?php endif; ?>
 	<div class="panel-body">
 		<div class="well text-center">
-			<h4><?php echo $data['stats-team'] ? 'Palmarès de cette équipe' : 'Palmarès sur ce jeu'; ?></h4>
+			<h4><?php echo $data['stats-team'] ? 'Awards on this team' : 'Awards on this game'; ?></h4>
 			<ul class="list-inline no-margin">
 				<li>
 					<span data-toggle="tooltip" title="1ère place"><?php echo icon('fa-trophy fa-2x trophy-gold'); ?></span><br />
-					<b><?php echo $data['total_gold'][0].($data['total_gold'][0] > 1 ? ' trophées' : ' trophée'); ?></b>
+					<b><?php echo $data['total_gold'][0].($data['total_gold'][0] > 1 ? ' trophies' : ' trophy'); ?></b>
 				</li>
 				<li>
 					<span data-toggle="tooltip" title="2ème place"><?php echo icon('fa-trophy fa-2x trophy-silver'); ?></span><br />
-					<b><?php echo $data['total_silver'][0].($data['total_silver'][0] > 1 ? ' trophées' : ' trophée'); ?></b>
+					<b><?php echo $data['total_silver'][0].($data['total_silver'][0] > 1 ? ' trophies' : ' trophy'); ?></b>
 				</li>
 				<li>
 					<span data-toggle="tooltip" title="3ème place"><?php echo icon('fa-trophy fa-2x trophy-bronze'); ?></span><br />
-					<b><?php echo $data['total_bronze'][0].($data['total_bronze'][0] > 1 ? ' trophées' : ' trophée'); ?></b>
+					<b><?php echo $data['total_bronze'][0].($data['total_bronze'][0] > 1 ? ' trophies' : ' trophy'); ?></b>
 				</li>
 			</ul>
 		</div>
@@ -28,9 +28,9 @@
 			<thead>
 				<tr>
 					<th class="col-md-1"></th>
-					<th class="col-md-1 text-center"><span data-toggle="tooltip" title="Classement"><?php echo icon('fa-trophy'); ?></span></th>
-					<th class="col-md-2"><span data-toggle="tooltip" title="Plateforme"><?php echo icon('fa-tv'); ?></span></th>
-					<th class="col-md-8" colspan="2">Événement</th>
+					<th class="col-md-1 text-center"><span data-toggle="tooltip" title="Ranking"><?php echo icon('fa-trophy'); ?></span></th>
+					<th class="col-md-2"><span data-toggle="tooltip" title="Platform"><?php echo icon('fa-tv'); ?></span></th>
+					<th class="col-md-8" colspan="2">Event</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -45,19 +45,19 @@
 							<?php
 							if ($award['ranking'] == 1)
 							{
-								echo '<span data-toggle="tooltip" title="'.$award['ranking'].'er / '.$award['participants'].' équipes">'.icon('fa-trophy trophy-gold').'</span>';
+								echo '<span data-toggle="tooltip" title="'.$award['ranking'].'st / '.$award['participants'].' teams">'.icon('fa-trophy trophy-gold').'</span>';
 							}
 							else if ($award['ranking'] == 2)
 							{
-								echo '<span data-toggle="tooltip" title="'.$award['ranking'].'ème / '.$award['participants'].' équipes">'.icon('fa-trophy trophy-silver').'</span>';
+								echo '<span data-toggle="tooltip" title="'.$award['ranking'].'nd / '.$award['participants'].' teams">'.icon('fa-trophy trophy-silver').'</span>';
 							}
 							else if ($award['ranking'] == 3)
 							{
-								echo '<span data-toggle="tooltip" title="'.$award['ranking'].'ème / '.$award['participants'].' équipes">'.icon('fa-trophy trophy-bronze').'</span>';
+								echo '<span data-toggle="tooltip" title="'.$award['ranking'].'rd / '.$award['participants'].' teams">'.icon('fa-trophy trophy-bronze').'</span>';
 							}
 							else
 							{
-								echo $award['ranking'].'<small>ème</small>';
+								echo $award['ranking'].'<small>th</small>';
 							}
 							?>
 						</td>

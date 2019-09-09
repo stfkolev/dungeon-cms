@@ -20,7 +20,7 @@ along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 
 class m_awards extends Module
 {
-	public $title       = 'Palmarès';
+	public $title       = 'Awards';
 	public $description = '';
 	public $icon        = 'fa-trophy';
 	public $link        = 'http://www.dungeon.com';

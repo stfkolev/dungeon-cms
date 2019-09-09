@@ -37,7 +37,7 @@ $rules = [
 	],
 	'hidden' => [
 		'checked' => ['on' => $this->form->value('hidden')],
-		'values'  => ['on' => 'Groupe caché'],
+		'values'  => ['on' => 'Hidden Group'],
 		'type'    => 'checkbox'
 	]
 ];

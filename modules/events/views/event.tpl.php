@@ -52,7 +52,7 @@
 		<p class="<?php echo count($data['rounds']) > 1 ? 'pull-right' : 'text-center'; ?>"><?php echo icon('fa-cog'); ?>Mode: <?php echo $data['mode']; ?></p>
 	<?php endif; ?>
 	<?php if (count($data['rounds']) > 1): ?>
-		<p><?php echo icon('fa-gamepad'); ?> <b>Détail des manches</b></p>
+		<p><?php echo icon('fa-gamepad'); ?> <b>Round Details</b></p>
 		<?php for ($i = 0; $i < count($data['rounds']); $i++) { ?>
 		<div class="well well-sm<?php echo (($i+1) == count($data['rounds'])) ? ' no-margin' : ''; ?>">
 			<div class="row vcenter">
@@ -62,7 +62,7 @@
 				</div>
 				<?php endif; ?>
 				<div class="col-xs-<?php echo $data['rounds'][$i]['image_id'] ? '3' : '5'; ?> vcenter">
-					<h4 class="no-margin">Manche <?php echo $i+1; ?></h4>
+					<h4 class="no-margin">Round <?php echo $i+1; ?></h4>
 					<?php echo $data['rounds'][$i]['title']; ?>
 				</div>
 				<div class="text-right col-xs-3 vcenter">
@@ -101,8 +101,8 @@ endif;
 <?php if ($data['webtv'] || $data['website']): ?>
 <div class="panel-body">
 	<ul class="list-inline no-margin">
-		<?php echo $data['webtv'] ? '<li><a href="'.$data['webtv'].'" target="_blank">'.icon('fa-twitch').' Retransmission sur Twitch</a></li>' : ''; ?>
-		<?php echo $data['website'] ? '<li><a href="'.$data['website'].'" target="_blank">'.icon('fa-newspaper-o').' On en parle ici</a></li>' : ''; ?>
+		<?php echo $data['webtv'] ? '<li><a href="'.$data['webtv'].'" target="_blank">'.icon('fa-twitch').' Retransmission on Twitch</a></li>' : ''; ?>
+		<?php echo $data['website'] ? '<li><a href="'.$data['website'].'" target="_blank">'.icon('fa-newspaper-o').' We talk about it here</a></li>' : ''; ?>
 	</ul>
 </div>
 <?php endif; ?>

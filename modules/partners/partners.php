@@ -20,7 +20,7 @@ along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 
 class m_partners extends Module
 {
-	public $title       = 'Partenaires';
+	public $title       = 'Partners';
 	public $description = '';
 	public $icon        = 'fa-star-o';
 	public $link        = 'http://www.dungeon.com';

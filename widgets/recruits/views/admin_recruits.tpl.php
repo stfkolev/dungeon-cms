@@ -6,7 +6,7 @@
 		<div id="recruits-options" class="tab-pane active" role="tabpanel">
 			<div class="form-horizontal">
 				<div class="form-group">
-					<label for="settings-recruits" class="col-sm-3 control-label">Offre à afficher</label>
+					<label for="settings-recruits" class="col-sm-3 control-label">Offer to display</label>
 					<div class="col-sm-6">
 						<select class="form-control" name="settings[recruit_id]" id="settings-recruits">
 							<?php foreach ($data['recruits'] as $recruit): ?>

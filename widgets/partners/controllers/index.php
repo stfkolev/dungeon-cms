@@ -52,7 +52,7 @@ class w_partners_c_index extends Controller_Widget
 		if (!empty($partners))
 		{
 			return $this->panel()
-						->heading('Partenaires')
+						->heading('Partners')
 						->body($this->view('column', [
 							'partners'      => $partners,
 							'display_style' => $settings['display_style']

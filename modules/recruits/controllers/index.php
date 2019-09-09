@@ -30,7 +30,7 @@ class m_recruits_c_index extends Controller_Module
 			{
 				$panels[] = $this	->panel()
 									->heading($recruit['title'], $recruit['icon'] ?: 'fa-bullhorn')
-									->body('Cette offre n\'est plus disponible actuellement.')
+									->body('This offer is no longer available.')
 									->color('info');
 			}
 			else
@@ -41,11 +41,11 @@ class m_recruits_c_index extends Controller_Module
 				}
 				else
 				{
-					$footer = '<a href="'.url('recruits/'.$recruit['recruit_id'].'/'.url_title($recruit['title'])).'" class="btn btn-default">'.icon('fa-eye').' En savoir plus</a> <a href="'.url('recruits/postulate/'.$recruit['recruit_id'].'/'.url_title($recruit['title'])).'" class="btn btn-primary">'.icon('fa-briefcase').' Postuler</a>';
+					$footer = '<a href="'.url('recruits/'.$recruit['recruit_id'].'/'.url_title($recruit['title'])).'" class="btn btn-default">'.icon('fa-eye').' Learn more</a> <a href="'.url('recruits/postulate/'.$recruit['recruit_id'].'/'.url_title($recruit['title'])).'" class="btn btn-primary">'.icon('fa-briefcase').' Apply</a>';
 				}
 
 				$panels[] = $this	->panel()
-									->heading($candidacy ? $recruit['title'].'<div class="pull-right"><span class="label label-default">J\'ai postulé !</span></div>' : $recruit['title'], $recruit['icon'] ?: 'fa-bullhorn', 'recruits/'.$recruit['recruit_id'].'/'.url_title($recruit['title']))
+									->heading($candidacy ? $recruit['title'].'<div class="pull-right"><span class="label label-default">I applied !</span></div>' : $recruit['title'], $recruit['icon'] ?: 'fa-bullhorn', 'recruits/'.$recruit['recruit_id'].'/'.url_title($recruit['title']))
 									->body($this->view('index', [
 										'recruit_id'   => $recruit['recruit_id'],
 										'title'        => $recruit['title'],
@@ -65,8 +65,8 @@ class m_recruits_c_index extends Controller_Module
 		if (empty($panels))
 		{
 			$panels[] = $this	->panel()
-								->heading('Recrutement', 'fa-bullhorn')
-								->body('<div class="text-center">Aucune offre n\'a été publiée pour le moment</div>')
+								->heading('Recruitment', 'fa-bullhorn')
+								->body('<div class="text-center">No offers have been published yet</div>')
 								->color('info');
 		}
 		else if ($pagination = $this->pagination->get_pagination())
@@ -92,7 +92,7 @@ class m_recruits_c_index extends Controller_Module
 			{
 				if ($this->access('recruits', 'recruit_postulate', $recruit_id))
 				{
-					$href = '<a href="'.url('recruits/postulate/'.$recruit_id.'/'.url_title($title)).'" class="btn btn-primary btn-block">'.icon('fa-briefcase').' Postuler</a>';
+					$href = '<a href="'.url('recruits/postulate/'.$recruit_id.'/'.url_title($title)).'" class="btn btn-primary btn-block">'.icon('fa-briefcase').' Apply</a>';
 				}
 				else
 				{
@@ -103,18 +103,18 @@ class m_recruits_c_index extends Controller_Module
 			}
 
 			$postulate_panel = $this->panel()
-									->heading($recruit['postulated'] ? 'J\'ai postulé' : 'Postuler', $recruit['postulated'] ? 'fa-check' : 'fa-black-tie')
+									->heading($recruit['postulated'] ? 'I applied' : 'Apply', $recruit['postulated'] ? 'fa-check' : 'fa-black-tie')
 									->body($recruit['postulated'] ? $this->view('recruit-postulate', [
 														'postulated' => $recruit['postulated'],
 														'status'     => $candidacy['status']
-													]) : 'Vous n\'avez pas encore déposé de candidature pour cette offre de recrutement.')
+													]) : 'You have not yet applied for this job offer.')
 									->footer($href);
 		}
 		else
 		{
 			$postulate_panel = $this->panel()
-									->heading('Postuler', 'fa-black-tie')
-									->body('Vous n\'êtes pas autorisé à déposer de candidature pour cette offre...')
+									->heading('Apply', 'fa-black-tie')
+									->body('You are not allowed to apply for this offer...')
 									->color('info');
 		}
 
@@ -144,7 +144,7 @@ class m_recruits_c_index extends Controller_Module
 			$this->row(
 				$this	->col(
 							$this	->panel()
-									->heading('Informations', 'fa-info')
+									->heading('Information', 'fa-info')
 									->body($this->view('recruit-infos', [
 																'role'      => $role,
 																'size'      => $size,
@@ -165,9 +165,9 @@ class m_recruits_c_index extends Controller_Module
 		if ($candidacy = $this->model()->postulated($this->user('user_id'), $recruit_id, $title))
 		{
 			return $this->panel()
-						->heading('Déposer ma candidature', 'fa-black-tie')
-						->body('Vous avez déjà déposé votre candidature pour cette offre le <b>'.timetostr('%e %b %Y', $candidacy['date']).'</b> !')
-						->footer('<a href="'.url('recruits/candidacy/'.$candidacy['candidacy_id'].'/'.url_title($candidacy['title'])).'" class="btn btn-primary">'.icon('fa-eye').' Voir ma candidature</a>')
+						->heading('Submit my application', 'fa-black-tie')
+						->body('You have already applied for this offer on <b>'.timetostr('%e %b %Y', $candidacy['date']).'</b> !')
+						->footer('<a href="'.url('recruits/candidacy/'.$candidacy['candidacy_id'].'/'.url_title($candidacy['title'])).'" class="btn btn-primary">'.icon('fa-eye').' See my application</a>')
 						->color('info');
 		}
 		else
@@ -177,44 +177,44 @@ class m_recruits_c_index extends Controller_Module
 				$this	->form
 						->add_rules($rules = [
 							'pseudo' => [
-								'label' => 'Votre pseudo',
+								'label' => 'Nickname',
 								'value' => $this->user('username'),
 								'type'  => 'text',
 								'rules' => 'required'
 							],
 							'email' => [
-								'label' => 'Adresse email',
+								'label' => 'E-mail Address',
 								'value' => $this->user('email'),
 								'type'  => 'email',
 								'rules' => 'required'
 							],
 							'date_of_birth' => [
-								'label' => 'Date de naissance',
+								'label' => 'Date of Birth',
 								'value' => $this->user('date_of_birth'),
 								'type'  => 'date',
 								'check' => function($value){
 									if ($value && strtotime($value) > strtotime(date('Y-m-d')))
 									{
-										return 'Vraiment ?! 2.1 Gigowatt !';
+										return 'Really ?! 2.1 Gigwatt !';
 									}
 								},
 								'rules' => 'required'
 							],
 							'presentation' => [
-								'label' => 'Présentez-vous',
+								'label' => 'Introduce yourself',
 								'type'  => 'editor'
 							],
 							'motivations' => [
-								'label' => 'Vos motivations',
+								'label' => 'Your motivations',
 								'type'  => 'editor'
 							],
 							'experiences' => [
-								'label' => 'Expériences',
+								'label' => 'Experiences',
 								'type'  => 'editor'
 							]
 						])
 						->add_captcha()
-						->add_submit('Envoyer ma candidature');
+						->add_submit('Send my application');
 
 				if ($this->form->is_valid($post))
 				{
@@ -253,7 +253,7 @@ class m_recruits_c_index extends Controller_Module
 							$reply_id = $this->db	->insert('dungeon_users_messages_replies', [
 														'message_id' => $message_id,
 														'user_id'    => $this->user('user_id'),
-														'message'    => '<div class="alert alert-info no-margin"><b>Message automatique.</b><br />Une nouvelle candidature vient d\'être déposée par '.($this->user() ? $user['username'] : $post['pseudo']).'.<br /><br />Pour la visualiser, <a href="'.url('admin/recruits/candidacy/'.$candidacy_id.'/'.url_title($title)).'">cliquer ici</a>.</div>'
+														'message'    => '<div class="alert alert-info no-margin"><b>Automatic message.</b><br />A new application has just been submitted by '.($this->user() ? $user['username'] : $post['pseudo']).'.<br /><br />To view it, <a href="'.url('admin/recruits/candidacy/'.$candidacy_id.'/'.url_title($title)).'">click here</a>.</div>'
 													]);
 						
 							$this->db	->where('message_id', $message_id)
@@ -273,7 +273,7 @@ class m_recruits_c_index extends Controller_Module
 						}
 					}
 
-					notify('Candidature envoyée avec succès');
+					notify('Application sent successfully');
 
 					if ($this->user())
 					{
@@ -286,7 +286,7 @@ class m_recruits_c_index extends Controller_Module
 				}
 
 				return $this->panel()
-							->heading('Déposer ma candidature', 'fa-black-tie')
+							->heading('Submit my application', 'fa-black-tie')
 							->body($this->view('postulate', [
 													'recruit_id'   => $recruit_id,
 													'title'        => $title,
@@ -299,8 +299,8 @@ class m_recruits_c_index extends Controller_Module
 			else
 			{
 				return $this->panel()
-							->heading('Déposer ma candidature', 'fa-black-tie')
-							->body('Oops... L\'offre <b>'.$title.'</b> n\'est plus disponible...')
+							->heading('Submit my application', 'fa-black-tie')
+							->body('Oops... The offer <b>'.$title.'</b> is no longer available...')
 							->color('danger');
 			}
 		}
@@ -310,13 +310,13 @@ class m_recruits_c_index extends Controller_Module
 	{
 		return [
 			$this	->panel()
-					->heading('Statut de ma candidature', 'fa-reply')
+					->heading('Status of my application', 'fa-reply')
 					->body($this->view('candidacy-status', [
 						'status'     => $status,
 						'reply_text' => bbcode($reply_text)
 					])),
 			$this	->panel()
-					->heading('Ma candidature', 'fa-black-tie')
+					->heading('My Application', 'fa-black-tie')
 					->body($this->view('candidacy', [
 						'candidacy_id'  => $candidacy_id,
 						'recruit_id'    => $recruit_id,

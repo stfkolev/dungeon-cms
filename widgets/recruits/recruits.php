@@ -20,7 +20,7 @@ along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 
 class w_recruits extends Widget
 {
-	public $title       = 'Recrutement';
+	public $title       = 'Recruitments';
 	public $description = '';
 	public $link        = 'http://www.dungeon.com';
 	public $author      = 'Evil <inkyzfx@gmail.com>';
@@ -29,8 +29,8 @@ class w_recruits extends Widget
 	public $dungeon_version  = 'Alpha 0.1.4';
 	public $path        = __FILE__;
 	public $types       = [
-		'index'   => 'Dernières annonces',
-		'recruit' => 'Une annonce en détail'
+		'index'   => 'Latest offers',
+		'recruit' => 'Offer Details'
 	];
 }
 

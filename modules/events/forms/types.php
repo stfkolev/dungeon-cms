@@ -20,7 +20,7 @@ along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 
 $rules = [
 	'title' => [
-		'label'   => 'Titre',
+		'label'   => 'Title',
 		'value'   => $this->form->value('title'),
 		'type'    => 'text',
 		'rules'   => 'required'
@@ -33,12 +33,12 @@ $rules = [
 		'rules'   => 'required'
 	],
 	'color' => [
-		'label'   => 'Couleur',
+		'label'   => 'Colour',
 		'value'   => $this->form->value('color'),
 		'type'    => 'colorpicker'
 	],
 	'icon' => [
-		'label'   => 'Icône',
+		'label'   => 'Icon',
 		'value'   => $this->form->value('icon'),
 		'default' => 'fa-clock-o',
 		'type'    => 'iconpicker'

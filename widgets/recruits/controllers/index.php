@@ -27,17 +27,17 @@ class w_recruits_c_index extends Controller_Widget
 		if (!empty($recruits))
 		{
 			return $this->panel()
-						->heading('Offres de recrutement')
+						->heading('Recruitment offers')
 						->body($this->view('index', [
 							'recruits' => $recruits
 						]), FALSE)
-						->footer('<a href="'.url('recruits').'">'.icon('fa-arrow-circle-o-right').' Voir toutes les annonces</a>');
+						->footer('<a href="'.url('recruits').'">'.icon('fa-arrow-circle-o-right').' See all the announcements</a>');
 		}
 		else
 		{
 			return $this->panel()
-						->heading('Recrutement')
-						->body('Aucune offre pour le moment...');
+						->heading('Recruitment')
+						->body('No offers at the moment...');
 		}
 	}
 
@@ -50,7 +50,7 @@ class w_recruits_c_index extends Controller_Widget
 			if (!$recruit['closed'] && ($recruit['candidacies_accepted'] < $recruit['size']) && (!$recruit['date_end'] || strtotime($recruit['date_end']) > time()))
 			{
 				return $this->panel()
-							->heading('Recrutement')
+							->heading('Recruitment')
 							->body($this->view('recruit', [
 								'recruit_id'   => $recruit['recruit_id'],
 								'title'        => $recruit['title'],
@@ -64,14 +64,14 @@ class w_recruits_c_index extends Controller_Widget
 								'team_name'    => $recruit['team_name'],
 								'image_id'     => $recruit['image_id']
 							]), FALSE)
-							->footer('<a href="'.url('recruits/'.$recruit['recruit_id'].'/'.url_title($recruit['title'])).'">'.icon('fa-eye').' Découvrir l\'offre</a>');
+							->footer('<a href="'.url('recruits/'.$recruit['recruit_id'].'/'.url_title($recruit['title'])).'">'.icon('fa-eye').' Discover the offer</a>');
 			}
 		}
 		else
 		{
 			return $this->panel()
-						->heading('Recrutement')
-						->body('Aucune offre pour le moment');
+						->heading('Recruitment')
+						->body('No offers at the moment');
 		}
 	}
 }

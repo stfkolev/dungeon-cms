@@ -16,7 +16,7 @@
 	</li>
 	<li class="list-group-item">
 		<?php if ($messages = $this->user->get_messages()): ?><span class="label label-danger pull-right"><?php echo $messages; ?></span><?php endif; ?>
-		<?php echo icon('fa-envelope-o'); ?> <a href="<?php echo url('user/messages'); ?>">Messagerie</a>
+		<?php echo icon('fa-envelope-o'); ?> <a href="<?php echo url('user/messages'); ?>">Messages</a>
 	</li>
 	<?php if ($this->access->admin()): ?>
 	<li class="list-group-item">

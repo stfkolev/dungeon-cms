@@ -3,10 +3,10 @@
 	<div class="addon-item<?php echo ($enabled = $authenticator->is_enabled()) ? ' active' : ''; ?>" data-name="<?php echo $authenticator->name; ?>">
 		<div class="item-status">
 			<div class="item-status-icon">
-				<?php echo $enabled ? '<span data-toggle="tooltip" title="Activé">'.icon('fa-check').'</span>' : '<span data-toggle="tooltip" title="Désactivé">'.icon('fa-ban').'</span>'; ?>
+				<?php echo $enabled ? '<span data-toggle="tooltip" title="Active">'.icon('fa-check').'</span>' : '<span data-toggle="tooltip" title="Inactive">'.icon('fa-ban').'</span>'; ?>
 			</div>
 			<div class="item-status-switch">
-				<?php echo $enabled ? '<a href="#" data-toggle="tooltip" title="Désactiver l\'authentificateur">'.icon('fa-toggle-on text-green').'</a>' : '<a href="#" data-toggle="tooltip" title="Activer l\'authentificateur">'.icon('fa-toggle-off text-muted').'</a>'; ?>
+				<?php echo $enabled ? '<a href="#" data-toggle="tooltip" title="Deactivate Authenticator">'.icon('fa-toggle-on text-green').'</a>' : '<a href="#" data-toggle="tooltip" title="Activate Authenticator">'.icon('fa-toggle-off text-muted').'</a>'; ?>
 			</div>
 			<div class="item-name">
 				<?php echo icon($authenticator->icon).' <b>'.$authenticator->title.'</b>'; ?>
@@ -15,11 +15,11 @@
 		<div class="item-action">
 			<?php
 				if (!$enabled && !$authenticator->is_setup()) echo $this->button()
-																		->tooltip('Configuration manquante')
+																		->tooltip('Missing configuration')
 																		->icon('fa-warning text-danger')
 																		->color('link');
 				echo $this	->button()
-							->tooltip('Configurer')
+							->tooltip('Configure')
 							->icon('fa-wrench')
 							->color('warning')
 							->compact()

@@ -20,7 +20,7 @@ along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 
 $rules = [
 	'title' => [
-		'label'       => 'Titre',
+		'label'       => 'Title',
 		'value'       => $this->form->value('title'),
 		'type'        => 'text',
 		'rules'       => 'required'
@@ -36,18 +36,18 @@ $rules = [
 		'rules'       => 'required'
 	],
 	'date' => [
-		'label'       => 'Date de début',
+		'label'       => 'Start Date',
 		'value'       => $this->form->value('date'),
 		'type'        => 'datetime',
 		'size'        => 'col-md-3',
 		'rules'       => 'required'
 	],
 	'date_end' => [
-		'label'       => 'Date de fin',
+		'label'       => 'End date',
 		'value'       => $this->form->value('date_end'),
 		'type'        => 'datetime',
 		'size'        => 'col-md-3',
-		'description' => 'Laissez vide pour ne pas indiquer de durée'
+		'description' => 'Leave blank to indicate no duration'
 	],
 	'description' => [
 		'label'       => 'Description',
@@ -55,16 +55,16 @@ $rules = [
 		'type'        => 'editor'
 	],
 	'private_description' => [
-		'label'       => 'Description privée',
+		'label'       => 'Private Description',
 		'value'       => $this->form->value('private_description'),
 		'type'        => 'editor',
-		'description' => 'Seulement visible par les participants'
+		'description' => 'Only visible to participants'
 	],
 	'location' => [
-		'label'       => 'Lieu',
+		'label'       => 'Location',
 		'value'       => $this->form->value('location'),
 		'type'        => 'textarea',
-		'description' => 'Seulement visible par les participants'
+		'description' => 'Only visible to participants'
 	],
 	'image' => [
 		'label'       => 'Image',
@@ -82,7 +82,7 @@ $rules = [
 	'published' => [
 		'type'        => 'checkbox',
 		'checked'     => ['on' => $this->form->value('published')],
-		'values'      => ['on' => 'Publier']
+		'values'      => ['on' => 'Publish']
 	]
 ];
 

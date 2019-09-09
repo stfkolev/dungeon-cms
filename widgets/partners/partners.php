@@ -20,7 +20,7 @@ along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 
 class w_partners extends Widget
 {
-	public $title       = 'Partenaires';
+	public $title       = 'Partners';
 	public $description = '';
 	public $link        = 'http://www.dungeon.com';
 	public $author      = 'Evil <inkyzfx@gmail.com>';
@@ -29,8 +29,8 @@ class w_partners extends Widget
 	public $dungeon_version  = 'Alpha 0.1.4';
 	public $path        = __FILE__;
 	public $types       = [
-		'index'  => 'Affichage horizontal en slider',
-		'column' => 'Affichage simple en colonne'
+		'index'  => 'Horizontal slider display',
+		'column' => 'Simple column display'
 	];
 }
 

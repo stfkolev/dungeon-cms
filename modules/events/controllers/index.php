@@ -59,7 +59,7 @@ class m_events_c_index extends Controller_Module
 		{
 			$panels[] = $this	->panel()
 								->heading()
-								->body('<div class="text-center">Aucun événement n\'a été publiée pour le moment</div>')
+								->body('<div class="text-center">No events at the moment</div>')
 								->color('info');
 		}
 		else if ($pagination = $this->pagination->get_pagination())

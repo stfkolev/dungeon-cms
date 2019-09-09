@@ -1,8 +1,8 @@
 <div>
 	<ul class="nav nav-tabs" role="tablist" style="margin-bottom: 20px;">
-		<li class="active"><a href="#pending" aria-controls="pending" role="tab" data-toggle="tab"><?php echo icon('fa-clock-o'); ?>En attente</a></li>
-		<li><a href="#accepted" aria-controls="accepted" role="tab" data-toggle="tab"><?php echo icon('fa-check'); ?>Acceptée</a></li>
-		<li><a href="#declined" aria-controls="declined" role="tab" data-toggle="tab"><?php echo icon('fa-ban'); ?>Refusée</a></li>
+		<li class="active"><a href="#pending" aria-controls="pending" role="tab" data-toggle="tab"><?php echo icon('fa-clock-o'); ?>Pending</a></li>
+		<li><a href="#accepted" aria-controls="accepted" role="tab" data-toggle="tab"><?php echo icon('fa-check'); ?>Accepted</a></li>
+		<li><a href="#declined" aria-controls="declined" role="tab" data-toggle="tab"><?php echo icon('fa-ban'); ?>Refused</a></li>
 	</ul>
 	<div class="tab-content">
 		<div role="tabpanel" class="tab-pane active" id="pending">

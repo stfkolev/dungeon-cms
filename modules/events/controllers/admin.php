@@ -80,7 +80,7 @@ class m_events_c_admin extends Controller_Module
 								}
 							],
 							[
-								'title'   => 'Titre',
+								'title'   => 'Title',
 								'content' => function($data){
 									return '<a href="'.url('events/'.$data['event_id'].'/'.url_title($data['title'])).'">'.$data['title'].'</a>';
 								},

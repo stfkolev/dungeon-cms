@@ -23,18 +23,14 @@ Translated by Dungeon community, contributors are:
 FoxLey, eResnova, creativewild
 **************************************************************************/
 
-$lang['access']                 = 'Accès';
-$lang['ambiguities_to_correct'] = 'Ambiguités à corriger';
-$lang['authorized_group']       = 'Groupe autorisé';
-$lang['authorized_member']      = 'Membre autorisé';
-$lang['forbidden_group']        = 'Groupe exclu';
-$lang['forbidden_member']       = 'Membre exclu';
-$lang['no_permission']          = 'Il n\'y a aucune permission à administrer';
-$lang['permissions_list']       = 'Liste des permissions';
-$lang['permissions_management'] = 'Gestion des permissions';
-$lang['reset_all_permissions']  = 'Réinitialiser toutes les permissions';
+$lang['title']       = 'dServ - Widget information';
+$lang['description'] = 'Display live stats for your server';
+$lang['ip']          = 'Your IP Address :';
+$lang['port']        = 'Your port :';
+$lang['text']       = 'This widget is compatible with almost all games multiplayers dev by Valve, Others games settings will be added if the community request.';
+$lang['games_list']      = 'List of the games';
 
 /*
 Dungeon Alpha 0.1.3
-./dungeon/modules/access/lang/fr.php
+./widgets/dserv/lang/en.php
 */

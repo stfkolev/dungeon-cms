@@ -47,7 +47,6 @@ class m_pages extends Module
 		}
 
 		/* TODO
-			Bug dans la liste des modules quand un module est désactivé et que le module Page est activé
 			return parent::get_title($new_title);
 		*/
 

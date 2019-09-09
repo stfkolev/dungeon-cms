@@ -45,7 +45,7 @@ $(function(){
 			});
 
 			$('#storage-used').html(printSize(used));
-			$('#storage-pourcent').html('Utilisé ('+pourcent+' %)');
+			$('#storage-pourcent').html('in use ('+pourcent+' %)');
 			
 			var notifications = '';
 			var count = {

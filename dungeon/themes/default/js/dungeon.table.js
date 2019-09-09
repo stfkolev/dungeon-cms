@@ -3,13 +3,13 @@
 	
 	$('body').on('change', 'th > input[type="checkbox"].table-checkbox', function(){
 		$('td > input[type="checkbox"].table-checkbox').prop('checked', $(this).is(':checked'));
-		$(this).data('original-title', ($(this).is(':checked')) ? 'Désélectionner tout' : 'Sélectionner toutes les lignes').tooltip('show');
+		$(this).data('original-title', ($(this).is(':checked')) ? 'Deselect all' : 'Sélectionner toutes les lignes').tooltip('show');
 	});
 
 	$('body').on('change', checkbox = 'td > input[type="checkbox"].table-checkbox', function(){
 		$('th > input[type="checkbox"].table-checkbox')
 			.prop('checked', $(checkbox).length == $(checkbox+':checked').length)
-			.data('original-title', ($(this).is(':checked')) ? 'Désélectionner tout' : 'Sélectionner toutes les lignes');
+			.data('original-title', ($(this).is(':checked')) ? 'Deselect all' : 'Sélectionner toutes les lignes');
 	});
 	
 	$('body').on('click', '.table thead .sort', function(){

@@ -27,17 +27,17 @@ class w_awards_c_index extends Controller_Widget
 			$this->css('awards');
 
 			return $this->panel()
-						->heading('Nos derniers palmarès')
+						->heading('All our awards')
 						->body($this->view('index', [
 							'awards' => array_slice($awards, 0, 5)
 						]), FALSE)
-						->footer('<a href="'.url('awards').'">'.icon('fa-arrow-circle-o-right').' Tous nos palmarès</a>', 'right');
+						->footer('<a href="'.url('awards').'">'.icon('fa-arrow-circle-o-right').' All our awards</a>', 'right');
 		}
 		else
 		{
 			return $this->panel()
-						->heading('Palmarès')
-						->body('Aucun palmarès pour le moment...');
+						->heading('Awards')
+						->body('No awards at the moment...');
 		}
 	}
 	
@@ -46,20 +46,20 @@ class w_awards_c_index extends Controller_Widget
 		if ($best_team = $this->model()->get_best_team_awards())
 		{
 			return $this->panel()
-						->heading('Palmarès')
+						->heading('Awards')
 						->body($this->view('best_team', [
 							'team_id'    => $best_team[0]['team_id'],
 							'name'       => $best_team[0]['name'],
 							'team_title' => $best_team[0]['team_title'],
 							'nb_awards'  => $best_team[0]['nb_awards']
 						]))
-						->footer('<a href="'.url('awards').'">'.icon('fa-arrow-circle-o-right').' Tous nos palmarès</a>', 'right');
+						->footer('<a href="'.url('awards').'">'.icon('fa-arrow-circle-o-right').' All our awards</a>', 'right');
 		}
 		else
 		{
 			return $this->panel()
-						->heading('Palmarès')
-						->body('Aucun palmarès pour le moment...');
+						->heading('Awards')
+						->body('No awards at the moment...');
 		}
 	}
 	
@@ -68,20 +68,20 @@ class w_awards_c_index extends Controller_Widget
 		if ($best_game = $this->model()->get_best_game_awards())
 		{
 			return $this->panel()
-						->heading('Palmarès')
+						->heading('Awards')
 						->body($this->view('best_game', [
 							'game_id'    => $best_game[0]['game_id'],
 							'name'       => $best_game[0]['name'],
 							'game_title' => $best_game[0]['game_title'],
 							'nb_awards'  => $best_game[0]['nb_awards']
 						]))
-						->footer('<a href="'.url('awards').'">'.icon('fa-arrow-circle-o-right').' Tous nos palmarès</a>', 'right');
+						->footer('<a href="'.url('awards').'">'.icon('fa-arrow-circle-o-right').' All our awards</a>', 'right');
 		}
 		else
 		{
 			return $this->panel()
-						->heading('Palmarès')
-						->body('Aucun palmarès pour le moment...');
+						->heading('Awards')
+						->body('No awards at the moment...');
 		}
 	}
 }

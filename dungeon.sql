@@ -1041,8 +1041,8 @@ CREATE TABLE `dungeon_settings_languages` (
 -- Dumping data for table `dungeon_settings_languages`
 --
 
-INSERT INTO `dungeon_settings_languages` (`code`, `name`, `flag`, `order`) VALUES
-('en', 'English', 'gb.png', 1),
+INSERT INTO `dungeon_settings_languages` (`code`, `name`, `flag`, `order`) VALUES 
+('en', 'English', 'gb.png', 1);
 
 -- --------------------------------------------------------
 
@@ -1333,13 +1333,13 @@ INSERT INTO `dungeon_widgets` (`widget_id`, `widget`, `type`, `title`, `settings
 (12, 'news', 'index', NULL, NULL),
 (13, 'members', 'index', NULL, NULL),
 (14, 'header', 'index', NULL, 'a:5:{s:5:\"align\";s:11:\"text-center\";s:5:\"title\";s:0:\"\";s:11:\"description\";s:0:\"\";s:11:\"color-title\";s:0:\"\";s:17:\"color-description\";s:7:\"#DC351E\";}'),
-(15, 'navigation', 'index', NULL, 'a:2:{s:7:\"display\";b:1;s:5:\"links\";a:6:{i:0;a:2:{s:5:\"title\";s:4:\"Home\";s:3:\"url\";s:0:\"\";}i:1;a:2:{s:5:\"title\";s:5:\"Forum\";s:3:\"url\";s:5:\"forum\";}i:2;a:2:{s:5:\"title\";s:5:\"Teams\";s:3:\"url\";s:5:\"teams\";}i:3;a:2:{s:5:\"title\";s:7:\"Matches\";s:3:\"url\";s:14:\"events/matches\";}i:4;a:2:{s:5:\"title\";s:8:\"Partners\";s:3:\"url\";s:8:\"partners\";}i:5;a:2:{s:5:\"title\";s:6:\"Awards\";s:3:\"url\";s:6:\"awards\";}}}'),
+(15, 'navigation', 'index', NULL, 'a:2:{s:7:\"display\";b:1;s:5:\"links\";a:6:{i:0;a:2:{s:5:\"title\";s:4:\"Home\";s:3:\"url\";s:0:\"\";}i:1;a:2:{s:5:\"title\";s:5:\"Forum\";s:3:\"url\";s:5:\"forum\";}i:2;a:2:{s:5:\"title\";s:5:\"Teams\";s:3:\"url\";s:5:\"teams\";}i:3;a:2:{s:5:\"title\";s:6:\"Events\";s:3:\"url\";s:14:\"events/matches\";}i:4;a:2:{s:5:\"title\";s:8:\"Partners\";s:3:\"url\";s:8:\"partners\";}i:5;a:2:{s:5:\"title\";s:6:\"Awards\";s:3:\"url\";s:6:\"awards\";}}}'),
 (16, 'user', 'index_mini', NULL, NULL),
 (17, 'navigation', 'index', NULL, 'a:2:{s:7:\"display\";b:1;s:5:\"links\";a:4:{i:0;a:2:{s:5:\"title\";s:8:\"Facebook\";s:3:\"url\";s:1:\"#\";}i:1;a:2:{s:5:\"title\";s:7:\"Twitter\";s:3:\"url\";s:1:\"#\";}i:2;a:2:{s:5:\"title\";s:6:\"Origin\";s:3:\"url\";s:1:\"#\";}i:3;a:2:{s:5:\"title\";s:5:\"Steam\";s:3:\"url\";s:1:\"#\";}}}'),
 (18, 'members', 'online_mini', NULL, NULL),
 (19, 'html', 'index', NULL, 'a:1:{s:7:\"content\";s:92:\"[center]Powered by [url=https://dungeon.com]Dungeon CMS[/url] version Alpha 0.1.6.1[/center]\";}'),
 (20, 'header', 'index', NULL, 'a:5:{s:5:\"align\";s:11:\"text-center\";s:5:\"title\";s:0:\"\";s:11:\"description\";s:0:\"\";s:11:\"color-title\";s:0:\"\";s:17:\"color-description\";s:7:\"#DC351E\";}'),
-(21, 'navigation', 'index', NULL, 'a:2:{s:7:\"display\";b:1;s:5:\"links\";a:6:{i:0;a:2:{s:5:\"title\";s:4:\"Home\";s:3:\"url\";s:0:\"\";}i:1;a:2:{s:5:\"title\";s:5:\"Forum\";s:3:\"url\";s:5:\"forum\";}i:2;a:2:{s:5:\"title\";s:5:\"Teams\";s:3:\"url\";s:5:\"teams\";}i:3;a:2:{s:7:\"title\";s:6:\"Matches\";s:3:\"url\";s:14:\"events/matches\";}i:4;a:2:{s:5:\"title\";s:8:\"Partners\";s:3:\"url\";s:8:\"partners\";}i:5;a:2:{s:5:\"title\";s:6:\"Awards\";s:3:\"url\";s:6:\"awards\";}}}'),
+(21, 'navigation', 'index', NULL, 'a:2:{s:7:\"display\";b:1;s:5:\"links\";a:6:{i:0;a:2:{s:5:\"title\";s:4:\"Home\";s:3:\"url\";s:0:\"\";}i:1;a:2:{s:5:\"title\";s:5:\"Forum\";s:3:\"url\";s:5:\"forum\";}i:2;a:2:{s:5:\"title\";s:5:\"Teams\";s:3:\"url\";s:5:\"teams\";}i:3;a:2:{s:5:\"title\";s:6:\"Events\";s:3:\"url\";s:14:\"events/matches\";}i:4;a:2:{s:5:\"title\";s:8:\"Partners\";s:3:\"url\";s:8:\"partners\";}i:5;a:2:{s:5:\"title\";s:6:\"Awards\";s:3:\"url\";s:6:\"awards\";}}}'),
 (22, 'user', 'index_mini', NULL, NULL),
 (23, 'slider', 'index', NULL, NULL),
 (24, 'breadcrumb', 'index', NULL, NULL),

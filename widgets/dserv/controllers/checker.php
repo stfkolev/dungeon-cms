@@ -11,26 +11,26 @@ the Free Software Foundation, either version 3 of the License, or
 
 Dungeon is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU Lesser General Public License for more details.
 
 You should have received a copy of the GNU Lesser General Public License
 along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 **************************************************************************/
 
-/**************************************************************************
-Translated by Dungeon community, contributors are:
-FoxLey, eResnova, creativewild
-**************************************************************************/
-
-$lang['all_comments']         = 'Tous les commentaires';
-$lang['comment_confirmation'] = 'Êtes-vous sûr(e) de vouloir supprimer ce commentaire ?';
-$lang['comments']             = 'Commentaires';
-$lang['no_comments']          = 'Il n\'y a pas de commentaire';
-$lang['number_comments']      = 'Nombre de commentaires';
-$lang['see_comments']         = 'Voir les commentaires';
+class w_dserv_c_checker extends Controller_Widget
+{
+	public function index($settings = array())
+	{
+		return array(
+			'addr'    => $settings['addr'],
+			'port' 	  => $settings['port'],
+			'display' => $settings['display']
+		);
+	}
+}
 
 /*
 Dungeon Alpha 0.1.3
-./dungeon/modules/comments/lang/fr.php
+./widgets/dserv/controllers/checker.php
 */

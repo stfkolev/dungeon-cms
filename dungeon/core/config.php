@@ -78,7 +78,7 @@ class Config extends Core
 
 		$this->update('default');
 
-		$this->update('default', 'fr');
+		$this->update('default', 'en');
 		//$this->update('default', array_shift($dungeon_languages));
 	}
 

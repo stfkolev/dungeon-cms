@@ -113,8 +113,7 @@ class m_forum_c_index extends Controller_Module
 				->breadcrumb()
 				->css('wbbtheme')
 				->js('jquery.wysibb.min')
-				->js('jquery.wysibb.fr')
-				->js_load('$(\'textarea.editor\').wysibb({lang: "fr"});')
+				->js_load('$(\'textarea.editor\').wysibb();')
 				->form
 				->add_rules([
 					'title' => [
@@ -323,8 +322,7 @@ class m_forum_c_index extends Controller_Module
 		{
 			$this	->css('wbbtheme')
 					->js('jquery.wysibb.min')
-					->js('jquery.wysibb.fr')
-					->js_load('$(\'textarea.editor\').wysibb({lang: "fr"});')
+					->js_load('$(\'textarea.editor\').wysibb();')
 					->form
 					->add_rules([
 						'message' => [
@@ -460,8 +458,7 @@ class m_forum_c_index extends Controller_Module
 				->breadcrumb()
 				->css('wbbtheme')
 				->js('jquery.wysibb.min')
-				->js('jquery.wysibb.fr')
-				->js_load('$(\'textarea.editor\').wysibb({lang: "fr"});')
+				->js_load('$(\'textarea.editor\').wysibb();')
 				->form
 				->add_rules([
 					'message' => [

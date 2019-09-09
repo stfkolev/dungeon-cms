@@ -20,7 +20,7 @@ along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 
 class m_recruits extends Module
 {
-	public $title       = 'Recrutements';
+	public $title       = 'Recruitments';
 	public $description = '';
 	public $icon        = 'fa-bullhorn';
 	public $link        = 'http://www.dungeon.com';
@@ -49,11 +49,11 @@ class m_recruits extends Module
 		$this	->form
 				->add_rules([
 					[
-						'label'       => 'Paramètres des offres',
+						'label'       => 'Offer Settings',
 						'type'        => 'legend'
 					],
 					'recruits_per_page' => [
-						'label'       => 'Nombre d\'offre par page',
+						'label'       => 'Number of offers per page',
 						'value'       => $this->config->recruits_per_page ?: '5',
 						'type'        => 'number',
 						'rules'       => 'required',
@@ -62,15 +62,15 @@ class m_recruits extends Module
 					'recruits_hide_unavailable' => [
 						'type'        => 'checkbox',
 						'checked'     => ['on' => $this->config->recruits_hide_unavailable],
-						'values'      => ['on' => 'Masquer les offres indisponibles']
+						'values'      => ['on' => 'Hide unavailable offers']
 					],
 					'recruits_alert' => [
 						'type'        => 'checkbox',
 						'checked'     => ['on' => $this->config->recruits_alert],
-						'values'      => ['on' => 'Être avertis par message privé des nouvelles candidatures']
+						'values'      => ['on' => 'Be notified by private message of new applications']
 					],
 					[
-						'label'       => 'Réponse aux candidats',
+						'label'       => 'Response to candidates',
 						'type'        => 'legend'
 					],
 					'recruits_send' => [
@@ -81,8 +81,8 @@ class m_recruits extends Module
 							'mail' => $this->config->recruits_send_mail
 						],
 						'values'      => [
-							'mp'   => 'Par message privé',
-							'mail' => 'Par e-mail'
+							'mp'   => 'By Private Message',
+							'mail' => 'By E-mail'
 						]
 					]
 				])
@@ -110,42 +110,42 @@ class m_recruits extends Module
 			'default' => [
 				'access'  => [
 					[
-						'title'  => 'Offres de recrutement',
+						'title'  => 'Recruitment offers',
 						'icon'   => 'fa-bullhorn',
 						'access' => [
 							'add_recruit' => [
-								'title' => 'Ajouter',
+								'title' => 'Add',
 								'icon'  => 'fa-plus',
 								'admin' => TRUE
 							],
 							'modify_recruit' => [
-								'title' => 'Modifier',
+								'title' => 'Modify',
 								'icon'  => 'fa-edit',
 								'admin' => TRUE
 							],
 							'delete_recruit' => [
-								'title' => 'Supprimer',
+								'title' => 'Delete',
 								'icon'  => 'fa-trash-o',
 								'admin' => TRUE
 							]
 						]
 					],
 					[
-						'title'  => 'Candidatures',
+						'title'  => 'Applications',
 						'icon'   => 'fa-black-tie',
 						'access' => [
 							'candidacy_vote' => [
-								'title' => 'Déposer son avis',
+								'title' => 'Submit your opinion',
 								'icon'  => 'fa-star-o',
 								'admin' => TRUE
 							],
 							'candidacy_reply' => [
-								'title' => 'Accepter / Refuser les candidats',
+								'title' => 'Accept / reject candidates',
 								'icon'  => 'fa-lock',
 								'admin' => TRUE
 							],
 							'candidacy_delete' => [
-								'title' => 'Supprimer',
+								'title' => 'Delete',
 								'icon'  => 'fa-trash-o',
 								'admin' => TRUE
 							]
@@ -155,12 +155,12 @@ class m_recruits extends Module
 			],
 			'recruit' => [
 				'get_all' => function(){
-					return Dungeon()->db->select('recruit_id', 'CONCAT_WS(" ", "Offre", title)')->from('dungeon_recruits')->get();
+					return Dungeon()->db->select('recruit_id', 'CONCAT_WS(" ", "Offer", title)')->from('dungeon_recruits')->get();
 				},
 				'check' => function($recruit_id){
 					if (($recruit = Dungeon()->db->select('title')->from('dungeon_recruits')->where('recruit_id', $recruit_id)->row()) !== [])
 					{
-						return 'Offre '.$recruit;
+						return 'Offer '.$recruit;
 					}
 				},
 				'init' => [
@@ -170,11 +170,11 @@ class m_recruits extends Module
 				],
 				'access' => [
 					[
-						'title'  => 'Postulants',
+						'title'  => 'Applicants',
 						'icon'   => 'fa-black-tie',
 						'access' => [
 							'recruit_postulate' => [
-								'title' => 'Déposer une candidature',
+								'title' => 'Submit an application',
 								'icon'  => 'fa-briefcase'
 							]
 						]

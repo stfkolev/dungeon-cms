@@ -11,24 +11,22 @@ the Free Software Foundation, either version 3 of the License, or
 
 Dungeon is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU Lesser General Public License for more details.
 
 You should have received a copy of the GNU Lesser General Public License
 along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 **************************************************************************/
 
-/**************************************************************************
-Translated by Dungeon community, contributors are:
-FoxLey, eResnova, creativewild
-**************************************************************************/
-
-$lang['databases_server']  = 'Serveur de bases de données';
-$lang['loaded_extensions'] = 'Extensions chargées';
-$lang['operating_system']  = 'Système d\'exploitation';
-$lang['web_server']        = 'Serveur web';
+class w_dserv_c_admin extends Controller_Widget
+{
+	public function index($settings = array())
+	{
+		return $this->view('admin', $settings);
+	}
+}
 
 /*
-Dungeon Alpha 0.1.5
-./dungeon/modules/monitoring/lang/fr.php
+Dungeon Alpha 0.1.3
+./widgets/dserv/controllers/admin.php
 */

@@ -5,15 +5,15 @@
 	</div>
 	<?php endif; ?>
 	<div class="col-md-<?php echo $data['image_id'] ? '8' : '12'; ?>">
-		<p><i><?php echo icon('fa-clock-o'); ?> Offre publiée le <?php echo timetostr('%e %b %Y', $data['date']); ?></i></p>
+		<p><i><?php echo icon('fa-clock-o'); ?> Offer published on <?php echo timetostr('%e %b %Y', $data['date']); ?></i></p>
 		<ul class="list-inline">
 			<?php if ($data['team_id']): ?>
-			<li><b>Equipe:</b> <?php echo $data['team_name']; ?></li>
+			<li><b>Team:</b> <?php echo $data['team_name']; ?></li>
 			<?php endif; ?>
-			<li><b>Rôle:</b> <?php echo $data['role']; ?></li>
-			<li><b><?php echo $data['size'] > 1 ? 'Places disponibles:' : 'Place disponible:'; ?></b> <?php echo $data['size']; ?></li>
+			<li><b>Position:</b> <?php echo $data['role']; ?></li>
+			<li><b><?php echo $data['size'] > 1 ? 'Available positions:' : 'Available position:'; ?></b> <?php echo $data['size']; ?></li>
 			<?php if ($data['date_end']): ?>
-			<li><b>Expiration:</b> <?php echo timetostr('%e %b %Y', $data['date_end']); ?></li>
+			<li><b>Deadline:</b> <?php echo timetostr('%e %b %Y', $data['date_end']); ?></li>
 			<?php endif; ?>
 		</ul>
 		<p><?php echo $data['introduction']; ?></p>

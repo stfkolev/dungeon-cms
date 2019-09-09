@@ -20,7 +20,7 @@ along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 
 class w_awards extends Widget
 {
-	public $title       = 'Palmarès';
+	public $title       = 'Awards';
 	public $description = '';
 	public $link        = 'http://www.dungeon.com';
 	public $author      = 'Evil <inkyzfx@gmail.com>';
@@ -29,9 +29,9 @@ class w_awards extends Widget
 	public $dungeon_version  = 'Alpha 0.1.4';
 	public $path        = __FILE__;
 	public $types       = [
-		'index'     => 'Derniers palmarès',
-		'best_team' => 'Équipe la plus récompensée',
-		'best_game' => 'Jeu le plus récompensé'
+		'index'     => 'Latest awards',
+		'best_team' => 'Most awarded team',
+		'best_game' => 'Most awarded game'
 	];
 }
 

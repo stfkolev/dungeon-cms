@@ -8,7 +8,7 @@ Dungeon is a CMS that offers you advanced features for the management of your ga
 
 - [Presentation](#presentation)
 - [Prerequisites](#prerequisites)
-- [Installation](#uk-installation)
+- [Installation](#installation)
 - [Contribute](#contribute)
 
 ## Presentation
@@ -24,12 +24,12 @@ Dungeon CMS is a project conceived in 2017, which saw this first version Alpha 0
 
 ## Prerequisites
 
-Dungeon CMS nécessite un hébergement web Apache / PHP / MySQL pour fonctionner.
+Dungeon CMS requires Apache / PHP / MySQL web hosting to work.
 
-- PHP 5.4 ou supérieur (avec les extensions curl, gd, json, mbstring, mysql ou mysqli et zip)
-- Module Apache rewrite_module activé
+- PHP 5.4 or higher (with curl, gd, json, mbstring, mysql or mysqli and zip extensions)
+- Apache module rewrite_module enabled
 
-## :uk: Installation
+## Installation
 
 - Copy all files and directories on website by FTP
 - Create a MySQL database and import DATABASE.sql

@@ -5,7 +5,7 @@
 		<li class="text-danger"><?php echo $data['total_down']; ?> <?php echo icon('fa-thumbs-o-down'); ?></li>
 	</ul>
 </div>
-<p><b>Tendance des votes</b></p>
+<p><b>Voting trend</b></p>
 <div class="progress">
 	<div class="progress-bar progress-bar-success" style="width: <?php echo ceil(($data['total_up']/$data['total_votes'])*100); ?>%"><?php echo ceil(($data['total_up']/$data['total_votes'])*100); ?>%</div>
 	<div class="progress-bar progress-bar-danger" style="width: <?php echo ceil(($data['total_down']/$data['total_votes'])*100) - 1; ?>%"><?php echo ceil(($data['total_down']/$data['total_votes'])*100) - 1; ?>%</div>
@@ -19,7 +19,7 @@
 			</div>
 			<div class="media-body">
 				<div class="pull-right">
-					<span class="label<?php echo $vote['vote'] ? ' label-success' : ' label-danger' ?>" style="display: inline-block"><?php echo $vote['vote'] ? icon('fa-thumbs-o-up').' Favorable' : icon('fa-thumbs-o-down').' Défavorable' ?></span>
+					<span class="label<?php echo $vote['vote'] ? ' label-success' : ' label-danger' ?>" style="display: inline-block"><?php echo $vote['vote'] ? icon('fa-thumbs-o-up').' Agree' : icon('fa-thumbs-o-down').' Disagree' ?></span>
 				</div>
 				<h4 class="media-heading"><?php echo $this->user->link($vote['user_id'], $vote['username']); ?></h4>
 				<?php echo bbcode($vote['comment']); ?>
@@ -29,10 +29,10 @@
 	<?php endforeach; ?>
 </div>
 <?php else: ?>
-Il n'y a pas encore de vote...
+There are no votes yet ...
 <?php endif; ?>
 <?php if ($data['status'] == 1): ?>
 <hr />
-<h4>Mon avis sur cette candidature</h4>
+<h4>My opinion on this application</h4>
 <?php echo $data['vote_form']; ?>
 <?php endif; ?>

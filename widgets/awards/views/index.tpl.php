@@ -10,19 +10,19 @@
 				<?php
 				if ($award['ranking'] == 1)
 				{
-					echo '<span data-toggle="tooltip" title="'.$award['ranking'].'er / '.$award['participants'].' équipes">'.icon('fa-trophy trophy-gold').'</span>';
+					echo '<span data-toggle="tooltip" title="'.$award['ranking'].'st / '.$award['participants'].' teams">'.icon('fa-trophy trophy-gold').'</span>';
 				}
 				else if ($award['ranking'] == 2)
 				{
-					echo '<span data-toggle="tooltip" title="'.$award['ranking'].'ème / '.$award['participants'].' équipes">'.icon('fa-trophy trophy-silver').'</span>';
+					echo '<span data-toggle="tooltip" title="'.$award['ranking'].'nd / '.$award['participants'].' teams">'.icon('fa-trophy trophy-silver').'</span>';
 				}
 				else if ($award['ranking'] == 3)
 				{
-					echo '<span data-toggle="tooltip" title="'.$award['ranking'].'ème / '.$award['participants'].' équipes">'.icon('fa-trophy trophy-bronze').'</span>';
+					echo '<span data-toggle="tooltip" title="'.$award['ranking'].'rd / '.$award['participants'].' teams">'.icon('fa-trophy trophy-bronze').'</span>';
 				}
 				else
 				{
-					echo $award['ranking'].'<small>ème</small>';
+					echo $award['ranking'].'<small>th</small>';
 				}
 				?>
 			</li>

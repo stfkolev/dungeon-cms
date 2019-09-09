@@ -889,8 +889,7 @@ class Form extends Library
 	{
 		$this	->css('wbbtheme')
 				->js('jquery.wysibb.min')
-				->js('jquery.wysibb.fr')
-				->js_load('$(\'textarea.editor\').wysibb({lang: "fr"});');
+				->js_load('$(\'textarea.editor\').wysibb();');
 
 		return $this->_display_textarea($var, $options, $post, TRUE);
 	}

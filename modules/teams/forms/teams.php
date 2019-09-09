@@ -20,7 +20,7 @@ along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 
 $rules = [
 	'title' => [
-		'label'         => 'Titre',
+		'label'         => 'Title',
 		'value'         => $this->form->value('title'),
 		'type'          => 'text',
 		'rules'			=> 'required'

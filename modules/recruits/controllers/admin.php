@@ -41,24 +41,24 @@ class m_recruits_c_admin extends Controller_Module
 									'content' => function($data){
 										if ($data['closed'] || ($data['candidacies_accepted'] >= $data['size']) || ($data['date_end'] && strtotime($data['date_end']) < time()))
 										{
-											return '<i class="fa fa-circle-o" data-toggle="tooltip" title="Offre clôturée" style="color: #535353;"></i>';
+											return '<i class="fa fa-circle-o" data-toggle="tooltip" title="Closed offers" style="color: #535353;"></i>';
 										}
 										else
 										{
-											return '<i class="fa fa-circle" data-toggle="tooltip" title="Offre active" style="color: #7bbb17;"></i>';
+											return '<i class="fa fa-circle" data-toggle="tooltip" title="Opened offers" style="color: #7bbb17;"></i>';
 										}
 									},
 									'size'    => TRUE
 								],
 								[
-									'title'   => '<span data-toggle="tooltip" title="Nombre de poste">'.icon('fa-briefcase').'</span>',
+									'title'   => '<span data-toggle="tooltip" title="Number of posts">'.icon('fa-briefcase').'</span>',
 									'content' => function($data){
 										return $data['size'];
 									},
 									'size'    => TRUE
 								],
 								[
-									'title'   => 'Titre',
+									'title'   => 'Title',
 									'content' => function($data){
 										return '<a href="'.url('recruits/'.$data['recruit_id'].'/'.url_title($data['title'])).'">'.$data['title'].'</a>';
 									},
@@ -70,13 +70,13 @@ class m_recruits_c_admin extends Controller_Module
 									}
 								],
 								[
-									'title'   => icon('fa-black-tie').' Candidatures',
+									'title'   => icon('fa-black-tie').' Applications',
 									'content' => function($data){
 										return '<ul class="list-inline">
-													<li class="text-muted" data-toggle="tooltip" title="En attente">'.icon('fa-clock-o').' '.$data['candidacies_pending'].'</li>
-													<li class="text-success" data-toggle="tooltip" title="Validée">'.icon('fa-check').' '.$data['candidacies_accepted'].'</li>
-													<li class="text-danger" data-toggle="tooltip" title="Refusée">'.icon('fa-ban').' '.$data['candidacies_declined'].'</li>
-													'.($data['candidacies_accepted'] == $data['size'] ? '<li><span class="label label-success">Complète</span></li>' : '<li><span class="label label-default">Incomplète</span></li>').'
+													<li class="text-muted" data-toggle="tooltip" title="Pending">'.icon('fa-clock-o').' '.$data['candidacies_pending'].'</li>
+													<li class="text-success" data-toggle="tooltip" title="Accepted">'.icon('fa-check').' '.$data['candidacies_accepted'].'</li>
+													<li class="text-danger" data-toggle="tooltip" title="Refused">'.icon('fa-ban').' '.$data['candidacies_declined'].'</li>
+													'.($data['candidacies_accepted'] == $data['size'] ? '<li><span class="label label-success">Overdue</span></li>' : '<li><span class="label label-default">In progress</span></li>').'
 												</ul>';
 									}
 								],
@@ -96,13 +96,13 @@ class m_recruits_c_admin extends Controller_Module
 								]
 							])
 							->data($recruits)
-							->no_data('Il n\'y a pas encore d\'offre de recrutement')
+							->no_data('There are no position offers yet')
 							->display();
 
 		return $this->row(
 			$this->col(
 				$this	->panel()
-						->heading('Candidatures', 'fa-black-tie')
+						->heading('Applications', 'fa-black-tie')
 						->body($this->view('admin-candidacies', [
 							'total_candidacies' => $total_candidacies,
 							'total_pending'     => $total_pending,
@@ -113,9 +113,9 @@ class m_recruits_c_admin extends Controller_Module
 			),
 			$this->col(
 				$this	->panel()
-						->heading('Liste des offres', 'fa-bullhorn')
+						->heading('Offers List', 'fa-bullhorn')
 						->body($recruits)
-						->footer($this->is_authorized('add_recruit') ? $this->button_create('admin/recruits/add', 'Créer une offre') : NULL)
+						->footer($this->is_authorized('add_recruit') ? $this->button_create('admin/recruits/add', 'Create an offer') : NULL)
 						->size('col-md-8 col-lg-9')
 			)
 		);
@@ -123,12 +123,12 @@ class m_recruits_c_admin extends Controller_Module
 
 	public function add()
 	{
-		$this	->subtitle('Créer une offre')
+		$this	->subtitle('Create an offer')
 				->form
 				->add_rules('recruit', [
 					'teams' => $this->model()->get_teams_list()
 				])
-				->add_submit('Ajouter')
+				->add_submit('Add')
 				->add_back('admin/recruits');
 
 		if ($this->form->is_valid($post))
@@ -145,13 +145,13 @@ class m_recruits_c_admin extends Controller_Module
 											$post['team_id'],
 											$post['image']);
 
-			notify('Offre de recrutement ajoutée avec succès');
+			notify('Recruitment offer successfully added');
 
 			redirect_back('admin/recruits');
 		}
 
 		return $this->panel()
-					->heading('Créer une offre de recrutement', 'fa-bullhorn')
+					->heading('Create a recruitment offer', 'fa-bullhorn')
 					->body($this->form->display());
 	}
 
@@ -176,7 +176,7 @@ class m_recruits_c_admin extends Controller_Module
 					'team_id'      => $team_id,
 					'image_id'     => $image_id
 				])
-				->add_submit('Modifier')
+				->add_submit('Modify')
 				->add_back('admin/recruits');
 
 		if ($this->form->is_valid($post))
@@ -194,7 +194,7 @@ class m_recruits_c_admin extends Controller_Module
 											$post['team_id'],
 											$post['image']);
 
-			notify('Offre de recrutement modifiée avec succès');
+			notify('Recruitment offer successfully modified');
 
 			redirect_back('admin/recruits');
 		}
@@ -208,7 +208,7 @@ class m_recruits_c_admin extends Controller_Module
 			),
 			$this->col(
 				$this	->panel()
-						->heading('Candidatures déposées', 'fa-black-tie')
+						->heading('Submitted applications', 'fa-black-tie')
 						->body($this->view('admin-recruit-status', [
 												'size'                 => $size,
 												'available'            => $size - $candidacies_accepted,
@@ -222,7 +222,7 @@ class m_recruits_c_admin extends Controller_Module
 				$this	->panel()
 						->heading('Formulaire', 'fa-tasks')
 						->body($this->view('admin-custom-form'))
-						->footer('<a href="#" class="btn btn-info btn-outline" data-toggle="tooltip" title="Disponible prochainement..." disabled>Personnaliser le formulaire</a>')
+						->footer('<a href="#" class="btn btn-info btn-outline" data-toggle="tooltip" title="Available soon..." disabled>Customize the form</a>')
 						->size('col-md-4')
 			)
 		);
@@ -230,10 +230,10 @@ class m_recruits_c_admin extends Controller_Module
 
 	public function delete($recruit_id, $title)
 	{
-		$this	->title('Suppression offre de recrutement')
+		$this	->title('Delete Recruitment offer')
 				->subtitle($title)
 				->form
-				->confirm_deletion('Confirmation de suppression', 'Êtes-vous sûr(e) de vouloir supprimer l\'offre <b>'.$title.'</b> ?<br />Toutes les candidatures associées à cette offre seront aussi supprimées.');
+				->confirm_deletion('Delete Confirmation', 'Are you sure you want to delete the offer <b>'.$title.'</b> ?<br />All applications associated with this offer will also be deleted.');
 
 		if ($this->form->is_valid())
 		{
@@ -252,7 +252,7 @@ class m_recruits_c_admin extends Controller_Module
 			throw new Exception(Dungeon::UNAUTHORIZED);
 		}
 
-		$this->subtitle('Candidatures en attentes');
+		$this->subtitle('Applicants waiting');
 
 		$candidacies_pending = $this->table
 									->add_columns([
@@ -269,7 +269,7 @@ class m_recruits_c_admin extends Controller_Module
 											'size'    => TRUE
 										],
 										[
-											'title'   => 'Candidat',
+											'title'   => 'Applicant',
 											'content' => function($data){
 												if ($data['user_id'])
 												{
@@ -297,7 +297,7 @@ class m_recruits_c_admin extends Controller_Module
 											}
 										],
 										[
-											'title'   => 'Offre',
+											'title'   => 'Offer',
 											'content' => function($data){
 												return $data['title'];
 											},
@@ -321,12 +321,12 @@ class m_recruits_c_admin extends Controller_Module
 										]
 									])
 									->data($this->model()->get_candidacies($recruit_id = '', 1))
-									->no_data('Aucune candidature en attente')
+									->no_data('No pending applications')
 									->display();
 
 		return [
 			$this	->panel()
-					->heading('Liste des candidatures en attentes', 'fa-black-tie')
+					->heading('List of applicants waiting', 'fa-black-tie')
 					->body($candidacies_pending)
 					->size('col-md-8'),
 			$this->panel_back()
@@ -340,7 +340,7 @@ class m_recruits_c_admin extends Controller_Module
 		$candidacies_pending = $this->table
 									->add_columns([
 										[
-											'title'   => 'Candidat',
+											'title'   => 'Applicant',
 											'content' => function($data){
 												if ($data['user_id'])
 												{
@@ -368,7 +368,7 @@ class m_recruits_c_admin extends Controller_Module
 											}
 										],
 										[
-											'title'   => 'Adresse e-mail',
+											'title'   => 'E-mail Address',
 											'content' => function($data){
 												return '<a href="mailto:'.$data['email'].'">'.$data['email'].'</a>';
 											},
@@ -392,13 +392,13 @@ class m_recruits_c_admin extends Controller_Module
 										]
 									])
 									->data($this->model()->get_candidacies($recruit_id, 1))
-									->no_data('Aucune candidature en attente')
+									->no_data('No pending applications')
 									->display();
 
 		$candidacies_accepted = $this->table
 									->add_columns([
 										[
-											'title'   => 'Candidat',
+											'title'   => 'Applicant',
 											'content' => function($data){
 												if ($data['user_id'])
 												{
@@ -426,7 +426,7 @@ class m_recruits_c_admin extends Controller_Module
 											}
 										],
 										[
-											'title'   => 'Adresse e-mail',
+											'title'   => 'E-mail Address',
 											'content' => function($data){
 												return '<a href="mailto:'.$data['email'].'">'.$data['email'].'</a>';
 											},
@@ -450,7 +450,7 @@ class m_recruits_c_admin extends Controller_Module
 										]
 									])
 									->data($this->model()->get_candidacies($recruit_id, 2))
-									->no_data('Aucune candidature acceptée')
+									->no_data('No accepted applications')
 									->display();
 
 		$candidacies_declined = $this->table
@@ -484,7 +484,7 @@ class m_recruits_c_admin extends Controller_Module
 											}
 										],
 										[
-											'title'   => 'Adresse e-mail',
+											'title'   => 'E-mail Address',
 											'content' => function($data){
 												return '<a href="mailto:'.$data['email'].'">'.$data['email'].'</a>';
 											},
@@ -508,12 +508,12 @@ class m_recruits_c_admin extends Controller_Module
 										]
 									])
 									->data($this->model()->get_candidacies($recruit_id, 3))
-									->no_data('Aucune candidature refusée')
+									->no_data('No refused applications')
 									->display();
 
 		return [
 			$this	->panel()
-					->heading('Liste des candidatures', 'fa-briefcase')
+					->heading('Applications List', 'fa-briefcase')
 					->body($this->view('admin-recruit-candidacies', [
 										'table_pending'  => $candidacies_pending,
 										'table_accepted' => $candidacies_accepted,
@@ -531,24 +531,24 @@ class m_recruits_c_admin extends Controller_Module
 		$reply_form = $this->load	->form
 									->add_rules($rules = [
 										'reply' => [
-											'label'  => 'Votre réponse',
+											'label'  => 'Your answer',
 											'value'  => $reply,
 											'type'   => 'editor',
 											'rules'  => 'required'
 										],
 										'status' => [
-											'label'  => 'Décision',
+											'label'  => 'Status',
 											'value'  => $status,
 											'values' => [
-												'1' => 'En attente',
-												'2' => 'Acceptée',
-												'3' => 'Refusée',
+												'1' => 'Pending',
+												'2' => 'Accept',
+												'3' => 'Refuse',
 											],
 											'type'   => 'radio',
 											'rules'  => 'required'
 										]
 									])
-									->add_submit('Envoyer la réponse')
+									->add_submit('Send the answer')
 									->save();
 
 		if ($reply_form->is_valid($post))
@@ -586,7 +586,7 @@ class m_recruits_c_admin extends Controller_Module
 				}
 			}
 
-			notify('Réponse envoyée avec succès');
+			notify('Answer sent successfully');
 
 			redirect('admin/recruits/candidacy/'.$candidacy_id.'/'.url_title($title));
 		}
@@ -617,23 +617,23 @@ class m_recruits_c_admin extends Controller_Module
 		$vote_form = $this	->form
 							->add_rules($rules = [
 								'vote' => [
-									'label'  => 'Je suis',
+									'label'  => 'I',
 									'value'  => isset($user_vote['vote']) ? $user_vote['vote'] : NULL,
 									'values' => [
-										'1' => icon('fa-thumbs-o-up').' <span class="text-green">Favorable</span>',
-										'0' => icon('fa-thumbs-o-down').' <span class="text-red">Défavorable</span>'
+										'1' => icon('fa-thumbs-o-up').' <span class="text-green">agree</span>',
+										'0' => icon('fa-thumbs-o-down').' <span class="text-red">disagree</span>'
 									],
 									'type'   => 'radio',
 									'rules'  => 'required'
 								],
 								'comment' => [
-									'label'  => 'Commentaire',
+									'label'  => 'Arguments',
 									'type'   => 'textarea',
 									'value'  => isset($user_vote['comment']) ? $user_vote['comment'] : NULL,
 									'rules'  => 'required'
 								],
 							])
-							->add_submit('Envoyer mon avis')
+							->add_submit('Send my opinion')
 							->save();
 
 		if ($vote_form->is_valid($post))
@@ -645,7 +645,7 @@ class m_recruits_c_admin extends Controller_Module
 											$post['vote'],
 											$post['comment']);
 
-				notify('Vote modifié avec succès');
+				notify('Vote successfully changed');
 			}
 			else
 			{
@@ -653,7 +653,7 @@ class m_recruits_c_admin extends Controller_Module
 											$post['vote'],
 											$post['comment']);
 
-				notify('Vote envoyé avec succès');
+				notify('Vote sent successfully');
 			}
 
 			refresh();
@@ -661,17 +661,17 @@ class m_recruits_c_admin extends Controller_Module
 
 		if ($status == 1)
 		{
-			$statut_heading = icon('fa-hourglass-end').' Candidature <b>en cours d\'éxamination</b>';
+			$statut_heading = icon('fa-hourglass-end').' Application is <b>under review</b>';
 			$statut_color   = 'bg-teal';
 		}
 		else if ($status == 2)
 		{
-			$statut_heading = icon('fa-check').' Candidature <b>acceptée</b>';
+			$statut_heading = icon('fa-check').' Application <b>accepted</b>';
 			$statut_color   = 'bg-green';
 		}
 		else
 		{
-			$statut_heading = icon('fa-close').' Candidature <b>refusée</b>';
+			$statut_heading = icon('fa-close').' Application <b>refused</b>';
 			$statut_color   = 'bg-red';
 		}
 
@@ -680,7 +680,7 @@ class m_recruits_c_admin extends Controller_Module
 				$this	->panel_box()
 						->heading($statut_heading, '', 'admin/recruits/candidacies/'.$recruit_id.'/'.url_title($title))
 						->color($statut_color)
-						->footer(icon('fa-arrow-circle-left').' Retour aux candidatures de cette offre'),
+						->footer(icon('fa-arrow-circle-left').' Back to applications for this offer'),
 				$this	->panel()
 						->heading('<div class="pull-right"><a href="mailto:'.$email.'" class="btn btn-outline btn-info btn-xs" data-toggle="tooltip" title="Contacter par e-mail">'.icon('fa-envelope-o').'</a></div>Candidature de <b>'.$pseudo.'</b>', 'fa-black-tie')
 						->body($this->view('candidacy', [
@@ -705,21 +705,21 @@ class m_recruits_c_admin extends Controller_Module
 							'team_name'     => $team_name
 						])),
 				$this	->panel()
-						->heading('Réponse au candidat', 'fa-lock')
-						->body($this->is_authorized('candidacy_reply') ? $reply_form->display() : '<span class="text-red">Vous n\'êtes pas autorisé à gérer le statut de la candidature.</span>')
+						->heading('Respond to the applicant', 'fa-lock')
+						->body($this->is_authorized('candidacy_reply') ? $reply_form->display() : '<span class="text-red">You are not authorized to manage the status of the application.</span>')
 						->size('col-md-7'),
 				$this->button_back()
 			),
 			$this->col(
 				$this	->panel()
-						->heading('<div class="pull-right text-right"><ul class="list-inline no-margin"><li>'.$total_up.' '.icon('fa-thumbs-o-up text-green').'</li><li>'.$total_down.' '.icon('fa-thumbs-o-down text-red').'</li></ul></div>Tendance des votes', 'fa-commenting-o')
+						->heading('<div class="pull-right text-right"><ul class="list-inline no-margin"><li>'.$total_up.' '.icon('fa-thumbs-o-up text-green').'</li><li>'.$total_down.' '.icon('fa-thumbs-o-down text-red').'</li></ul></div>Voting Trend', 'fa-commenting-o')
 						->body($this->view('admin-candidacy-status', [
 							'status' => $status,
 							'votes'  => $votes
 						])),
 				$this	->panel()
-						->heading('Mon avis sur la candidature', 'fa-star-o')
-						->body($this->is_authorized('candidacy_vote') ? $vote_form->display() : '<span class="text-red">Vous n\'êtes pas autorisé à déposer votre avis.</span>')
+						->heading('My opinion on the application', 'fa-star-o')
+						->body($this->is_authorized('candidacy_vote') ? $vote_form->display() : '<span class="text-red">You are not allowed to leave your opinion.</span>')
 						->size('col-md-5')
 			)
 		);
@@ -727,10 +727,10 @@ class m_recruits_c_admin extends Controller_Module
 
 	public function _candidacies_delete($candidacy_id, $pseudo, $title)
 	{
-		$this	->title('Suppression candidature')
+		$this	->title('Delete Application')
 				->subtitle($title)
 				->form
-				->confirm_deletion('Confirmation de suppression', 'Êtes-vous sûr(e) de vouloir supprimer la candidature de <b>'.$pseudo.'</b> ?<br />Tous les avis associés à cette candidature seront aussi supprimés.');
+				->confirm_deletion('Delete confirmation', 'Are you sure you want to delete the application <b>'.$pseudo.'</b> ?<br />All notices associated with this application will also be removed.');
 
 		if ($this->form->is_valid())
 		{
@@ -750,11 +750,11 @@ class m_recruits_c_admin extends Controller_Module
 			{
 				if ($status == 2)
 				{
-					$message = '<div class="alert alert-success">Votre candidature a été <b>acceptée</b>. Félicitations !</div>'.$reply;
+					$message = '<div class="alert alert-success">Your application has been <b>accepted</b>. Congratulations !</div>'.$reply;
 				}
 				else if ($status == 3)
 				{
-					$message = '<div class="alert alert-danger">Votre candidature a été <b>refusée</b>. Désolé !</div>'.$reply;
+					$message = '<div class="alert alert-danger">Your application has been <b>refused</b>. Sorry !</div>'.$reply;
 				}
 				else
 				{
@@ -763,7 +763,7 @@ class m_recruits_c_admin extends Controller_Module
 
 				$message_id = $this->db	->ignore_foreign_keys()
 										->insert('dungeon_users_messages', [
-											'title' => 'Candidature :: '.$candidacy['title']
+											'title' => 'Application :: '.$candidacy['title']
 										]);
 
 				$reply_id = $this->db	->insert('dungeon_users_messages_replies', [
@@ -793,7 +793,7 @@ class m_recruits_c_admin extends Controller_Module
 				$this->load	->email
 							->from($this->config->dungeon_contact ? $this->config->dungeon_contact : $this->user('email'))
 							->to($candidacy['email'])
-							->subject('Candidature :: '.$candidacy['title'])
+							->subject('Application :: '.$candidacy['title'])
 							->message('default', [
 								'content' => bbcode($reply).($this->user() ? '<br /><br /><br />'.$this->user->link() : '')
 							])

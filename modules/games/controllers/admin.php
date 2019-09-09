@@ -108,7 +108,7 @@ class m_games_c_admin extends Controller_Module
 		$modes = $this	->table
 						->add_columns([
 							[
-								'title'   => 'Titre',
+								'title'   => 'Title',
 								'content' => function($data){
 									return $data['title'];
 								}
@@ -314,7 +314,7 @@ class m_games_c_admin extends Controller_Module
 		$maps = $this	->table
 						->add_columns(array_filter([
 							[
-								'title'   => 'Titre',
+								'title'   => 'Title',
 								'content' => function($data){
 									return $data['title'];
 								}

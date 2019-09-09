@@ -173,11 +173,11 @@ class t_default extends Theme
 												'url'   => 'members'
 											],
 											[
-												'title' => utf8_htmlentities('Recrutement'),
+												'title' => utf8_htmlentities('Recruitment'),
 												'url'   => 'recruits'
 											],
 											[
-												'title' => utf8_htmlentities('Photos'),
+												'title' => utf8_htmlentities('Gallery'),
 												'url'   => 'gallery'
 											],
 											[

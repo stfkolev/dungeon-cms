@@ -44,7 +44,7 @@ class m_user_c_admin extends Controller_Module
 				],
 				[
 					'content' => function($data){
-						return $data['hidden'] ? $this->button()->icon('fa-eye-slash')->tooltip('Groupe caché') : NULL;
+						return $data['hidden'] ? $this->button()->icon('fa-eye-slash')->tooltip('Hidden') : NULL;
 					},
 					'size'    => TRUE
 				],

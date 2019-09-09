@@ -27,7 +27,7 @@ class m_awards_c_admin extends Controller_Module
 		$awards = $this	->table
 						->add_columns([
 							[
-								'title'   => 'Titre',
+								'title'   => 'Title',
 								'content' => function($data){
 									return $data['name'];
 								},
@@ -39,7 +39,7 @@ class m_awards_c_admin extends Controller_Module
 								}
 							],
 							[
-								'title'   => 'Lieu',
+								'title'   => 'Location',
 								'content' => function($data){
 									return $data['location'] ? icon('fa-map-marker').$data['location'] : '';
 								},
@@ -63,7 +63,7 @@ class m_awards_c_admin extends Controller_Module
 								}
 							],
 							[
-								'title'   => 'Équipe',
+								'title'   => 'Team',
 								'content' => function($data){
 									return $data['team_title'];
 								},
@@ -75,7 +75,7 @@ class m_awards_c_admin extends Controller_Module
 								}
 							],
 							[
-								'title'   => 'Jeu',
+								'title'   => 'Game',
 								'content' => function($data){
 									return $data['game_title'];
 								},
@@ -87,29 +87,29 @@ class m_awards_c_admin extends Controller_Module
 								}
 							],
 							[
-								'title'   => '<span data-toggle="tooltip" title="Classement">'.icon('fa-trophy').'</span>',
+								'title'   => '<span data-toggle="tooltip" title="Ranking">'.icon('fa-trophy').'</span>',
 								'size'    => TRUE,
 								'content' => function($data){
 									if ($data['ranking'] == 1)
 									{
-										return '<span data-toggle="tooltip" title="'.$data['ranking'].'er / '.$data['participants'].' équipes">'.icon('fa-trophy trophy-gold').'</span>';
+										return '<span data-toggle="tooltip" title="'.$data['ranking'].'st / '.$data['participants'].' teams">'.icon('fa-trophy trophy-gold').'</span>';
 									}
 									else if ($data['ranking'] == 2)
 									{
-										return '<span data-toggle="tooltip" title="'.$data['ranking'].'ème / '.$data['participants'].' équipes">'.icon('fa-trophy trophy-silver').'</span>';
+										return '<span data-toggle="tooltip" title="'.$data['ranking'].'nd / '.$data['participants'].' teams">'.icon('fa-trophy trophy-silver').'</span>';
 									}
 									else if ($data['ranking'] == 3)
 									{
-										return '<span data-toggle="tooltip" title="'.$data['ranking'].'ème / '.$data['participants'].' équipes">'.icon('fa-trophy trophy-bronze').'</span>';
+										return '<span data-toggle="tooltip" title="'.$data['ranking'].'rd / '.$data['participants'].' teams">'.icon('fa-trophy trophy-bronze').'</span>';
 									}
 									else
 									{
-										return $data['ranking'].'<small>ème</small>';
+										return $data['ranking'].'<small>th</small>';
 									}
 								}
 							],
 							[
-								'title'   => '<span data-toggle="tooltip" title="Plateforme">'.icon('fa-tv').'</span>',
+								'title'   => '<span data-toggle="tooltip" title="Platform">'.icon('fa-tv').'</span>',
 								'size'    => TRUE,
 								'content' => function($data){
 									return $data['platform'];
@@ -131,18 +131,18 @@ class m_awards_c_admin extends Controller_Module
 							]
 						])
 						->data($awards)
-						->no_data('Aucun palmarès')
+						->no_data('No awards')
 						->display();
 
 		return $this->panel()
-					->heading('Liste des palmarès', 'fa-trophy')
+					->heading('List of awards', 'fa-trophy')
 					->body($awards)
-					->footer($this->button_create('admin/awards/add', 'Ajouter un palmarès'));
+					->footer($this->button_create('admin/awards/add', 'Add award'));
 	}
 
 	public function add()
 	{
-		$this	->subtitle('Ajouter un palmarès')
+		$this	->subtitle('Add award')
 				->form
 				->add_rules('awards', [
 					'teams' => $this->model()->get_teams_list(),
@@ -164,19 +164,19 @@ class m_awards_c_admin extends Controller_Module
 										$post['description'],
 										$post['image']);
 
-			notify('Palmarès ajouté avec succès');
+			notify('Award added successfully');
 
 			redirect_back('admin/awards');
 		}
 
 		return $this->panel()
-					->heading('Nouveau palmarès', 'fa-trophy')
+					->heading('New award', 'fa-trophy')
 					->body($this->form->display());
 	}
 
 	public function _edit($award_id, $team_id, $date, $location, $name, $platform, $game_id, $ranking, $participants, $description, $image_id, $team_name, $team_title, $game_name, $game_title)
 	{
-		$this	->subtitle('Équipe '.$team_title)
+		$this	->subtitle('Team '.$team_title)
 				->form
 				->add_rules('awards', [
 					'award_id'     => $award_id,
@@ -210,22 +210,22 @@ class m_awards_c_admin extends Controller_Module
 										$post['description'],
 										$post['image']);
 
-			notify('Palmarès édité avec succès');
+			notify('Award modified successfully');
 
 			redirect_back('admin/awards');
 		}
 
 		return $this->panel()
-					->heading('Édition du palmarès', 'fa-trophy')
+					->heading('Modify award', 'fa-trophy')
 					->body($this->form->display());
 	}
 
 	public function delete($award_id, $name)
 	{
-		$this	->title('Palmarès')
+		$this	->title('Awards')
 				->subtitle($name)
 				->form
-				->confirm_deletion($this->lang('delete_confirmation'), 'Êtes-vous sûr de vouloir supprimer le palmarès <b>'.$name.'</b> ?');
+				->confirm_deletion($this->lang('delete_confirmation'), 'Are you sure you want to delete the award <b>'.$name.'</b> ?');
 
 		if ($this->form->is_valid())
 		{
