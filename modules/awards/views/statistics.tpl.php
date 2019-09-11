@@ -3,19 +3,19 @@
 	<ul class="list-inline">
 		<li>
 			<div class="well">
-				<span data-toggle="tooltip" title="1ère place"><?php echo icon('fa-trophy trophy-gold fa-2x'); ?></span><br />
+				<span data-toggle="tooltip" title="1st place"><?php echo icon('fa-trophy trophy-gold fa-2x'); ?></span><br />
 				<?php echo $data['total_gold'][0].($data['total_gold'][0] > 1 ? ' trophies' : ' trophy'); ?>
 			</div>
 		</li>
 		<li>
 			<div class="well">
-				<span data-toggle="tooltip" title="2ème place"><?php echo icon('fa-trophy trophy-silver fa-2x'); ?></span><br />
+				<span data-toggle="tooltip" title="2nd place"><?php echo icon('fa-trophy trophy-silver fa-2x'); ?></span><br />
 				<?php echo $data['total_silver'][0].($data['total_silver'][0] > 1 ? ' trophies' : ' trophy'); ?>
 			</div>
 		</li>
 		<li>
 			<div class="well">
-				<span data-toggle="tooltip" title="3ème place"><?php echo icon('fa-trophy trophy-bronze fa-2x'); ?></span><br />
+				<span data-toggle="tooltip" title="3rd place"><?php echo icon('fa-trophy trophy-bronze fa-2x'); ?></span><br />
 				<?php echo $data['total_bronze'][0].($data['total_bronze'][0] > 1 ? ' trophies' : ' trophy'); ?>
 			</div>
 		</li>
@@ -65,10 +65,10 @@
 		<thead>
 			<tr>
 				<th class="col-md-6"><h4 class="no-margin">Ranking of our teams</h4></th>
-				<th class="text-center"><span data-toggle="tooltip" title="1ère place"><?php echo icon('fa-trophy trophy-gold'); ?></span></th>
-				<th class="text-center"><span data-toggle="tooltip" title="2ème place"><?php echo icon('fa-trophy trophy-silver'); ?></span></th>
-				<th class="text-center"><span data-toggle="tooltip" title="3ème place"><?php echo icon('fa-trophy trophy-bronze'); ?></span></th>
-				<th class="text-center"><span data-toggle="tooltip" title="Autre place"><?php echo icon('fa-plus'); ?></span></th>
+				<th class="text-center"><span data-toggle="tooltip" title="1st place"><?php echo icon('fa-trophy trophy-gold'); ?></span></th>
+				<th class="text-center"><span data-toggle="tooltip" title="2nd place"><?php echo icon('fa-trophy trophy-silver'); ?></span></th>
+				<th class="text-center"><span data-toggle="tooltip" title="3rd place"><?php echo icon('fa-trophy trophy-bronze'); ?></span></th>
+				<th class="text-center"><span data-toggle="tooltip" title="Other placement"><?php echo icon('fa-plus'); ?></span></th>
 			</tr>
 		</thead>
 		<tbody>

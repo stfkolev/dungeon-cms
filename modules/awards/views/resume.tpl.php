@@ -3,15 +3,15 @@
 		<h4>All our awards</h4>
 		<ul class="list-inline no-margin">
 			<li>
-				<span data-toggle="tooltip" title="1ère place"><?php echo icon('fa-trophy trophy-gold fa-2x'); ?></span>
+				<span data-toggle="tooltip" title="1st place"><?php echo icon('fa-trophy trophy-gold fa-2x'); ?></span>
 				<h4 class="no-margin"><?php echo $data['total_gold'][0]; ?></h4>
 			</li>
 			<li>
-				<span data-toggle="tooltip" title="2ème place"><?php echo icon('fa-trophy trophy-silver fa-2x'); ?></span>
+				<span data-toggle="tooltip" title="2nd place"><?php echo icon('fa-trophy trophy-silver fa-2x'); ?></span>
 				<h4 class="no-margin"><?php echo $data['total_silver'][0]; ?></h4>
 			</li>
 			<li>
-				<span data-toggle="tooltip" title="3ème place"><?php echo icon('fa-trophy trophy-bronze fa-2x'); ?></span>
+				<span data-toggle="tooltip" title="3rd place"><?php echo icon('fa-trophy trophy-bronze fa-2x'); ?></span>
 				<h4 class="no-margin"><?php echo $data['total_bronze'][0]; ?></h4>
 			</li>
 		</ul>

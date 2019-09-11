@@ -7,15 +7,15 @@
 			<h4><?php echo $data['stats-team'] ? 'Awards on this team' : 'Awards on this game'; ?></h4>
 			<ul class="list-inline no-margin">
 				<li>
-					<span data-toggle="tooltip" title="1ère place"><?php echo icon('fa-trophy fa-2x trophy-gold'); ?></span><br />
+					<span data-toggle="tooltip" title="1st place"><?php echo icon('fa-trophy fa-2x trophy-gold'); ?></span><br />
 					<b><?php echo $data['total_gold'][0].($data['total_gold'][0] > 1 ? ' trophies' : ' trophy'); ?></b>
 				</li>
 				<li>
-					<span data-toggle="tooltip" title="2ème place"><?php echo icon('fa-trophy fa-2x trophy-silver'); ?></span><br />
+					<span data-toggle="tooltip" title="2nd place"><?php echo icon('fa-trophy fa-2x trophy-silver'); ?></span><br />
 					<b><?php echo $data['total_silver'][0].($data['total_silver'][0] > 1 ? ' trophies' : ' trophy'); ?></b>
 				</li>
 				<li>
-					<span data-toggle="tooltip" title="3ème place"><?php echo icon('fa-trophy fa-2x trophy-bronze'); ?></span><br />
+					<span data-toggle="tooltip" title="3rd place"><?php echo icon('fa-trophy fa-2x trophy-bronze'); ?></span><br />
 					<b><?php echo $data['total_bronze'][0].($data['total_bronze'][0] > 1 ? ' trophies' : ' trophy'); ?></b>
 				</li>
 			</ul>

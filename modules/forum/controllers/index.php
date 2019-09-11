@@ -141,7 +141,7 @@ class m_forum_c_index extends Controller_Module
 													$post['message'],
 													!empty($post['announce']) && in_array('on', $post['announce']));
 
-			notify('Sujet ajouté');
+			notify('Topic posted');
 
 			redirect('forum/topic/'.$topic_id.'/'.url_title($post['title']));
 		}
