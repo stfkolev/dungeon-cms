@@ -217,7 +217,7 @@ class m_recruits_c_admin extends Controller_Module
 												'candidacies_accepted' => $candidacies_accepted,
 												'candidacies_declined' => $candidacies_declined
 											]))
-						->footer(($this->is_authorized('candidacy_vote') || $this->is_authorized('candidacy_reply')) ? '<a href="'.url('admin/recruits/candidacies/'.$recruit_id.'/'.url_title($title)).'" class="btn btn-info btn-outline">Voir les candidatures</a>' : '<span class="text-red">Vous n\'êtes pas autorisé à gérer les candidatures...</span>')
+						->footer(($this->is_authorized('candidacy_vote') || $this->is_authorized('candidacy_reply')) ? '<a href="'.url('admin/recruits/candidacies/'.$recruit_id.'/'.url_title($title)).'" class="btn btn-info btn-outline">See the applicants</a>' : '<span class="text-red">ou are not allowed to manage applications...</span>')
 						->size('col-md-4'),
 				$this	->panel()
 						->heading('Formulaire', 'fa-tasks')

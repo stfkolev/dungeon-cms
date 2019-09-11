@@ -37,7 +37,7 @@ class m_recruits_c_index extends Controller_Module
 			{
 				if ($candidacy = $this->model()->postulated($this->user('user_id'), $recruit['recruit_id'], $recruit['title']))
 				{
-					$footer = '<a href="'.url('recruits/candidacy/'.$candidacy['candidacy_id'].'/'.url_title($recruit['title'])).'" class="btn btn-primary">'.icon('fa-briefcase').' Voir ma candidature</a>';
+					$footer = '<a href="'.url('recruits/candidacy/'.$candidacy['candidacy_id'].'/'.url_title($recruit['title'])).'" class="btn btn-primary">'.icon('fa-briefcase').' View my application</a>';
 				}
 				else
 				{
@@ -85,7 +85,7 @@ class m_recruits_c_index extends Controller_Module
 		{
 			if ($candidacy = $this->model()->postulated($this->user('user_id'), $recruit_id, $title))
 			{
-				$href                  = '<a href="'.url('recruits/candidacy/'.$candidacy['candidacy_id'].'/'.url_title($candidacy['title'])).'" class="btn btn-success">'.icon('fa-eye').' Voir ma candidature</a>';
+				$href                  = '<a href="'.url('recruits/candidacy/'.$candidacy['candidacy_id'].'/'.url_title($candidacy['title'])).'" class="btn btn-success">'.icon('fa-eye').' View my application</a>';
 				$recruit['postulated'] = TRUE;
 			}
 			else
@@ -193,7 +193,7 @@ class m_recruits_c_index extends Controller_Module
 								'value' => $this->user('date_of_birth'),
 								'type'  => 'date',
 								'check' => function($value){
-									if ($value && strtotime($value) > strtotime(date('Y-m-d')))
+									if ($value && strtotime($value) > strtotime(date('d-m-Y')))
 									{
 										return 'Really ?! 2.1 Gigwatt !';
 									}

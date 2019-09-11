@@ -60,7 +60,7 @@ $rules = [
 		'value'       => $this->form->value('date_end'),
 		'type'        => 'date',
 		'check'       => function($value){
-			if ($value && strtotime($value) < strtotime(date('Y-m-d')))
+			if ($value && strtotime($value) < strtotime(date('d-m-Y')))
 			{
 				return 'Really ?! 2.1 Gigwatt !';
 			}
