@@ -31,6 +31,6 @@ $lang['pm_inbox']         = 'Inbox';
 $lang['welcome']          = 'Welcome <a href="'.url('user').'">'.$this->user('username').'</a>';
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/widgets/user/lang/en.php
 */

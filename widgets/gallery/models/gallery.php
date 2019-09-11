@@ -75,6 +75,6 @@ class w_gallery_m_gallery extends Model
 }
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./widgets/gallery/models/gallery.php
 */

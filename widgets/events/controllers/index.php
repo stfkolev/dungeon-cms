@@ -26,7 +26,6 @@ class w_events_c_index extends Controller_Widget
 				->css('events')
 				->js('moment.min')
 				->js('fullcalendar.min')
-				// ->js('lang-all')
 				->js('events');
 
 		return $this->panel()
@@ -57,7 +56,7 @@ class w_events_c_index extends Controller_Widget
 		}
 		else
 		{
-			$label = $this->label('Tous', '', 'default');
+			$label = $this->label('All', '', 'default');
 			$events = $this->model()->get_events();
 		}
 
@@ -153,6 +152,6 @@ class w_events_c_index extends Controller_Widget
 }
 
 /*
-Dungeon Alpha 0.1.6.1
+Dungeon Alpha 0.1.7.7
 ./widgets/events/controllers/index.php
 */

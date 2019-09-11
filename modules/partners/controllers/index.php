@@ -43,6 +43,6 @@ class m_partners_c_index extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/partners/controllers/index.php
 */

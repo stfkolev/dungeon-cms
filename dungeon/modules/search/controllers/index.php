@@ -167,6 +167,6 @@ class m_search_c_index extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/modules/search/controllers/index.php
 */

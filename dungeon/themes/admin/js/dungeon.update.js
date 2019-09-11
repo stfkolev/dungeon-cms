@@ -52,7 +52,7 @@ $(function(){
 				$('.module-monitoring .refresh').trigger('click');
 				setTimeout(function(){
 					$('#modal-update').modal('hide');
-					notify('Mise à jour effectuée avec succès');
+					notify('Update successfully completed');
 				}, 1000);
 			}
 		});

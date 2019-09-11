@@ -25,8 +25,8 @@ class t_admin extends Theme
 	public $link        = 'http://www.dungeon.com';
 	public $author      = 'Evil <inkyzfx@gmail.com>';
 	public $licence     = 'http://www.dungeon.com/license.html LGPLv3';
-	public $version     = 'Alpha 0.1';
-	public $dungeon_version  = 'Alpha 0.1';
+	public $version     = 'Alpha 0.1.7';
+	public $dungeon_version  = 'Alpha 0.1.7';
 	public $path        = __FILE__;
 
 	public function load()
@@ -202,6 +202,6 @@ class t_admin extends Theme
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/themes/admin/admin.php
 */

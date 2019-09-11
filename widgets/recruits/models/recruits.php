@@ -60,6 +60,6 @@ class w_recruits_m_recruits extends Model
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./widgets/recruits/models/recruits.php
 */

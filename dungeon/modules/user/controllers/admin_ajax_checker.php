@@ -30,6 +30,6 @@ class m_user_c_admin_ajax_checker extends Controller
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/modules/user/controllers/admin_ajax_checker.php
 */

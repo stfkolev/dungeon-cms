@@ -164,13 +164,13 @@ class m_teams_c_index extends Controller_Module
 			$team_matches ? $this->panel()
 					->heading('Derniers résultats', 'fa-crosshairs')
 					->body($matches)
-					->footer_if((count($team_matches) > 10), '<a href="'.url('events/team/'.$team_id.'/'.url_title($name)).'">'.icon('fa-arrow-circle-o-right').' Voir tous les matchs de cette équipe</a>', 'right') : NULL,
+					->footer_if((count($team_matches) > 10), '<a href="'.url('events/team/'.$team_id.'/'.url_title($name)).'">'.icon('fa-arrow-circle-o-right').' View all matches of this team</a>', 'right') : NULL,
 			$this	->panel_back('teams')
 		];
 	}
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/teams/controllers/index.php
 */

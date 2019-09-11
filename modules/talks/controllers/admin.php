@@ -134,6 +134,6 @@ class m_talks_c_admin extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/talks/controllers/admin.php
 */

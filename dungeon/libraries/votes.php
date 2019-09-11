@@ -32,6 +32,6 @@ class Votes extends Library
 }
 
 /*
-Dungeon Alpha 0.1
+Dungeon Alpha 0.1.7
 ./dungeon/libraries/votes.php
 */

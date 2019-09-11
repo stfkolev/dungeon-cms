@@ -90,6 +90,6 @@ class m_games_m_modes extends Model
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/games/models/modes.php
 */

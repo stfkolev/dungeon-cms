@@ -59,6 +59,6 @@ class m_gallery_c_checker extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1
+Dungeon Alpha 0.1.7
 ./modules/gallery/controllers/checker.php
 */

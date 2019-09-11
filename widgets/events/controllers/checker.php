@@ -46,6 +46,6 @@ class w_events_c_checker extends Controller
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./widgets/events/controllers/checker.php
 */

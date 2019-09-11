@@ -61,6 +61,6 @@ class a_google extends Authenticator
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./authenticators/google.php
 */

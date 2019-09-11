@@ -26,11 +26,11 @@ class w_dserv extends Widget
 	public $author      = 'Evil';
 	public $licence     = 'http://www.dungeon.com/license.html LGPLv3';
 	public $version     = '1.3';
-	public $dungeon_version  = 'Alpha 0.1.6.1';
+	public $dungeon_version  = 'Alpha 0.1.7.7';
 	public $path        = __FILE__;
 }
 
 /*
-Dungeon Alpha 0.1.6.1
+Dungeon Alpha 0.1.7.7
 ./widgets/dserv/dserv.php
 */

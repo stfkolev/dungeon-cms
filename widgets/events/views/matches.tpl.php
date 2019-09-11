@@ -33,5 +33,5 @@
 	<?php endforeach; ?>
 </ul>
 <?php else: ?>
-<div class="panel-body">Aucun résultat...</div>
+<div class="panel-body">No matches...</div>
 <?php endif; ?>

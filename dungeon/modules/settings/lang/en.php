@@ -42,6 +42,6 @@ $lang['text_color']                   = 'Text color';
 $lang['website_status']               = 'Website status';
 
 /*
-Dungeon Alpha 0.1.4
+Dungeon Alpha 0.1.7.7
 ./dungeon/modules/settings/lang/en.php
 */

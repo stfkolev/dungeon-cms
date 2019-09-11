@@ -860,6 +860,6 @@ function is_crawler()
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/helpers/user_agent.php
 */

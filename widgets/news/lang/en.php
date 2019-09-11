@@ -28,6 +28,6 @@ $lang['no_news']     = 'No news at the moment';
 $lang['recent_news'] = 'Latest news';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./widgets/news/lang/en.php
 */

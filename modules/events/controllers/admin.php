@@ -26,7 +26,6 @@ class m_events_c_admin extends Controller_Module
 				->css('admin')
 				->js('moment.min')
 				->js('fullcalendar.min')
-				// ->js('lang-all')
 				->js('events');
 
 		$types = $this	->table
@@ -620,6 +619,6 @@ class m_events_c_admin extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/events/controllers/admin.php
 */

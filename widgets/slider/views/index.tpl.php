@@ -8,14 +8,14 @@
 			<img src="<?php echo image('slide1.jpg'); ?>" alt="..." />
 			<div class="carousel-caption hidden-xs">
 				<h3>Slider 1</h3>
-				<p>Accedebant enim eius asperitati, ubi inminuta vel laesa amplitudo imperii dicebatur</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eligendi, reprehenderit expedita numquam</p>
 			</div>
 		</div>
 		<div class="item">
 			<img src="<?php echo image('slide2.jpg'); ?>" alt="..." />
 			<div class="carousel-caption hidden-xs">
 				<h3>Slider 2</h3>
-				<p>Accedebant enim eius asperitati, ubi inminuta vel laesa amplitudo imperii dicebatur</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eligendi, reprehenderit expedita numquam</p>
 			</div>
 		</div>
 	</div>

@@ -106,6 +106,6 @@ class m_news_m_categories extends Model
 }
 
 /*
-Dungeon Alpha 0.1.5
+Dungeon Alpha 0.1.7.5
 ./modules/news/models/categories.php
 */

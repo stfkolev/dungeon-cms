@@ -31,6 +31,6 @@ $lang['number_comments']      = 'Number of comments';
 $lang['see_comments']         = 'View comments';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./dungeon/modules/comments/lang/en.php
 */

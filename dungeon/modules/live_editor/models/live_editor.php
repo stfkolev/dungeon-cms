@@ -122,6 +122,6 @@ class m_live_editor_m_live_editor extends Model
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/modules/live_editor/models/live_editor.php
 */

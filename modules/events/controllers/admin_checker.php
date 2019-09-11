@@ -136,6 +136,6 @@ class m_events_c_admin_checker extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/events/controllers/admin_checker.php
 */

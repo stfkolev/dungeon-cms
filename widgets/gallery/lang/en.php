@@ -41,6 +41,6 @@ $lang['random_picture']       = 'Random image';
 $lang['see_our_gallery']      = 'See our gallery';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./widgets/gallery/lang/en.php
 */

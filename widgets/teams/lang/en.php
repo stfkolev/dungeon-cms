@@ -29,6 +29,6 @@ $lang['see_all_teams'] = 'View all our teams';
 $lang['teams']         = 'Teams';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./widgets/teams/lang/en.php
 */

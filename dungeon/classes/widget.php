@@ -156,6 +156,6 @@ abstract class Widget extends Loadable
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/classes/widget.php
 */

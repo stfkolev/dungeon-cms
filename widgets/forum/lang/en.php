@@ -38,6 +38,6 @@ $lang['no_topics']       = 'No topic at the moment';
 $lang['there_are']       = 'There are %d user on the forum| There are %d users on the forum';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./widgets/forum/lang/en.php
 */

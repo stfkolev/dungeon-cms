@@ -180,7 +180,7 @@ class m_games_c_admin extends Controller_Module
 	
 	public function _maps_add($game_id = NULL, $game = NULL)
 	{
-		$this	->subtitle('Nouvelle carte')
+		$this	->subtitle('Add map')
 				->form
 				->add_rules('maps', [
 					'games'   => $this->model()->get_games_list(TRUE),
@@ -199,13 +199,13 @@ class m_games_c_admin extends Controller_Module
 		}
 
 		return $this->panel()
-					->heading('Nouvelle carte', 'fa-map-o')
+					->heading('New map', 'fa-map-o')
 					->body($this->form->display());
 	}
 	
 	public function _maps_edit($map_id, $game_id, $image_id, $title, $game)
 	{
-		$this	->title('Éditer la carte')
+		$this	->title('Edit map')
 				->subtitle($title)
 				->form
 				->add_rules('maps', [
@@ -228,16 +228,16 @@ class m_games_c_admin extends Controller_Module
 		}
 
 		return $this->panel()
-					->heading('Éditer la carte', 'fa-map-o')
+					->heading('Edit map', 'fa-map-o')
 					->body($this->form->display());
 	}
 	
 	public function _maps_delete($map_id, $title)
 	{
-		$this	->title('Suppression d\'une carte')
+		$this	->title('Delete map')
 				->subtitle($title)
 				->form
-				->confirm_deletion($this->lang('delete_confirmation'), 'Êtes-vous sûr(e) de vouloir supprimer la carte <b>'.$title.'</b> ?');
+				->confirm_deletion($this->lang('delete_confirmation'), 'Are you sure you want to delete this map <b>'.$title.'</b> ?');
 
 		if ($this->form->is_valid())
 		{
@@ -251,7 +251,7 @@ class m_games_c_admin extends Controller_Module
 	
 	public function _modes_add($game_id, $game)
 	{
-		$this	->subtitle('Nouveau mode')
+		$this	->subtitle('New mode')
 				->form
 				->add_rules('modes')
 				->add_submit($this->lang('add'))
@@ -265,13 +265,13 @@ class m_games_c_admin extends Controller_Module
 		}
 
 		return $this->panel()
-					->heading('Nouveau mode', 'fa-cog')
+					->heading('New mode', 'fa-cog')
 					->body($this->form->display());
 	}
 	
 	public function _modes_edit($mode_id, $game_id, $title, $game)
 	{
-		$this	->title('Éditer le mode')
+		$this	->title('Edit mode')
 				->subtitle($title)
 				->form
 				->add_rules('modes', [
@@ -288,16 +288,16 @@ class m_games_c_admin extends Controller_Module
 		}
 
 		return $this->panel()
-					->heading('Éditer le mode', 'fa-cog')
+					->heading('Edit mode', 'fa-cog')
 					->body($this->form->display());
 	}
 	
 	public function _modes_delete($mode_id, $title)
 	{
-		$this	->title('Suppression d\'un mode')
+		$this	->title('Delete mode')
 				->subtitle($title)
 				->form
-				->confirm_deletion($this->lang('delete_confirmation'), 'Êtes-vous sûr(e) de vouloir supprimer le mode <b>'.$title.'</b> ?');
+				->confirm_deletion($this->lang('delete_confirmation'), 'Are you sure you want to delete the mode <b>'.$title.'</b> ?');
 
 		if ($this->form->is_valid())
 		{
@@ -320,7 +320,7 @@ class m_games_c_admin extends Controller_Module
 								}
 							],
 							$game_id ? NULL : [
-								'title'   => 'Jeu',
+								'title'   => 'Game',
 								'content' => function($data){
 									return ($data['icon_id'] ? '<img src="'.path($data['icon_id']).'" alt="" /> ' : '').'<a href="'.url('admin/games/'.$data['game_id'].'/'.$data['name']).'">'.$data['game_title'].'</a>';
 								}
@@ -338,17 +338,17 @@ class m_games_c_admin extends Controller_Module
 							]
 						]))
 						->data($maps)
-						->no_data('Aucune carte')
+						->no_data('No map')
 						->display();
 
 		return $this->panel()
-					->heading('Cartes', 'fa-map-o')
+					->heading('Maps', 'fa-map-o')
 					->body($maps)
-					->footer($this->button_create('admin/games/maps/add'.($game_id ? '/'.$game_id.'/'.url_title($title) : ''),  'Ajouter une carte'));
+					->footer($this->button_create('admin/games/maps/add'.($game_id ? '/'.$game_id.'/'.url_title($title) : ''),  'Add map'));
 	}
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/games/controllers/admin.php
 */

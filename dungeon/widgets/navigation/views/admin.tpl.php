@@ -29,7 +29,7 @@
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<a class="type-collapse" role="button" data-toggle="collapse" data-parent="#accordion" href="#type-module" aria-controls="type-module">
-								<?php echo icon('fa-edit'); ?> <b>Lien vers un module</b>
+								<?php echo icon('fa-edit'); ?> <b>Link to a module</b>
 							</a>
 						</div>
 						<div id="type-module" class="panel-collapse collapse" role="tabpanel">
@@ -100,7 +100,7 @@
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<a class="type-collapse" role="button" data-toggle="collapse" data-parent="#accordion" href="#type-page" aria-controls="type-page">
-								<?php echo icon('fa-file-text-o'); ?> <b>Lien vers une page</b>
+								<?php echo icon('fa-file-text-o'); ?> <b>Link to a page</b>
 							</a>
 						</div>
 						<div id="type-page" class="panel-collapse collapse" role="tabpanel">
@@ -144,7 +144,7 @@
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<a class="type-collapse link-item" role="button" data-link-title="" data-link-url="" data-toggle="collapse" data-parent="#accordion" href="#type-custom" aria-controls="type-custom">
-								<?php echo icon('fa-link'); ?> <b>Lien personnalisé</b>
+								<?php echo icon('fa-link'); ?> <b>Custom link</b>
 							</a>
 						</div>
 						<div id="type-custom" class="panel-collapse collapse" role="tabpanel">

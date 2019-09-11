@@ -128,6 +128,6 @@ class m_events_m_participants extends Model
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/events/models/participants.php
 */

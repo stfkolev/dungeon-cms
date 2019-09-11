@@ -193,6 +193,6 @@ class m_admin_c_admin extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/modules/admin/controllers/admin.php
 */

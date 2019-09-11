@@ -44,6 +44,6 @@ class m_comments_c_admin_checker extends Controller
 }
 
 /*
-Dungeon Alpha 0.1.5.3
+Dungeon Alpha 0.1.7.5.3
 ./dungeon/modules/comments/controllers/admin_checker.php
 */

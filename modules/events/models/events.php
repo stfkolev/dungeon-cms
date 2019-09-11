@@ -142,6 +142,6 @@ class m_events_m_events extends Model
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/events/models/events.php
 */

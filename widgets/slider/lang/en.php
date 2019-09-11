@@ -26,6 +26,6 @@ FoxLey, eResnova
 $lang['slider'] = 'Slider';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./widgets/slider/lang/en.php
 */

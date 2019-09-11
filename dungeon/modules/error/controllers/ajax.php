@@ -34,6 +34,6 @@ class m_error_c_ajax extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.4
+Dungeon Alpha 0.1.7.7
 ./dungeon/modules/error/controllers/ajax.php
 */

@@ -13,7 +13,7 @@ $(function(){
 		}
 		else {
 
-			$('#catalog .catalog-loader').html('<h4>Une erreur est survenue, essayez de recharger la page à nouveau</h4>');
+			$('#catalog .catalog-loader').html('<h4>An error occurred, try reloading the page again</h4>');
 		}
 	}
 

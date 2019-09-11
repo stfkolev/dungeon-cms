@@ -35,6 +35,6 @@ class Button_submit extends Button
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/libraries/buttons/submit.php
 */

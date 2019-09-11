@@ -26,8 +26,8 @@ class m_events extends Module
 	public $link        = 'http://www.dungeon.com';
 	public $author      = 'Evil <inkyzfx@gmail.com>';
 	public $licence     = 'http://www.dungeon.com/license.html LGPLv3';
-	public $version     = 'Alpha 0.1.6';
-	public $dungeon_version  = 'Alpha 0.1.6';
+	public $version     = 'Alpha 0.1.7';
+	public $dungeon_version  = 'Alpha 0.1.7';
 	public $path        = __FILE__;
 	public $admin       = TRUE;
 	public $routes      = [
@@ -182,6 +182,6 @@ class m_events extends Module
 }
 
 /*
-Dungeon Alpha 0.1.6.1
+Dungeon Alpha 0.1.7.7
 ./modules/events/events.php
 */

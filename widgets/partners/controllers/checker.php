@@ -39,6 +39,6 @@ class w_partners_c_checker extends Controller
 }
 
 /*
-Dungeon Alpha 0.1.5
+Dungeon Alpha 0.1.7.5
 ./widgets/partners/controllers/checker.php
 */

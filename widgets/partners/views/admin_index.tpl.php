@@ -7,7 +7,7 @@
 			<div class="form-horizontal">
 				<input type="hidden" name="settings[id]" value="<?php echo isset($data['id']) ? $data['id'] : unique_id(); ?>" />
 				<div class="form-group">
-					<label for="settings-display_number" class="col-sm-5 control-label">Number of partners by slider</label>
+					<label for="settings-display_number" class="col-sm-5 control-label">Number of partners per slider</label>
 					<div class="col-sm-2">
 						<select class="form-control" name="settings[display_number]" id="settings-display_number">
 						<?php foreach ([1, 2, 3, 4, 6] as $i): ?>
@@ -17,7 +17,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="settings-display_style" class="col-sm-5 control-label">Logo style to display</label>
+					<label for="settings-display_style" class="col-sm-5 control-label">Logo style</label>
 					<div class="col-sm-6">
 						<select class="form-control" name="settings[display_style]" id="settings-display_style">
 							<option value="light"<?php if (!isset($data['display_style']) || $data['display_style'] == 'light') echo ' selected="selected"'; ?>>Light Logo</option>

@@ -118,7 +118,7 @@ class m_settings_c_admin extends Controller_Module
 				$this->config('dungeon_'.$var, $value);
 			}
 
-			notify('Préférences générales sauvegardées avec succès');
+			notify('General preferences saved successfully');
 
 			refresh();
 		}
@@ -172,7 +172,7 @@ class m_settings_c_admin extends Controller_Module
 						'label'   => 'Validation',
 						'type'    => 'radio',
 						'value'   => $this->config->dungeon_registration_validation,
-						'values'  => array('Automatique', 'Confirmation par e-mail')
+						'values'  => array('Automatic', 'E-Mail Confirmation')
 					),*/
 					'registration_terms' => [
 						'label'   => 'Terms of usage',
@@ -705,6 +705,6 @@ class m_settings_c_admin extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/modules/settings/controllers/admin.php
 */

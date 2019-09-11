@@ -102,6 +102,6 @@ class m_games_c_admin_checker extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.5
+Dungeon Alpha 0.1.7.5
 ./modules/games/controllers/admin_checker.php
 */

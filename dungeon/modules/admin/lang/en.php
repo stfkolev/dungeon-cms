@@ -47,6 +47,6 @@ $lang['web_designer']       = 'Web designer';
 $lang['web_developer']      = 'Web developer';
 
 /*
-Dungeon Alpha 0.1.5
+Dungeon Alpha 0.1.7.5
 ./dungeon/modules/admin/lang/en.php
 */

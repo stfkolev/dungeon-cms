@@ -19,7 +19,7 @@ $(function(){
 		});
 	};
 	
-	$('body').on('nf.load', sortable);
+	$('body').on('dungeon.load', sortable);
 	
 	sortable();
 });

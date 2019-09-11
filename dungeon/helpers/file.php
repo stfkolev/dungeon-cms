@@ -161,6 +161,6 @@ function image_resize($filename, $width, $height = NULL)
 }
 
 /*
-Dungeon Alpha 0.1.5.3
+Dungeon Alpha 0.1.7.5.3
 ./dungeon/helpers/file.php
 */

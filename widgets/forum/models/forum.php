@@ -72,6 +72,6 @@ class w_forum_m_forum extends Model
 }
 
 /*
-Dungeon Alpha 0.1.5
+Dungeon Alpha 0.1.7.5
 ./widgets/forum/models/forum.php
 */

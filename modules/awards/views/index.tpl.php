@@ -74,7 +74,7 @@
 				else:
 				?>
 				<tr>
-					<td colspan="3" class="text-center">Aucun trophée...</td>
+					<td colspan="3" class="text-center">No trophies...</td>
 				</tr>
 				<?php
 				endif;

@@ -65,6 +65,6 @@ class m_events_c_ajax extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/events/controllers/ajax.php
 */

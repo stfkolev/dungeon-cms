@@ -31,6 +31,6 @@ class w_dserv_c_checker extends Controller_Widget
 }
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./widgets/dserv/controllers/checker.php
 */

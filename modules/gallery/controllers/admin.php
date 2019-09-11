@@ -59,7 +59,7 @@ class m_gallery_c_admin extends Controller_Module
 							],
 							/* //TODO
 							array(
-								'title'   => 'Intégration <i class="fa fa-info-circle text-muted" data-toggle="tooltip" title="Code à intégrer pour afficher cette galerie dans un contenu libre de type html/bbcode"></i>',
+								'title'   => 'Integration <i class="fa fa-info-circle text-muted" data-toggle="tooltip" title="Code to integrate to display this gallery in a free content of type html/bbcode"></i>',
 								'content' => '<code>[gallery-{gallery_id}]</code>'
 							),
 							*/
@@ -305,7 +305,7 @@ class m_gallery_c_admin extends Controller_Module
 		return $this->row(
 			$this->col(
 				$this	->panel()
-						->heading(/* //TODO '<div class="pull-right"><code data-toggle="tooltip" title="Code à intégrer pour afficher cette galerie dans un contenu libre de type html/bbcode">[gallery-'.$gallery_id.']</code></div>*/$this->lang('edit_album_title'), 'fa-photo')
+						->heading(/* //TODO '<div class="pull-right"><code data-toggle="tooltip" title="Code to integrate to display this gallery in a free content of type html">[gallery-'.$gallery_id.']</code></div>*/$this->lang('edit_album_title'), 'fa-photo')
 						->body($form_album->display())
 						->size('col-md-12 col-lg-7')
 			),
@@ -479,6 +479,6 @@ class m_gallery_c_admin extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/gallery/controllers/admin.php
 */

@@ -59,6 +59,6 @@ $lang['teams']                     = 'Team';
 $lang['teams_title']               = 'Teams';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./modules/teams/lang/en.php
 */

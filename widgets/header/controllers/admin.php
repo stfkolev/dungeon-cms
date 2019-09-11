@@ -27,6 +27,6 @@ class w_header_c_admin extends Controller_Widget
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./widgets/header/controllers/admin.php
 */

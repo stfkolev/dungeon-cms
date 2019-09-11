@@ -33,5 +33,5 @@
 	<?php endforeach; ?>
 </ul>
 <?php else: ?>
-<div class="panel-body">Aucun événement...</div>
+<div class="panel-body">No events...</div>
 <?php endif; ?>

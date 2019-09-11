@@ -287,6 +287,6 @@ class m_gallery_m_gallery extends Model
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/gallery/models/gallery.php
 */

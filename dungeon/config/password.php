@@ -22,6 +22,6 @@ $password['iteration_count_log2'] = 8;
 $password['portable_hashes']      = FALSE;
 
 /*
-Dungeon Alpha 0.1
+Dungeon Alpha 0.1.7
 ./dungeon/config/password.php
 */

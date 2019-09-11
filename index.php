@@ -58,7 +58,7 @@ ob_start();
 define('DUNGEON_CMS',     dirname(__FILE__));
 define('DUNGEON_MEMORY',  memory_get_peak_usage());
 define('DUNGEON_TIME',    microtime(TRUE));
-define('DUNGEON_VERSION', 'Alpha 0.1.6.1');
+define('DUNGEON_VERSION', 'Alpha 0.1.7.7');
 
 ini_set('default_charset', 'UTF8');
 ini_set('mbstring.func_overload', 7);
@@ -305,6 +305,6 @@ if (isset($Dungeon->config->dungeon_dispositions_upgrade) && !$Dungeon->config->
 echo $Dungeon->router()->output;
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./index.php
 */

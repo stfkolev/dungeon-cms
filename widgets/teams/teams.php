@@ -25,12 +25,12 @@ class w_teams extends Widget
 	public $link        = 'http://www.dungeon.com';
 	public $author      = 'Evil <inkyzfx@gmail.com>';
 	public $licence     = 'http://www.dungeon.com/license.html LGPLv3';
-	public $version     = 'Alpha 0.1';
-	public $dungeon_version  = 'Alpha 0.1';
+	public $version     = 'Alpha 0.1.7';
+	public $dungeon_version  = 'Alpha 0.1.7';
 	public $path        = __FILE__;
 }
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./widgets/teams/teams.php
 */

@@ -30,6 +30,6 @@ $lang['message']    = 'Message';
 $lang['subject']    = 'Subject';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./modules/contact/lang/en.php
 */

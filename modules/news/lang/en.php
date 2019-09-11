@@ -65,6 +65,6 @@ $lang['tag']                           = 'Tag %s';
 $lang['tags']                          = 'Keyword(s)';
 
 /*
-Dungeon Alpha 0.1.4
+Dungeon Alpha 0.1.7.7
 ./modules/news/lang/en.php
 */

@@ -31,6 +31,6 @@ class m_pages_c_index extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/modules/pages/controllers/index.php
 */

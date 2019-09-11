@@ -31,6 +31,6 @@ $lang['offline']          = 'offline';
 $lang['show_all_members'] = 'See all members';
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/members/lang/en.php
 */

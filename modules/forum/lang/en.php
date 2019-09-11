@@ -97,6 +97,6 @@ $lang['views']                 = '<b>%d</b> view| <b>%d</b> views';
 $lang['write']                 = 'Write';
 
 /*
-Dungeon Alpha 0.1.4
+Dungeon Alpha 0.1.7.7
 ./modules/forum/lang/en.php
 */

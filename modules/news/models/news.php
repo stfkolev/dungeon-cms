@@ -160,6 +160,6 @@ class m_news_m_news extends Model
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/news/models/news.php
 */

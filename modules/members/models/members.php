@@ -39,6 +39,6 @@ class m_members_m_members extends Model
 }
 
 /*
-Dungeon Alpha 0.1.5
+Dungeon Alpha 0.1.7.5
 ./modules/members/models/members.php
 */

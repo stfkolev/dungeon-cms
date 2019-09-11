@@ -27,7 +27,7 @@ class m_awards extends Module
 	public $author      = 'Evil <inkyzfx@gmail.com>';
 	public $licence     = 'http://www.dungeon.com/license.html LGPLv3';
 	public $version     = '1.0';
-	public $dungeon_version  = 'Alpha 0.1.4';
+	public $dungeon_version  = 'Alpha 0.1.7.7';
 	public $path        = __FILE__;
 	public $admin       = 'gaming';
 	public $routes      = [
@@ -57,6 +57,6 @@ class m_awards extends Module
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/awards/awards.php
 */

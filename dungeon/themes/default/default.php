@@ -26,8 +26,8 @@ class t_default extends Theme
 	public $link        = 'http://www.dungeon.com';
 	public $author      = 'Evil <inkyzfx@gmail.com>';
 	public $licence     = 'http://www.dungeon.com/license.html LGPLv3';
-	public $version     = 'Alpha 0.1';
-	public $dungeon_version  = 'Alpha 0.1';
+	public $version     = 'Alpha 0.1.7';
+	public $dungeon_version  = 'Alpha 0.1.7';
 	public $path        = __FILE__;
 	public $zones       = ['{lang content}', '{lang pre_content}', '{lang post_content}', '{lang header}', '{lang top}', '{lang footer}'];
 
@@ -383,6 +383,6 @@ class t_default extends Theme
 }
 
 /*
-Dungeon Alpha 0.1.6.1
+Dungeon Alpha 0.1.7.7
 ./dungeon/themes/default/default.php
 */

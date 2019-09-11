@@ -37,6 +37,6 @@ class m_forum_c_ajax_checker extends Controller
 }
 
 /*
-Dungeon Alpha 0.1.5
+Dungeon Alpha 0.1.7.5
 ./modules/forum/controllers/ajax_checker.php
 */

@@ -26,8 +26,8 @@ class m_error extends Module
 	public $link          = 'http://www.dungeon.com';
 	public $author        = 'Evil <inkyzfx@gmail.com>';
 	public $licence       = 'http://www.dungeon.com/license.html LGPLv3';
-	public $version       = 'Alpha 0.1';
-	public $dungeon_version    = 'Alpha 0.1';
+	public $version       = 'Alpha 0.1.7';
+	public $dungeon_version    = 'Alpha 0.1.7';
 	public $path          = __FILE__;
 	
 	public function load()
@@ -37,6 +37,6 @@ class m_error extends Module
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/modules/error/error.php
 */

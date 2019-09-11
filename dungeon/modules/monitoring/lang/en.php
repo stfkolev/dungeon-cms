@@ -29,6 +29,6 @@ $lang['operating_system']  = 'Operating System';
 $lang['web_server']        = 'Web server';
 
 /*
-Dungeon Alpha 0.1.5
+Dungeon Alpha 0.1.7.5
 ./dungeon/modules/monitoring/lang/en.php
 */

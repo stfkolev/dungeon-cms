@@ -28,6 +28,6 @@ $lang['free_content_html_code'] = 'Free content / HTML Code';
 $lang['html_code']              = 'HTML code';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./dungeon/widgets/html/lang/en.php
 */

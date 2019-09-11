@@ -92,10 +92,10 @@ class m_addons_c_admin extends Controller_Module
 	
 	public function _module_delete($module)
 	{
-		$this	->title('Confirmation de suppression')
+		$this	->title('Delete confirmation')
 				->subtitle($module->get_title())
 				->form
-				->confirm_deletion($this->lang('delete_confirmation'), 'Êtes-vous sûr(e) de vouloir supprimer le module <b>'.$module->get_title().'</b> ?');
+				->confirm_deletion($this->lang('delete_confirmation'), 'Are you sure you want to delete the module <b>'.$module->get_title().'</b> ?');
 
 		if ($this->form->is_valid())
 		{
@@ -117,10 +117,10 @@ class m_addons_c_admin extends Controller_Module
 	
 	public function _theme_delete($theme)
 	{
-		$this	->title('Confirmation de suppression')
+		$this	->title('Delete confirmation')
 				->subtitle($theme->get_title())
 				->form
-				->confirm_deletion($this->lang('delete_confirmation'), 'Êtes-vous sûr(e) de vouloir supprimer le thème <b>'.$theme->get_title().'</b> ?');
+				->confirm_deletion($this->lang('delete_confirmation'), 'Are you sure you want to delete the theme <b>'.$theme->get_title().'</b> ?');
 
 		if ($this->form->is_valid())
 		{
@@ -133,6 +133,6 @@ class m_addons_c_admin extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/modules/addons/controllers/admin.php
 */

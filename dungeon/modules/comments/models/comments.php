@@ -73,6 +73,6 @@ class m_comments_m_comments extends Model
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/modules/comments/models/comments.php
 */

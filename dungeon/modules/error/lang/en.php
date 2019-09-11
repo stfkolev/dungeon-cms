@@ -29,6 +29,6 @@ $lang['unauthorized']         = 'Access denied';
 $lang['unfound']              = 'Page not found';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./dungeon/modules/error/lang/en.php
 */

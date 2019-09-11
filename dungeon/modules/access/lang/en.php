@@ -35,6 +35,6 @@ $lang['permissions_management'] = 'Permissions management';
 $lang['reset_all_permissions']  = 'Reset all permissions';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./dungeon/modules/access/lang/en.php
 */

@@ -33,6 +33,6 @@ $lang['upload_zip_file']             = 'Download a .zip (max. %dMB) theme';
 $lang['zip_file_required']           = 'Please download a .zip theme';
 
 /*
-Dungeon Alpha 0.1.4
+Dungeon Alpha 0.1.7.7
 ./dungeon/modules/addons/lang/en.php
 */

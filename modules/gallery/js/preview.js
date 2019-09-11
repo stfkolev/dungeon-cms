@@ -4,7 +4,7 @@ $('.thumbnail-link').on('click', function() {
 			<div class="modal-dialog modal-lg">\
 				<div class="modal-content">\
 					<div class="modal-header">\
-						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Fermer</span></button>\
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>\
 						<h4 class="modal-title"><i class="fa fa-photo fa-fw"></i> '+$(this).data('title')+'</h4>\
 					</div>\
 					<div class="modal-body text-center no-padding">\
@@ -14,7 +14,7 @@ $('.thumbnail-link').on('click', function() {
 						<div class="pull-left text-left">\
 							'+$(this).data('description')+'\
 						</div>\
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>\
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>\
 					</div>\
 				</div>\
 			</div>\

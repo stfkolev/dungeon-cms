@@ -19,7 +19,7 @@ $(function(){
 				location.hash = '#'+$addon.data('addon');
 				$addon.addClass('active');
 				$row.append(data);
-				$('body').trigger('nf.load');
+				$('body').trigger('dungeon.load');
 			}
 		});
 		

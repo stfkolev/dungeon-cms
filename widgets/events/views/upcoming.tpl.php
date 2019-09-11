@@ -30,5 +30,5 @@
 	<?php endforeach; ?>
 </ul>
 <?php else: ?>
-<div class="panel-body">Aucun match à venir...</div>
+<div class="panel-body">No upcoming matches...</div>
 <?php endif; ?>

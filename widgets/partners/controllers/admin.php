@@ -32,6 +32,6 @@ class w_partners_c_admin extends Controller
 }
 
 /*
-Dungeon Alpha 0.1.6.1
+Dungeon Alpha 0.1.7.7
 ./widgets/partners/controllers/admin.php
 */

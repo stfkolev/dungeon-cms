@@ -26,8 +26,8 @@ class m_news extends Module
 	public $link        = 'http://www.dungeon.com';
 	public $author      = 'Evil <inkyzfx@gmail.com>';
 	public $licence     = 'http://www.dungeon.com/license.html LGPLv3';
-	public $version     = 'Alpha 0.1';
-	public $dungeon_version  = 'Alpha 0.1';
+	public $version     = 'Alpha 0.1.7';
+	public $dungeon_version  = 'Alpha 0.1.7';
 	public $path        = __FILE__;
 	public $admin       = TRUE;
 	public $routes      = [
@@ -51,42 +51,42 @@ class m_news extends Module
 			'default' => [
 				'access'  => [
 					[
-						'title'  => 'Actualités',
+						'title'  => 'News',
 						'icon'   => 'file-text-o',
 						'access' => [
 							'add_news' => [
-								'title' => 'Ajouter',
+								'title' => 'Add',
 								'icon'  => 'fa-plus',
 								'admin' => TRUE
 							],
 							'modify_news' => [
-								'title' => 'Modifier',
+								'title' => 'Modify',
 								'icon'  => 'fa-edit',
 								'admin' => TRUE
 							],
 							'delete_news' => [
-								'title' => 'Supprimer',
+								'title' => 'Delete',
 								'icon'  => 'fa-trash-o',
 								'admin' => TRUE
 							]
 						]
 					],
 					[
-						'title'  => 'Catégories',
+						'title'  => 'Categories',
 						'icon'   => 'fa-align-left',
 						'access' => [
 							'add_news_category' => [
-								'title' => 'Ajouter une catégorie',
+								'title' => 'Add category',
 								'icon'  => 'fa-plus',
 								'admin' => TRUE
 							],
 							'modify_news_category' => [
-								'title' => 'Modifier une catégorie',
+								'title' => 'Modify category',
 								'icon'  => 'fa-edit',
 								'admin' => TRUE
 							],
 							'delete_news_category' => [
-								'title' => 'Supprimer une catégorie',
+								'title' => 'Delete category',
 								'icon'  => 'fa-trash-o',
 								'admin' => TRUE
 							]
@@ -140,6 +140,6 @@ class m_news extends Module
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/news/news.php
 */

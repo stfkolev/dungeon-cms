@@ -48,6 +48,6 @@ function array_natsort(&$array, $data = NULL)
 }
 
 /*
-Dungeon Alpha 0.1.4.1
+Dungeon Alpha 0.1.7.7.1
 ./dungeon/helpers/array.php
 */

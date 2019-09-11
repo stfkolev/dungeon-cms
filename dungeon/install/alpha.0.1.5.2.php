@@ -29,6 +29,6 @@ class i_0_1_5_2 extends Install
 }
 
 /*
-Dungeon Alpha 0.1.5.2
+Dungeon Alpha 0.1.7.5.2
 ./dungeon/install/alpha.0.1.5.2.php
 */

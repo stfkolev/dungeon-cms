@@ -39,6 +39,6 @@ $lang['widgets']            = 'Widgets';
 $lang['zones']              = 'Zones';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./dungeon/modules/live_editor/lang/en.php
 */

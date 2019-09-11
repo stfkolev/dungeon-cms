@@ -159,7 +159,7 @@ var modal_settings = function(title, settings, callback){
 	});
 	
 	$modal.find('.btn-info:first').on('click', function(){
-		$('#live-editor-settings-form').trigger('nf.live-editor-settings.submit');
+		$('#live-editor-settings-form').trigger('dungeon.live-editor-settings.submit');
 		
 		$modal.modal('hide');
 		

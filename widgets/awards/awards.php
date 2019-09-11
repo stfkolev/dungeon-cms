@@ -26,7 +26,7 @@ class w_awards extends Widget
 	public $author      = 'Evil <inkyzfx@gmail.com>';
 	public $licence     = 'http://www.dungeon.com/license.html LGPLv3';
 	public $version     = '1.0';
-	public $dungeon_version  = 'Alpha 0.1.4';
+	public $dungeon_version  = 'Alpha 0.1.7.7';
 	public $path        = __FILE__;
 	public $types       = [
 		'index'     => 'Latest awards',
@@ -36,6 +36,6 @@ class w_awards extends Widget
 }
 
 /*
-Dungeon Alpha 0.1.5
+Dungeon Alpha 0.1.7.5
 ./widgets/awards/awards.php
 */

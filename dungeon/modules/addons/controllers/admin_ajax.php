@@ -353,6 +353,6 @@ class m_addons_c_admin_ajax extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/modules/addons/controllers/admin_ajax.php
 */

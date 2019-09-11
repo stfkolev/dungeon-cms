@@ -26,6 +26,6 @@ FoxLey, eResnova
 $lang['widget_error'] = 'Widget not found or misconfigured';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./dungeon/widgets/error/lang/en.php
 */

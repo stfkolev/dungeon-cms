@@ -13,7 +13,7 @@ Dungeon is a CMS that offers you advanced features for the management of your ga
 
 ## Presentation
 
-Dungeon CMS is a project conceived in 2017, which saw this first version Alpha 0.1 launched in June 2019. To learn more and stay informed of the progress of the project, visit us on the official website [Dungeon CMS](https://dungeon.com).
+Dungeon CMS is a project conceived in 2017, which saw this first version Alpha 0.1.7 launched in June 2019. To learn more and stay informed of the progress of the project, visit us on the official website [Dungeon CMS](https://dungeon.com).
 
 - Its speed of execution allows the loading of the pages in a flash! Dungeon is a small but powerful CMS.
 - Many additional content will be available on the official website [Dungeon CMS](https://dungeon.com), graphic themes, modules and widgets can be installed automatically via the management interface of your site.
@@ -35,7 +35,7 @@ Dungeon CMS requires Apache / PHP / MySQL web hosting to work.
 - Create a MySQL database and import DATABASE.sql
 - Edit database config file in ./config/db.php
 - Connect on your website and login with username: admin and password: admin123
-- Let's enjoy [Dungeon CMS](https://dungeon.com) Alpha 0.1.6.1!
+- Let's enjoy [Dungeon CMS](https://dungeon.com) Alpha 0.1.7.7!
 
 ## Contribute
 

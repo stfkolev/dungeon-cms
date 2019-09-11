@@ -98,6 +98,6 @@ class m_talks_m_talks extends Model
 }
 
 /*
-Dungeon Alpha 0.1.5
+Dungeon Alpha 0.1.7.5
 ./modules/talks/models/talks.php
 */

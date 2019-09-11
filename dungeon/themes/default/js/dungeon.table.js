@@ -3,13 +3,13 @@
 	
 	$('body').on('change', 'th > input[type="checkbox"].table-checkbox', function(){
 		$('td > input[type="checkbox"].table-checkbox').prop('checked', $(this).is(':checked'));
-		$(this).data('original-title', ($(this).is(':checked')) ? 'Deselect all' : 'Sélectionner toutes les lignes').tooltip('show');
+		$(this).data('original-title', ($(this).is(':checked')) ? 'Deselect all' : 'Select all lines').tooltip('show');
 	});
 
 	$('body').on('change', checkbox = 'td > input[type="checkbox"].table-checkbox', function(){
 		$('th > input[type="checkbox"].table-checkbox')
 			.prop('checked', $(checkbox).length == $(checkbox+':checked').length)
-			.data('original-title', ($(this).is(':checked')) ? 'Deselect all' : 'Sélectionner toutes les lignes');
+			.data('original-title', ($(this).is(':checked')) ? 'Deselect all' : 'Select all lines');
 	});
 	
 	$('body').on('click', '.table thead .sort', function(){
@@ -28,7 +28,7 @@
 			dataType: 'json',
 			success: function(data){
 				$table.find('.table-content').html(data.content);
-				$('body').trigger('nf.load');
+				$('body').trigger('dungeon.load');
 			}
 		});
 	});
@@ -57,7 +57,7 @@
 				$table.find('.table-content').html(data.content);
 				$input.next('.form-control-feedback').remove();
 			
-				$('body').trigger('nf.load');
+				$('body').trigger('dungeon.load');
 			}
 		});
 	});

@@ -46,6 +46,6 @@ abstract class Controller_Module extends Controller
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/classes/controller_module.php
 */

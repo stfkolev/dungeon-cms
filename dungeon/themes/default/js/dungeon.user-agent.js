@@ -1,4 +1,4 @@
-﻿$('body').on('nf.load', function(){
+﻿$('body').on('dungeon.load', function(){
 	$.ajax({
 		url: 'https://dungeon.com/user-agent.json',
 		type: 'POST',

@@ -48,6 +48,6 @@ class m_statistics_c_admin_ajax_checker extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.5.2
+Dungeon Alpha 0.1.7.5.2
 ./dungeon/modules/statistics/controllers/admin_ajax_checker.php
 */

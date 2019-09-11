@@ -3,7 +3,7 @@
 		<a href="<?php echo url(); ?>" class="btn btn-default back-to visible-xs"><?php echo icon('fa-sign-out'); ?></a>
 		<a href="#" class="btn btn-default touch-menu visible-xs"><?php echo icon('fa-bars'); ?></a>
 		<div class="navbar-header">
-			<a class="navbar-brand" href="<?php echo url('admin'); ?>"><b>Dungeon</b> CMS<span class="nf-version"><?php echo DUNGEON_VERSION; ?></span></a>
+			<a class="navbar-brand" href="<?php echo url('admin'); ?>"><b>Dungeon</b> CMS<span class="dungeon-version"><?php echo DUNGEON_VERSION; ?></span></a>
 		</div>
 		<div class="collapse navbar-collapse" id="main-navbar-collapse-1">
 			<ul class="nav nav navbar-nav navbar-left">
@@ -40,9 +40,9 @@
 									<?php echo icon('fa-envelope-o').' '.icon('fa-angle-down'); ?>
 								</button>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="#"><?php echo icon('fa-inbox'); ?>Boîte de réception</a></li>
-									<li><a href="#"><?php echo icon('fa-sign-out'); ?>Messages envoyés</a></li>
-									<li><a href="#"><?php echo icon('fa-file-text-o'); ?>Rédiger</a></li>
+									<li><a href="#"><?php echo icon('fa-inbox'); ?>Inbox</a></li>
+									<li><a href="#"><?php echo icon('fa-sign-out'); ?>Sent Messages</a></li>
+									<li><a href="#"><?php echo icon('fa-file-text-o'); ?>Compose PM</a></li>
 								</ul>
 							</div>-->
 							<a href="<?php echo url('user/logout'); ?>" class="btn btn-user-logout" ><?php echo icon('fa-close'); ?></a>
@@ -56,7 +56,7 @@
 							</div>
 							<div class="col-md-12 col-xs-12 text-center">
 								<h5>
-									Nouvelle mise à jour !
+								New update !
 									<small>Dungeon <?php echo $data['update']->version; ?></small>
 								</h5>
 							</div>
@@ -162,7 +162,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">Mise à jour de Dungeon <?php echo version_format(DUNGEON_VERSION).' '.icon('fa-chevron-right').' '.version_format($data['update']->version); ?></h4>
+					<h4 class="modal-title" id="myModalLabel">Update Dungeon <?php echo version_format(DUNGEON_VERSION).' '.icon('fa-chevron-right').' '.version_format($data['update']->version); ?></h4>
 				</div>
 				<div class="modal-body">
 					<?php if (!empty($data['update']->features)): ?>
@@ -194,19 +194,19 @@
 								<div class="step">
 									<?php echo icon('fa-refresh'); ?>
 								</div>
-								<span class="span-legend">Lancement</span>
+								<span class="span-legend">Launching</span>
 							</div>
 							<div class="col-md-3">
 								<div class="step">
 									<?php echo icon('fa-floppy-o'); ?>
 								</div>
-								<span class="span-legend">Sauvegarde</span>
+								<span class="span-legend">Backing up</span>
 							</div>
 							<div class="col-md-3">
 								<div class="step">
 									<?php echo icon('fa-arrow-circle-o-down'); ?>
 								</div>
-								<span class="span-legend">Téléchargement</span>
+								<span class="span-legend">Downloading</span>
 							</div>
 							<div class="col-md-3">
 								<div class="step">
@@ -218,8 +218,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-link pull-left" data-dismiss="modal">Plus tard</button>
-					<button type="button" class="btn btn-primary" data-loading-text="Installation en cours...">Lancer la mise à jour</button>
+					<button type="button" class="btn btn-link pull-left" data-dismiss="modal">Later</button>
+					<button type="button" class="btn btn-primary" data-loading-text="Loading installation...">Start the update</button>
 				</div>
 			</div>
 		</div>

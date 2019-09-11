@@ -26,8 +26,8 @@ class m_members extends Module
 	public $link          = 'http://www.dungeon.com';
 	public $author        = 'Evil <inkyzfx@gmail.com>';
 	public $licence       = 'http://www.dungeon.com/license.html LGPLv3';
-	public $version       = 'Alpha 0.1';
-	public $dungeon_version    = 'Alpha 0.1';
+	public $version       = 'Alpha 0.1.7';
+	public $dungeon_version    = 'Alpha 0.1.7';
 	public $path          = __FILE__;
 	public $routes        = [
 		'{pages}'                                   => 'index',
@@ -38,6 +38,6 @@ class m_members extends Module
 }
 
 /*
-Dungeon Alpha 0.1.5
+Dungeon Alpha 0.1.7.5
 ./modules/members/members.php
 */

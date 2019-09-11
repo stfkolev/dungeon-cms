@@ -41,6 +41,6 @@ $lang['write']                = 'Write';
 $lang['your_message']         = 'Your message...';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./modules/talks/lang/en.php
 */

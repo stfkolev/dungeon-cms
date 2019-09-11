@@ -58,6 +58,6 @@ class w_gallery_c_checker extends Controller
 }
 
 /*
-Dungeon Alpha 0.1.5
+Dungeon Alpha 0.1.7.5
 ./widgets/gallery/controllers/checker.php
 */

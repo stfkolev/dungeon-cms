@@ -10,5 +10,5 @@
 	<?php endforeach; ?>
 </div>
 <?php else: ?>
-<div class="panel-body">Aucun type d'événement...</div>
+<div class="panel-body">No event types...</div>
 <?php endif; ?>

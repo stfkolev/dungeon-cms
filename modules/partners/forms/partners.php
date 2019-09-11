@@ -55,7 +55,7 @@ $rules = [
 		'description' => 'To be displayed on a light background <i>(following the current theme)</i>'
 	],
 	'description' => [
-		'label'       => 'Présentation',
+		'label'       => 'Description',
 		'value'       => $this->form->value('description'),
 		'type'        => 'editor'
 	],
@@ -92,6 +92,6 @@ $rules = [
 ];
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/partners/forms/partners.php
 */

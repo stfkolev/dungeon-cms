@@ -33,7 +33,7 @@
 	<?php echo $data['js']; ?>
 	<script type="text/javascript">
 	$(function(){
-		$('body').trigger('nf.load');
+		$('body').trigger('dungeon.load');
 
 		$('body').popover({
 			selector: '[data-toggle=popover]',

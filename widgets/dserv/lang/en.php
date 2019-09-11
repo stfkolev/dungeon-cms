@@ -31,6 +31,6 @@ $lang['text']       = 'This widget is compatible with almost all games multiplay
 $lang['games_list']      = 'List of the games';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./widgets/dserv/lang/en.php
 */

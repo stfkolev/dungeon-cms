@@ -6,7 +6,7 @@
 		<div id="events-options" class="tab-pane active" role="tabpanel">
 			<div class="form-horizontal">
 				<div class="form-group">
-					<label for="settings-events" class="col-sm-3 control-label">Événement à afficher</label>
+					<label for="settings-events" class="col-sm-3 control-label">Event to display</label>
 					<div class="col-sm-6">
 						<select class="form-control" name="settings[event_id]" id="settings-events">
 							<?php foreach ($data['events'] as $event): ?>

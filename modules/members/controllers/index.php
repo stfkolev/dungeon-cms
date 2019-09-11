@@ -66,6 +66,6 @@ class m_members_c_index extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/members/controllers/index.php
 */

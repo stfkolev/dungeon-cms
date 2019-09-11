@@ -33,6 +33,6 @@ $lang['security']      = 'Security';
 $lang['support']       = 'Support';
 
 /*
-Dungeon Alpha 0.1.4
+Dungeon Alpha 0.1.7.7
 ./dungeon/themes/admin/lang/en.php
 */

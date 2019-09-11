@@ -74,6 +74,6 @@ foreach ($this->model()->get_statistics() as $name => $statistic)
 }
 
 /*
-Dungeon Alpha 0.1.5
+Dungeon Alpha 0.1.7.5
 ./dungeon/modules/statistics/forms/statistics.php
 */

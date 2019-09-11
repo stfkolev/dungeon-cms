@@ -11,5 +11,5 @@
 	<?php endforeach; ?>
 </div>
 <?php else: ?>
-No recent posts ...
+No recent activity ...
 <?php endif; ?>

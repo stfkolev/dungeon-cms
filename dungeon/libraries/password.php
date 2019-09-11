@@ -349,6 +349,6 @@ class Password extends Library
 }
 
 /*
-Dungeon Alpha 0.1.4
+Dungeon Alpha 0.1.7.7
 ./dungeon/libraries/password.php
 */

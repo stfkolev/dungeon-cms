@@ -263,6 +263,6 @@ function version_format($version)
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/helpers/string.php
 */

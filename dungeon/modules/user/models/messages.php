@@ -198,6 +198,6 @@ class m_user_m_messages extends Model
 }
 
 /*
-Dungeon Alpha 0.1.5
+Dungeon Alpha 0.1.7.5
 ./dungeon/modules/user/models/messages.php
 */

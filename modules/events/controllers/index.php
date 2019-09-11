@@ -248,7 +248,7 @@ class m_events_c_index extends Controller_Module
 
 	public function _participant_delete($event_id, $user_id)
 	{
-		$this	->title('Suppression participant')
+		$this	->title('Delete participant')
 				->form
 				->confirm_deletion('Delete confirmation', 'Are you sure you want to delete this guest?');
 
@@ -266,6 +266,6 @@ class m_events_c_index extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.6.1
+Dungeon Alpha 0.1.7.7
 ./modules/events/controllers/index.php
 */

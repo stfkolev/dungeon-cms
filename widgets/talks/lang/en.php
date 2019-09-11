@@ -27,6 +27,6 @@ $lang['talk']  = 'Discussion';
 $lang['talks'] = 'Discussions';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./widgets/talks/lang/en.php
 */

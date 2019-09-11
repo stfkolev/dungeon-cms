@@ -20,14 +20,14 @@ along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 
 $rules = [
 	'game_id' => [
-		'label'  => 'Jeu',
+		'label'  => 'Game',
 		'value'  => $this->form->value('game_id'),
 		'values' => $this->form->value('games'),
 		'type'   => 'select',
 		'rules'  => 'required'
 	],
 	'title' => [
-		'label' => 'Nom de la carte',
+		'label' => 'Map Name',
 		'value' => $this->form->value('title'),
 		'type'  => 'text',
 		'rules' => 'required'
@@ -48,6 +48,6 @@ $rules = [
 ];
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/games/forms/maps.php
 */

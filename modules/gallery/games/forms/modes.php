@@ -20,7 +20,7 @@ along with Dungeon. If not, see <http://www.gnu.org/licenses/>.
 
 $rules = [
 	'title' => [
-		'label' => 'Nom du mode',
+		'label' => 'Mode Name',
 		'value' => $this->form->value('title'),
 		'type'  => 'text',
 		'rules' => 'required'
@@ -28,6 +28,6 @@ $rules = [
 ];
 
 /*
-Dungeon Alpha 0.1.5.2
+Dungeon Alpha 0.1.7.5.2
 ./modules/games/forms/modes.php
 */

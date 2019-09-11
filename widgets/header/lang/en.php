@@ -32,6 +32,6 @@ $lang['options']             = 'Options';
 $lang['website_title']       = 'Site Title';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./widgets/header/lang/en.php
 */

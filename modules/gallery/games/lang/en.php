@@ -40,6 +40,6 @@ $lang['no_games']             = 'There are no more games';
 $lang['parent_game']          = 'Parent game';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./modules/games/lang/en.php
 */

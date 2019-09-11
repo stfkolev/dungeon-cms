@@ -120,7 +120,7 @@ $lang['last_name']                      = 'Name';
 $lang['left']                           = 'Left';
 $lang['loading']                        = 'Loading...';
 $lang['location']                       = 'Location';
-$lang['login']                          = 'Connection';
+$lang['login']                          = 'Login';
 $lang['login_title']                    = 'Login';
 $lang['maintenance']                    = 'Maintenance';
 $lang['male']                           = 'Male';
@@ -259,6 +259,6 @@ if (!function_exists('datetime2sql'))
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/lang/en.php
 */

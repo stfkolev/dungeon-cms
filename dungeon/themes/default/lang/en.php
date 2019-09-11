@@ -54,6 +54,6 @@ $lang['white_background']             = 'White background';
 $lang['white_widget']                 = 'White Widget';
 
 /*
-Dungeon Alpha 0.1.4
+Dungeon Alpha 0.1.7.7
 ./dungeon/themes/default/lang/en.php
 */

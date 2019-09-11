@@ -30,6 +30,6 @@ class m_gallery_c_admin_ajax_checker extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.5
+Dungeon Alpha 0.1.7.5
 ./modules/gallery/controllers/admin_ajax_checker.php
 */

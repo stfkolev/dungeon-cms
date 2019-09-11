@@ -28,6 +28,6 @@ $rules = [
 ];
 
 /*
-Dungeon Alpha 0.1.5.2
+Dungeon Alpha 0.1.7.5.2
 ./modules/talks/forms/talks.php
 */

@@ -97,6 +97,6 @@ function dir_copy($src, $dst)
 }
 
 /*
-Dungeon Alpha 0.1.5.2
+Dungeon Alpha 0.1.7.5.2
 ./dungeon/helpers/dir.php
 */

@@ -163,6 +163,6 @@ class m_live_editor_c_ajax_checker extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/modules/live_editor/controllers/ajax_checker.php
 */

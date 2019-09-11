@@ -33,6 +33,6 @@ class Button_update extends Library
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/libraries/buttons/update.php
 */

@@ -5,7 +5,7 @@
 </div>
 <ul class="list-group">
 	<li class="list-group-item">
-		<!--<span class="label label-success pull-right"><?php echo 0; //TODO nombre de nouvelles notifications ?></span>-->
+		<!--<span class="label label-success pull-right"><?php echo 0; //TODO number of new notifications ?></span>-->
 		<?php echo icon('fa-user'); ?> <a href="<?php echo url('user'); ?>"><?php echo $this->lang('my_account'); ?></a>
 	</li>
 	<li class="list-group-item">

@@ -27,7 +27,7 @@ class m_recruits extends Module
 	public $author      = 'Evil <inkyzfx@gmail.com>';
 	public $licence     = 'http://www.dungeon.com/license.html LGPLv3';
 	public $version     = '1.0';
-	public $dungeon_version  = 'Alpha 0.1.6';
+	public $dungeon_version  = 'Alpha 0.1.7';
 	public $path        = __FILE__;
 	public $admin       = TRUE;
 	public $routes      = [
@@ -74,7 +74,7 @@ class m_recruits extends Module
 						'type'        => 'legend'
 					],
 					'recruits_send' => [
-						'label'       => 'Avertir les postulants',
+						'label'       => 'Notify applicants',
 						'type'        => 'checkbox',
 						'checked'     => [
 							'mp'   => $this->config->recruits_send_mp,
@@ -186,6 +186,6 @@ class m_recruits extends Module
 }
 
 /*
-Dungeon Alpha 0.1.6.1
+Dungeon Alpha 0.1.7.7
 ./modules/recruits/recruits.php
 */

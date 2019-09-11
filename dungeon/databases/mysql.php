@@ -237,6 +237,6 @@ class Driver_mysql extends Driver
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/databases/mysql.php
 */

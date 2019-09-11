@@ -29,6 +29,6 @@ $lang['search_for']      = 'Search for one or more terms on our site';
 $lang['see_all_results'] = 'See all results';
 
 /*
-Dungeon Alpha 0.1.4
+Dungeon Alpha 0.1.7.7
 ./dungeon/modules/search/lang/en.php
 */

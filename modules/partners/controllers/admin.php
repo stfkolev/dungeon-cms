@@ -31,19 +31,19 @@ class m_partners_c_admin extends Controller_Module
 						'size'    => TRUE
 					],
 					[
-						'title'   => 'Nom',
+						'title'   => 'Title',
 						'content' => function($data){
 							return $data['title'];
 						}
 					],
 					[
-						'title'   => 'Site internet',
+						'title'   => 'Website',
 						'content' => function($data){
 							return '<a href="'.$data['website'].'" target="_blank">'.$data['website'].'</a>';
 						}
 					],
 					[
-						'title'   => '<span data-toggle="tooltip" title="Visites">'.icon('fa-line-chart').'</span>',
+						'title'   => '<span data-toggle="tooltip" title="Visits">'.icon('fa-line-chart').'</span>',
 						'content' => function($data){
 							return $data['count'];
 						}
@@ -61,7 +61,7 @@ class m_partners_c_admin extends Controller_Module
 					]
 				])
 				->data($this->model()->get_partners())
-				->no_data('Aucun partenaire');
+				->no_data('No partners');
 
 		return $this->panel()
 					->heading('List of partners', 'fa-star-o')
@@ -156,6 +156,6 @@ class m_partners_c_admin extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./modules/partners/controllers/admin.php
 */

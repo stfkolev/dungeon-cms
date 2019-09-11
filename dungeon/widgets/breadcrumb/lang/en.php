@@ -26,6 +26,6 @@ FoxLey, eResnova
 $lang['breadcrumb'] = 'Breadcrumb';
 
 /*
-Dungeon Alpha 0.1.3
+Dungeon Alpha 0.1.7.3
 ./dungeon/widgets/breadcrumb/lang/en.php
 */

@@ -36,6 +36,6 @@ $lang['whos_online']        = 'Who is online?';
 $lang['whos_online_mini']   = 'Who is online? (mini)';
 
 /*
-Dungeon Alpha 0.1.5
+Dungeon Alpha 0.1.7.5
 ./widgets/members/lang/en.php
 */

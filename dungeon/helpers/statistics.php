@@ -57,6 +57,6 @@ function statistics($name, $value = NULL, $callback = NULL)
 }
 
 /*
-Dungeon Alpha 0.1.6
+Dungeon Alpha 0.1.7
 ./dungeon/helpers/statistics.php
 */

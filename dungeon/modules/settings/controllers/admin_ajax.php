@@ -32,6 +32,6 @@ class m_settings_c_admin_ajax extends Controller_Module
 }
 
 /*
-Dungeon Alpha 0.1.5.2
+Dungeon Alpha 0.1.7.5.2
 ./dungeon/modules/settings/controllers/admin_ajax.php
 */

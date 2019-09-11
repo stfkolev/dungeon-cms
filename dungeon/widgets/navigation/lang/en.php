@@ -37,6 +37,6 @@ $lang['target']              = 'Target';
 $lang['vertical']            = 'Vertical';
 
 /*
-Dungeon Alpha 0.1.4
+Dungeon Alpha 0.1.7.7
 ./dungeon/widgets/navigation/lang/en.php
 */
